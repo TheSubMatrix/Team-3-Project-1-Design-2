@@ -73,5 +73,5 @@ MonoBehaviour:
   settings:
     QuantizationAmounts: {x: 32, y: 32, z: 32, w: 32}
     Samples: 128
-    DitherSpread: 0.02
+    DitherSpread: 0.015
   _event: 500
