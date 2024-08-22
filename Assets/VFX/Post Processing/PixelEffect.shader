@@ -25,7 +25,7 @@ Shader "Hidden/Custom/Pixel Effect"
 
         float GetBayer2(int x, int y)
         {
-            return float(BayerDitherPattern[(x % 2) + (y % 2) *2]) * ((1.0 / 4.0) - 0.5);
+            return float(BayerDitherPattern[(x % BayerPatternSize) + (y % BayerPatternSize) * BayerPatternSize]) * ((1.0 / 4.0) - 0.5);
         }
         float CalculateQuatization(float currentAmount, float desiredSamples)
         {
