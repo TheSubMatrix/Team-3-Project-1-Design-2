@@ -2,42 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StandardItem : MonoBehaviour, IPlacable, IInteractable
+public class StandardItem : MonoBehaviour, IPlacable, IHoldable
 {
     bool m_isBeingInteractedWith;
-    public void OnInteractEnd()
+    Rigidbody m_rigidbody;
+    void Awake()
+    {
+        m_rigidbody = GetComponent<Rigidbody>();
+    }
+    public void OnHoldEnd(GameObject objectBeingLookedAt)
     {
         m_isBeingInteractedWith = false;
-        Place(transform.position, Vector3.zero);
+        if (Place(objectBeingLookedAt))
+        {
+
+        }
+        else
+        {
+            if (m_rigidbody != null)
+            {
+                m_rigidbody.isKinematic = true;
+            }
+        }
     }
 
-    public void OnInteracting()
+    public void OnHolding(Vector3 vector)
     {
-        
+        transform.position = vector;
     }
 
-    public void OnInteractStart()
+    public void OnHoldStart()
     {
         m_isBeingInteractedWith = true;
-    }
-
-    public void Place(Vector3 location, Vector3 velocity)
-    {
-        
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(m_isBeingInteractedWith)
+        if(m_rigidbody != null)
         {
-            OnInteracting();
+            m_rigidbody.isKinematic = true;
         }
+    }
+
+    public bool Place(GameObject objectToTryAndPlaceOn)
+    {
+        return false;
     }
 }

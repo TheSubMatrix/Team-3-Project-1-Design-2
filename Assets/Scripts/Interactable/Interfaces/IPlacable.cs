@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IPlacable
 {
-    void Place(Vector3 location, Vector3 velocity);
+    bool Place(GameObject objectToAttemptToPlaceOn);
 }

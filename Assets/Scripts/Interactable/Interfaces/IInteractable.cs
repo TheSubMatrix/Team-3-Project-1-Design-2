@@ -5,6 +5,4 @@ using UnityEngine;
 public interface IInteractable
 {
     void OnInteractStart();
-    void OnInteracting();
-    void OnInteractEnd();
 }
