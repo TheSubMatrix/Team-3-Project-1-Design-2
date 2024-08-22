@@ -22,7 +22,7 @@ public class FP_Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //SnaptoPlayer(cameraOrientation);
+        
         float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
 
