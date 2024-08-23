@@ -15,13 +15,13 @@ public class StandardItem : MonoBehaviour, IPlacable, IHoldable
         m_isBeingInteractedWith = false;
         if (Place(objectBeingLookedAt))
         {
-
+            Debug.Log("No");
         }
         else
         {
             if (m_rigidbody != null)
             {
-                m_rigidbody.isKinematic = true;
+                m_rigidbody.isKinematic = false;
             }
         }
     }
