@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IPlacable
 {
+    GameObject gameObject { get; }
     bool Place(GameObject objectToAttemptToPlaceOn);
 }
