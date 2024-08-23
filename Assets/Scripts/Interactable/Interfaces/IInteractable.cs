@@ -5,7 +5,16 @@ using UnityEngine;
 public interface IInteractable
 {
     GameObject gameObject { get; }
-    void OnInteractStart();
+    PlayerInteractionHandler interactionHandler { get; set; }
+    void OnInteractStart(PlayerInteractionHandler incomingHandler)
+    {
+        {
+            interactionHandler = incomingHandler;
+        }
+    }
     void OnInteracting();
-    void OnInteractEnd();
+    void OnInteractEnd()
+    {
+        interactionHandler = null;
+    }
 }

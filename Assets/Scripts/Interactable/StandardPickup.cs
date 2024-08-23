@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StandardItem : MonoBehaviour, IPlacable, IHoldable
+public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
 {
     bool m_isBeingInteractedWith;
     Rigidbody m_rigidbody;
@@ -24,11 +24,6 @@ public class StandardItem : MonoBehaviour, IPlacable, IHoldable
                 m_rigidbody.isKinematic = false;
             }
         }
-    }
-
-    public void OnHolding(Vector3 vector)
-    {
-        transform.position = vector;
     }
 
     public void OnHoldStart()

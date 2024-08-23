@@ -12,8 +12,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     [Serializable]
     public class PickupEvent : UnityEvent<GameObject> { }
     [SerializeField]LayerMask interactableLayers;
-    [SerializeField]IHoldable heldObject;
-    [SerializeField]IInteractable interactingObject;
+    [SerializeField] IHoldable heldObject;
+    [SerializeField] IInteractable interactingObject;
     [SerializeField] InteractionEvent InteractStarted;
     [SerializeField] InteractionEvent InteractEnded;
     [SerializeField] PickupEvent PickupStarted;
@@ -25,9 +25,9 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             const int raycastDistance = 5;
             Ray ray = new Ray(transform.position, transform.forward);
-            Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.red, 1);
             Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
-            if (heldObject == null && interactingObject == null)
+            Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1);
+            if (heldObject == null && interactingObject == null && hitInfo.collider != null)
             {
                 IHoldable holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
                 IInteractable interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
@@ -37,14 +37,15 @@ public class PlayerInteractionHandler : MonoBehaviour
                 }
                 else if(interactable != null)
                 {
+                    Debug.Log("here");
                     StartIntreaction(interactable);
                 }
             }
-            if(interactingObject != null)
+            else if(interactingObject != null)
             {
                 EndIntreaction();
             }
-            if(heldObject != null)
+            else if(heldObject != null)
             {
                 EndPickup(hitInfo.collider.gameObject, heldObject);
             }
@@ -70,7 +71,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public void StartIntreaction(IInteractable interactable)
     {
         InteractStarted.Invoke(interactable.gameObject);
-        interactable.OnInteractStart();
+        interactable.OnInteractStart(this);
         interactingObject = interactable;
     }
     public void EndPickup(GameObject objectForAttemptingPlace, IHoldable holdable)
