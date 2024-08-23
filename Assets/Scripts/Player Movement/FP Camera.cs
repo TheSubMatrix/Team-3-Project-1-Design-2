@@ -20,7 +20,7 @@ public class FP_Camera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         
         float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;

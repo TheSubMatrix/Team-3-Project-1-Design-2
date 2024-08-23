@@ -16,21 +16,37 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("(Negative for normal gravity and positive for floating)")]
     [SerializeField] float gravity;
-    private Vector3 gravityPull;
+    [SerializeField] Vector3 gravityPull;
+
+    [Header("Player Jump Height")]
+    [SerializeField] float jumpHeight;
 
     private CharacterController characterController;
 
     private AudioSource characterAudioSource;
+
+    private bool isJumping = false;
+    [SerializeField] float jumpDelay = 5f;
     
     private void Start()
     {       
         characterController = GetComponent<CharacterController>();
         characterAudioSource = GetComponent<AudioSource>();
     }
+
+    private void Update()
+    {
+        PlayerGravity();
+        if (isJumping != true && Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(DelayJump(jumpDelay));
+            Debug.Log("Jump");
+            Jump();
+        }
+    }
     private void FixedUpdate()
     {
         PlayerMove();
-
         
     }
 
@@ -42,22 +58,45 @@ public class PlayerMovement : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        if((x!= 0 || z!= 0) && characterController.isGrounded == true) 
+       
+        if ((x!= 0 || z!= 0) && characterController.isGrounded == true) 
         {
-            Vector3 characterMove = transform.right * x + transform.forward * z;
-
-            characterController.Move(characterMove * speed * Time.deltaTime);
-
             characterAudioSource.enabled = true;
-        } 
+        }        
         else
         {
             characterAudioSource.enabled = false;   
         }
-        
+       
+        Vector3 characterMove = transform.right * x + transform.forward * z;
 
+        characterController.Move(characterMove * speed * Time.deltaTime);
 
-        gravityPull.y += gravity * Time.deltaTime;
-        characterController.Move(gravityPull * .1f * Time.deltaTime);
     }    
+
+    private void Jump()
+    {
+        Debug.Log("Start Jump");
+        gravityPull.y = Mathf.Sqrt( gravity * -jumpHeight);
+        Debug.Log("Start End");
+    }
+
+    IEnumerator DelayJump(float delay)
+    {
+        isJumping = true;
+        yield return new WaitForSeconds(delay);
+        isJumping = false;
+    }
+
+    private void PlayerGravity()
+    {
+        if(isJumping == false && characterController.isGrounded == false && gravityPull.y < 0)
+        {
+            gravityPull.y = -2;
+        }
+        
+        gravityPull.y += gravity * Time.deltaTime;
+
+        characterController.Move(gravityPull * Time.deltaTime);
+    }
 }
