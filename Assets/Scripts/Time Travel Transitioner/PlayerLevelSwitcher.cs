@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLevelSwitcher : MonoBehaviour
 {
-    [SerializeField] float m_transitionDelay = 1f;
+    [SerializeField] float m_DelayBeforeTransition;
     [SerializeField] List<TransitionData> m_transitions = new List<TransitionData>();
     [System.Serializable]
     struct TransitionData
@@ -17,30 +17,41 @@ public class PlayerLevelSwitcher : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            StartCoroutine(TransitionSceneAsync(m_transitions, m_transitionDelay));
+            StartCoroutine(TransitionSceneAsync(m_transitions, m_DelayBeforeTransition));
         }
     }
-    IEnumerator TransitionSceneAsync(List<TransitionData> scenesToParse, float transitionDelay)
+    IEnumerator TransitionSceneAsync(List<TransitionData> scenesToParse, float timeToWait)
     {
+        float elapsedTime = 0;
         string sceneName = null;
         string currentScene = SceneManager.GetActiveScene().name;
-        for(int i = 0;  i < scenesToParse.Count; i++)
+        for (int i = 0; i < scenesToParse.Count; i++)
         {
-            
-            if(scenesToParse[i].FromScene == currentScene)
+
+            if (scenesToParse[i].FromScene == currentScene)
             {
                 sceneName = scenesToParse[i].ToScene;
             }
         }
-        AsyncOperation asyncSceneLoad = SceneManager.LoadSceneAsync(sceneName);
-        asyncSceneLoad.allowSceneActivation = false;
-        float elapsedTime = 0;
-        while(!asyncSceneLoad.isDone && elapsedTime < transitionDelay)
+        if( sceneName == null ) 
         {
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            yield break;
         }
-        DontDestroyOnLoad(gameObject);
+        AsyncOperation asyncSceneLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        asyncSceneLoad.allowSceneActivation = false;
+        while (!Mathf.Approximately(asyncSceneLoad.progress, 0.9f) || elapsedTime < timeToWait)
+        {
+            Debug.Log(asyncSceneLoad.progress);
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
         asyncSceneLoad.allowSceneActivation = true;
+        yield return new WaitForEndOfFrame();
+        yield return null;
+        DontDestroyOnLoad(gameObject);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+        SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetSceneByName(sceneName));
+        yield return SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(currentScene));
+        Debug.Log("Done");
     }
 }
