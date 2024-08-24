@@ -13,7 +13,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public class PickupEvent : UnityEvent<GameObject> { }
     [SerializeField]LayerMask interactableLayers;
     [SerializeField] IHoldable heldObject;
-    [SerializeField] IInteractable interactingObject;
+    [SerializeField] public IInteractable interactingObject;
     [SerializeField] InteractionEvent InteractStarted;
     [SerializeField] InteractionEvent InteractEnded;
     [SerializeField] PickupEvent PickupStarted;
@@ -37,7 +37,7 @@ public class PlayerInteractionHandler : MonoBehaviour
                 }
                 else if(interactable != null)
                 {
-                    Debug.Log("here");
+                    //Debug.Log("here");
                     StartIntreaction(interactable);
                 }
             }
@@ -70,6 +70,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     } 
     public void StartIntreaction(IInteractable interactable)
     {
+        
         InteractStarted.Invoke(interactable.gameObject);
         interactable.OnInteractStart(this);
         interactingObject = interactable;
