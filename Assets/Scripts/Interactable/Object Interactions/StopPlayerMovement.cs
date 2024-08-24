@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class StopPlayerMovement : MonoBehaviour
 {
-    [SerializeField] PlayerMovement playerMovementScript = new PlayerMovement();
+    [SerializeField] PlayerMovement playerMovementScript;
 
-    
-
-    public void StopMovement()
+    public void ChangePlayerMovement()
     {
-        playerMovementScript.MovementStopped();       
+        //playerMovementScript.MovementStopped();
+       if( playerMovementScript.movementStoped == false)
+        {
+            playerMovementScript.movementStoped = true;
+        }
+        else
+        {
+            playerMovementScript.movementStoped = false; 
+        }
+        
     }
+
+
 }

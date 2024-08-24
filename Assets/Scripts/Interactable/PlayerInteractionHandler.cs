@@ -16,6 +16,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     [SerializeField] public IInteractable interactingObject;
     [SerializeField] InteractionEvent InteractStarted;
     [SerializeField] InteractionEvent InteractEnded;
+    [SerializeField] InteractionEvent ArcadeMachineInteractStart;
+    [SerializeField] InteractionEvent ArcadeMachineInteractEnded;
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
     
@@ -37,7 +39,7 @@ public class PlayerInteractionHandler : MonoBehaviour
                 }
                 else if(interactable != null)
                 {
-                    //Debug.Log("here");
+                    Debug.Log("here");
                     StartIntreaction(interactable);
                 }
             }
@@ -55,10 +57,25 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             heldObject.OnHolding(transform.position + transform.forward * 2);
         }
+
+        if(interactingObject != null)
+        {
+            WhileInteracting(interactingObject);
+        }
     }
     public void EndIntreaction()
     {
+        if(interactingObject.gameObject.CompareTag("Arcade Machine"))
+        {
+            Debug.Log("Contains Arcade Machine Tag");
+            ArcadeMachineInteractEnded.Invoke(interactingObject.gameObject);
+        }
+        else
+        {
+            Debug.Log("Doesnt contain arcade machine tag");
+        }
         InteractEnded.Invoke(interactingObject.gameObject);
+        Debug.Log("End Interaction");
         interactingObject.OnInteractEnd();
         interactingObject = null;
     }
@@ -72,6 +89,19 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         
         InteractStarted.Invoke(interactable.gameObject);
+
+        if (interactable.gameObject.CompareTag("Arcade Machine")) //// This is checking if the interactable object is tagged as the arcade machine in question
+        {
+            Debug.Log("Contains Arcade Machine tag");
+            ArcadeMachineInteractStart.Invoke(interactable.gameObject);
+            
+        }
+        else
+        {
+            Debug.Log("Doesnt contain arcade machine tag");
+        }
+       
+        Debug.Log("Start Interaction");
         interactable.OnInteractStart(this);
         interactingObject = interactable;
     }
@@ -87,5 +117,11 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
         PickupEnded.Invoke(heldObject.gameObject);
         heldObject = null;
+    }
+
+    public void WhileInteracting(IInteractable interactable)
+    {
+        //Debug.Log("While Interacting");
+        interactable.OnInteracting();
     }
 }

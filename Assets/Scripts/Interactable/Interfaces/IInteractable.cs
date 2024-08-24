@@ -11,12 +11,9 @@ public interface IInteractable
     void OnInteractStart(PlayerInteractionHandler incomingHandler)
     {
         {
-            Debug.Log(gameObject.name);
+           // Debug.Log(gameObject.name);
 
-            if (gameObject.GetComponent<Animator>())
-            {
-                Debug.Log("Has an animator");
-            }
+            
 
             interactionHandler = incomingHandler;
 

@@ -41,10 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(movementStoped)
-        {
-            Debug.Log("Stopped");
-        }
+        
         PlayerGravity();
         if (movementStoped != true && isJumping != true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -66,8 +63,8 @@ public class PlayerMovement : MonoBehaviour
     { 
         if(movementStoped != true)
         {
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
+            float x = Input.GetAxisRaw("Horizontal");
+            float z = Input.GetAxisRaw("Vertical");
 
             if ((x != 0 || z != 0) && characterController.isGrounded == true)
             {
