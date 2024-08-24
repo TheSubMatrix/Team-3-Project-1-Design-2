@@ -7,9 +7,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]public bool movementStoped;
-    
 
+    [SerializeField] AudioManager audioManager;
+
+    public LayerMask currentTerrain,oldTerrain;
+    
+    
+    [SerializeField]public bool movementStoped;
+
+    
+    
     [Header("Player's Speed")]
     [SerializeField] float speed = 12f;
     
@@ -21,27 +28,37 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float gravity;
     [SerializeField] Vector3 gravityPull;
 
-    [Header("Player Jump Height")]
+    [Header("Player Jump")]
     [SerializeField] float jumpHeight;
+    [SerializeField] float jumpDelay = 5f;
+
+    [Header("Walkable Terrain")]
+    [SerializeField] LayerMask grassTerrain;
+    [SerializeField] LayerMask gravelTerrain;
+    [SerializeField] LayerMask futureArcadeTerrain;
+
+   
+    [SerializeField] Transform terrainChecker;
 
     private CharacterController characterController;
 
-    private AudioSource characterAudioSource;
-
     private bool isJumping = false;
-    [SerializeField] float jumpDelay = 5f;
+   
 
     
     private void Start()
     {       
        
         characterController = GetComponent<CharacterController>();
-        characterAudioSource = GetComponent<AudioSource>();
+        
+        //audioManager.AudioManagerReference.Play();
+
     }
 
     private void Update()
     {
-        
+       
+        //Debug.Log();
         PlayerGravity();
         if (movementStoped != true && isJumping != true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -52,8 +69,14 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        
         PlayerMove();
         
+
+    }
+    private void LateUpdate()
+    {
+        CheckTerrain();
     }
 
     /// <summary>
@@ -68,11 +91,13 @@ public class PlayerMovement : MonoBehaviour
 
             if ((x != 0 || z != 0) && characterController.isGrounded == true)
             {
-                characterAudioSource.enabled = true;
+               
+                audioManager.audioManagerReference.audioSource.enabled = true;
             }
             else
             {
-                characterAudioSource.enabled = false;
+                audioManager.audioManagerReference.audioSource.enabled = false;
+                //audioManager.AudioManagerReference.enabled = false;
             }
 
             Vector3 characterMove = transform.right * x + transform.forward * z;
@@ -111,15 +136,56 @@ public class PlayerMovement : MonoBehaviour
 
     public void MovementStopped()
     {
-        if(movementStoped == false)
+        if (movementStoped == false)
         {
-            movementStoped = true;
+            movementStoped = true; 
+            
         }
         else
         {
             movementStoped = false;
+            
         }
+
+        
+
     }
 
+    private void ResetWalkingSFX()
+    {
+        audioManager.audioManagerReference.audioSource.enabled = false;
+        audioManager.audioManagerReference.audioSource.enabled = true;
+    }
+    public void CheckTerrain()
+    {
+        
+
+
+        if (Physics.CheckSphere(terrainChecker.position, .4f, futureArcadeTerrain))
+        {
+           
+            currentTerrain = futureArcadeTerrain;
+            
+            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[0];
+            
+        }
+        if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain))
+        {
+            currentTerrain = grassTerrain;
+            
+            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[2];
+
+        }
+        if (Physics.CheckSphere(terrainChecker.position, .4f, gravelTerrain))
+        {
+
+            currentTerrain = gravelTerrain;
+            
+            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[1];
+
+        }
+        
+        
+    }
     
 }
