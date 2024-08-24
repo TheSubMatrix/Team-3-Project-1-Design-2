@@ -92,5 +92,6 @@ class PixelEffectPass : ScriptableRenderPass
     public void ReleaseTargets()
     {
         rtTemp?.Release();
+        rtColor?.Release();
     }
 }
