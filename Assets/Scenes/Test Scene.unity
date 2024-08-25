@@ -229,17 +229,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -2.209, y: -2.589, z: 26.108}
---- !u!114 &308829439 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7934540527537702621, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
-  m_PrefabInstance: {fileID: 2393314968601570740}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2ac718733675664c9038a6f25fde812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &812544327
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,51 +351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77591043597ece748817bde8e7464ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1115828423
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1115828425}
-  - component: {fileID: 1115828426}
-  m_Layer: 0
-  m_Name: Arcade Machine Interactions
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1115828425
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115828423}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.444284, y: 4.490172, z: 3.7634466}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1115828426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115828423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1147760de9a8564d902c0807697602c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMovementScript: {fileID: 308829439}
 --- !u!1 &1373023276
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +827,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81b62e52a2b0ce44bf5d71d24095a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCodeCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  code: 7700770073007300610064006100640030003100
 --- !u!1 &2125182047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,11 +964,11 @@ PrefabInstance:
     - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: ArcadeMachineInteractEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1115828426}
+      objectReference: {fileID: 0}
     - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: ArcadeMachineInteractStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1115828426}
+      objectReference: {fileID: 0}
     - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: ArcadeMachineInteractEnded.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1109,6 +1057,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6904424912657076903, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934540527537702621, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: jumpHeight
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7934540527537702621, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: audioManager
       value: 
@@ -1146,4 +1102,3 @@ SceneRoots:
   - {fileID: 65803446}
   - {fileID: 1373023280}
   - {fileID: 1697319695}
-  - {fileID: 1115828425}

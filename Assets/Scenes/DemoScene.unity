@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &29312246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7934540527537702621, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+  m_PrefabInstance: {fileID: 1246881994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ac718733675664c9038a6f25fde812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &51467954
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +455,7 @@ GameObject:
   - component: {fileID: 1443813240}
   m_Layer: 0
   m_Name: arcade_machine
-  m_TagString: Untagged
+  m_TagString: Arcade Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1780,6 +1791,30 @@ PrefabInstance:
       propertyPath: InteractStarted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: ArcadeMachineInteractEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 29312246}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: ArcadeMachineInteractStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 29312246}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: ArcadeMachineInteractEnded.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MovementStopped
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: ArcadeMachineInteractStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MovementStopped
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: ArcadeMachineInteractEnded.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: ArcadeMachineInteractStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5191115468458582235, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Name
       value: First Person Player
@@ -2073,6 +2108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81b62e52a2b0ce44bf5d71d24095a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCodeCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  code: 7700770073007300610064006100640030003100
 --- !u!1001 &1467499955
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,11 +11,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioManager audioManager;
 
     public LayerMask currentTerrain,oldTerrain;
-    
-    
+       
     [SerializeField]public bool movementStoped;
 
-    
+   
     
     [Header("Player's Speed")]
     [SerializeField] float speed = 12f;
@@ -40,12 +39,14 @@ public class PlayerMovement : MonoBehaviour
    
     [SerializeField] Transform terrainChecker;
 
+    private bool terrainChecked;
+
     private CharacterController characterController;
 
     private bool isJumping = false;
-   
 
-    
+   public bool audioPlaying;
+
     private void Start()
     {       
        
@@ -60,8 +61,11 @@ public class PlayerMovement : MonoBehaviour
        
         //Debug.Log();
         PlayerGravity();
-        if (movementStoped != true && isJumping != true && Input.GetKeyDown(KeyCode.Space))
+        
+
+        if (movementStoped != true && characterController.isGrounded  && !isJumping && Input.GetKeyDown(KeyCode.Space))
         {
+            
             StartCoroutine(DelayJump(jumpDelay));
             Debug.Log("Jump");
             Jump();
@@ -76,33 +80,50 @@ public class PlayerMovement : MonoBehaviour
     }
     private void LateUpdate()
     {
-        CheckTerrain();
+        
     }
 
     /// <summary>
     /// Basic Player Movement with gravity, footstep sound affects
     /// </summary>
     private void PlayerMove() 
-    { 
+    {
+         
         if(movementStoped != true)
         {
+           
             float x = Input.GetAxisRaw("Horizontal");
             float z = Input.GetAxisRaw("Vertical");
 
-            if ((x != 0 || z != 0) && characterController.isGrounded == true)
+            
+
+            if ((x != 0 || z != 0) && characterController.isGrounded == true && audioPlaying != true)
             {
-               
-                audioManager.audioManagerReference.audioSource.enabled = true;
+                CheckTerrain();
+                
+                
+
+                audioPlaying = true;
+                
+                
+                
+                          
             }
-            else
+           
+             if(((x == 0 && z == 0)  || !characterController.isGrounded) && audioPlaying != false)
             {
-                audioManager.audioManagerReference.audioSource.enabled = false;
-                //audioManager.AudioManagerReference.enabled = false;
+                Debug.Log("Stop");
+                
+                audioPlaying = false;
+                terrainChecked = false;
+                audioManager.audioManagerReference.audioSource.Stop();
+                
+                
             }
 
             Vector3 characterMove = transform.right * x + transform.forward * z;
 
-            characterController.Move(characterMove * speed * Time.deltaTime);
+            characterController.Move(characterMove * speed * Time.fixedDeltaTime);
         }
         
 
@@ -151,41 +172,49 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void ResetWalkingSFX()
-    {
-        audioManager.audioManagerReference.audioSource.enabled = false;
-        audioManager.audioManagerReference.audioSource.enabled = true;
-    }
     public void CheckTerrain()
     {
+
         
+        
+            if (Physics.CheckSphere(terrainChecker.position, .4f, futureArcadeTerrain))
+            {
 
+                currentTerrain = futureArcadeTerrain;
+                Debug.Log("Changing to arcade");
+               
+               audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[0];
+                audioManager.audioManagerReference.audioSource.Play();
+                Debug.Log("Changed to arcade");
+  
+            }
+            if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain))
+            {
+                currentTerrain = grassTerrain;
+                Debug.Log("Changing to grass");
+               
+               audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[2];
+                Debug.Log("Changed to grass");
+               audioManager.audioManagerReference.audioSource.Play();
+                
+            }
+            if (Physics.CheckSphere(terrainChecker.position, .4f, gravelTerrain))
+            {
 
-        if (Physics.CheckSphere(terrainChecker.position, .4f, futureArcadeTerrain))
-        {
-           
-            currentTerrain = futureArcadeTerrain;
-            
-            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[0];
-            
-        }
-        if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain))
-        {
-            currentTerrain = grassTerrain;
-            
-            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[2];
-
-        }
-        if (Physics.CheckSphere(terrainChecker.position, .4f, gravelTerrain))
-        {
-
-            currentTerrain = gravelTerrain;
-            
-            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[1];
-
-        }
+                currentTerrain = gravelTerrain;
+                Debug.Log("Changing to gravel");
+               
+                audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[1];
+                Debug.Log("Changed to gravel");
+                 audioManager.audioManagerReference.audioSource.Play();
+                
+            }
+        
+        
         
         
     }
     
+
+
 }

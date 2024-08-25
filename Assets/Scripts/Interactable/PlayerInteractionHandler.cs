@@ -87,7 +87,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     } 
     public void StartIntreaction(IInteractable interactable)
     {
-        
+        Debug.Log("Start Interaction");
         InteractStarted.Invoke(interactable.gameObject);
 
         if (interactable.gameObject.CompareTag("Arcade Machine")) //// This is checking if the interactable object is tagged as the arcade machine in question
@@ -101,7 +101,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             Debug.Log("Doesnt contain arcade machine tag");
         }
        
-        Debug.Log("Start Interaction");
+       
         interactable.OnInteractStart(this);
         interactingObject = interactable;
     }
