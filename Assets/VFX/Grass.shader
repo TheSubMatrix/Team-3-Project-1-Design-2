@@ -3,6 +3,8 @@ Shader "Unlit/Grass"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _GrassMask ("Grass Mask", 2D) = "white" {}
+        _GrassMaskThreshold("Grass Threshold", Range(0,1)) = 0.9
         _BendRotationRandom("Bend Rotation Random", Range(0, 1)) = 0.05
         _BladeWidth("Blade Average Width", float) = 0.02
         _BladeWidthDeviation("Blade Width Random Deviation", float) = 0.5
@@ -73,18 +75,18 @@ Shader "Unlit/Grass"
             geometryOutput GenerateGrassVertex(float3 vertexPosition, float width, float height, float forward, float2 uv, float3x3 transformMatrix)
             {
 	            float3 tangentPoint = float3(width, forward, height);
-
 	            float3 localPosition = vertexPosition + mul(transformMatrix, tangentPoint);
 	            return ConvertToGeometryOutput(localPosition, uv);
             }
+            Texture2D _GrassMask;
+            sampler sampler_GrassMask;
             sampler2D _MainTex;
             float4 _MainTex_ST;
-            float _BendRotationRandom, _BladeWidth, _BladeWidthDeviation, _BladeHeight, _BladeHeightDeviation, _BladeForwardAmount, _BladeCurveAmount;
-            [maxvertexcount(BLADE_SEGMENTS * 2 + 1)]
+            float _BendRotationRandom, _BladeWidth, _BladeWidthDeviation, _BladeHeight, _BladeHeightDeviation, _BladeForwardAmount, _BladeCurveAmount, _GrassMaskThreshold;
+            [maxvertexcount(BLADE_SEGMENTS * 2 + 1 + 3)]
             void geo(triangle vertexOutput IN[3] : SV_POSITION, inout TriangleStream<geometryOutput> triStream)
             {
-                geometryOutput o;
-
+                float maskVal = _GrassMask.SampleLevel(sampler_GrassMask, IN[0].uv, 0);
                 float4 pos = IN[0].vertex;
                 float3 normal = IN[0].normal;
                 float4 tangent = IN[0].tangent;
@@ -101,6 +103,8 @@ Shader "Unlit/Grass"
                 float height = (rand(pos.zyx) * 2 - 1) * _BladeHeightDeviation + _BladeHeight;
                 float width = (rand(pos.xzy) * 2 - 1) * _BladeWidthDeviation + _BladeWidth;
                 float curveAmount = rand(pos.yyz) * _BladeForwardAmount;
+                if(maskVal >= _GrassMaskThreshold)
+                {
                 for (int i = 0; i < BLADE_SEGMENTS; i++)
                 {
 	                float t = i / (float)BLADE_SEGMENTS;
@@ -110,7 +114,8 @@ Shader "Unlit/Grass"
                     triStream.Append(GenerateGrassVertex(pos.xyz, segmentWidth, segmentHeight, segmentForward, float2(0, t), transformationMatrix));
                     triStream.Append(GenerateGrassVertex(pos.xyz, -segmentWidth, segmentHeight, segmentForward, float2(1, t), transformationMatrix));
                 }
-                triStream.Append(GenerateGrassVertex(pos.xyz, 0, height, curveAmount, float2(0.5, 1), transformationMatrix));                
+                }
+                triStream.Append(GenerateGrassVertex(pos.xyz, 0, height, curveAmount, float2(0.5, 1), transformationMatrix));            
             }
             void InitializeSurfaceData(geometryOutput i, out SurfaceData surfaceData)
             {
