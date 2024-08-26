@@ -10,14 +10,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource audioSource;
 
-    /*public AudioSource AudioManagerReference
-    {
-        get
-        {
-            return audioSource;
-        }
-       
-    }*/
+   
     public AudioManager audioManagerReference
     {
         get

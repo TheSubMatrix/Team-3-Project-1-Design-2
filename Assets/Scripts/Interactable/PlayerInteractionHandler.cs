@@ -22,7 +22,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     [SerializeField] InteractionEvent ArcadeMachineInteractEnded;
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
-    
+    [SerializeField] Vector3 holdablePosition;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -57,8 +57,8 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
         if(heldObject != null)
         {
-           
-            heldObject.OnHolding(transform.position + transform.forward * 2);
+            heldObject.OnHolding(transform.position + transform.forward + holdablePosition);
+             //heldObject.OnHolding(transform.position + transform.forward * 2);
 
         }
 

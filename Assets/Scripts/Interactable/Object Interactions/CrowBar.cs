@@ -19,6 +19,11 @@ public class CrowBar : MonoBehaviour, IHoldable
         if(rb != null)
         {
             rb.isKinematic = true;
+            
+        }
+        if(gameObject.GetComponent<Collider>() != null )
+        {
+            gameObject.GetComponent<Collider>().enabled = false;
         }
     }
    
@@ -37,6 +42,12 @@ public class CrowBar : MonoBehaviour, IHoldable
             isHolding = false;
             rb.isKinematic = false;
         }
+
+        if (gameObject.GetComponent<Collider>() != null)
+        {
+            gameObject.GetComponent<Collider>().enabled = true;
+        }
+
     }
 
 
