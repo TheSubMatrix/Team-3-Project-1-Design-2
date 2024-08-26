@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
            
              if(((x == 0 && z == 0)  || !characterController.isGrounded) && audioPlaying != false)
             {
-                Debug.Log("Stop");
+                
                 
                 audioPlaying = false;
                 terrainChecked = false;
@@ -181,20 +181,20 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 currentTerrain = futureArcadeTerrain;
-                Debug.Log("Changing to arcade");
+                
                
                audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[0];
                 audioManager.audioManagerReference.audioSource.Play();
-                Debug.Log("Changed to arcade");
+                
   
             }
             if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain))
             {
                 currentTerrain = grassTerrain;
-                Debug.Log("Changing to grass");
+                
                
                audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[2];
-                Debug.Log("Changed to grass");
+               
                audioManager.audioManagerReference.audioSource.Play();
                 
             }
@@ -202,10 +202,10 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 currentTerrain = gravelTerrain;
-                Debug.Log("Changing to gravel");
+                
                
                 audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[1];
-                Debug.Log("Changed to gravel");
+                
                  audioManager.audioManagerReference.audioSource.Play();
                 
             }

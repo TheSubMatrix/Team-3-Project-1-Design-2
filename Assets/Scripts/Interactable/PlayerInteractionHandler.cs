@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
+
     [Serializable]
     public class InteractionEvent : UnityEvent<GameObject> { }
     [Serializable]
@@ -55,7 +57,9 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
         if(heldObject != null)
         {
+           
             heldObject.OnHolding(transform.position + transform.forward * 2);
+
         }
 
         if(interactingObject != null)
@@ -121,7 +125,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     public void WhileInteracting(IInteractable interactable)
     {
-        //Debug.Log("While Interacting");
+        
         interactable.OnInteracting();
     }
 }
