@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6122844406787512788, guid: 814292b69665d4e4a9cc2bd5b973c9f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.777
+      objectReference: {fileID: 0}
     - target: {fileID: -5677451050161139869, guid: 814292b69665d4e4a9cc2bd5b973c9f5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -569,7 +573,54 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1094559010302358929, guid: 814292b69665d4e4a9cc2bd5b973c9f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 130633642}
+    - targetCorrespondingSourceObject: {fileID: -3917336829705408407, guid: 814292b69665d4e4a9cc2bd5b973c9f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699602763}
+    - targetCorrespondingSourceObject: {fileID: -3917336829705408407, guid: 814292b69665d4e4a9cc2bd5b973c9f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699602767}
   m_SourcePrefab: {fileID: 100100000, guid: 814292b69665d4e4a9cc2bd5b973c9f5, type: 3}
+--- !u!1 &699602762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3917336829705408407, guid: 814292b69665d4e4a9cc2bd5b973c9f5, type: 3}
+  m_PrefabInstance: {fileID: 699602761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &699602763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699602762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112b672b70f367542aae06885d8eb9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchStateChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!65 &699602767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699602762}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 28.4, y: 83.7, z: 63.67}
+  m_Center: {x: -62.4, y: -196, z: 318.7}
 --- !u!1 &819697253
 GameObject:
   m_ObjectHideFlags: 0

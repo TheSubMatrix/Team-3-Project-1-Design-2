@@ -72,7 +72,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     }
     public void EndIntreaction()
     {
-        if (interactingObject.shouldStopMovement)
+        if (interactingObject.ShouldStopMovement)
         {
             RestartPlayerMovement.Invoke();
         }
@@ -89,16 +89,16 @@ public class PlayerInteractionHandler : MonoBehaviour
     } 
     public void StartIntreaction(IInteractable interactable)
     {
+        interactingObject = interactable;
         Debug.Log("Start Interaction");
         InteractStarted.Invoke(interactable.gameObject);
-        if (interactable.shouldStopMovement)
+        if (interactable.ShouldStopMovement)
         {
             StopPlayerMovement.Invoke();
         }
        
        
         interactable.OnInteractStart(this);
-        interactingObject = interactable;
     }
     public void EndPickup(GameObject objectForAttemptingPlace, IHoldable holdable)
     {

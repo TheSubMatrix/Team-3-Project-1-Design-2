@@ -9,7 +9,7 @@ public class ArcadeCode : MonoBehaviour, IInteractable
     [SerializeField]UnityEvent OnCodeCompleted = new UnityEvent();
     PlayerInteractionHandler playerInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => playerInteractionHandler; set => playerInteractionHandler = value; }
-    public bool shouldStopMovement { get => myShouldStopMovement; set => myShouldStopMovement = value; }
+    public bool ShouldStopMovement { get => myShouldStopMovement; set => myShouldStopMovement = value; }
 
     bool myShouldStopMovement = true;
 

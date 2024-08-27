@@ -9,7 +9,7 @@ public class StandardInteractable : MonoBehaviour, IInteractable
     bool myShouldStopMovement;
     GameObject m_gameObject  { get; }
     public PlayerInteractionHandler interactionHandler { get; set ; }
-    public bool shouldStopMovement { get => myShouldStopMovement; set => myShouldStopMovement = value; }
+    public bool ShouldStopMovement { get => myShouldStopMovement; set => myShouldStopMovement = value; }
 
     public void OnInteracting()
     {
