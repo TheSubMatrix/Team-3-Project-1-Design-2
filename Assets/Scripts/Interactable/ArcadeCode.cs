@@ -9,6 +9,10 @@ public class ArcadeCode : MonoBehaviour, IInteractable
     [SerializeField]UnityEvent OnCodeCompleted = new UnityEvent();
     PlayerInteractionHandler playerInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => playerInteractionHandler; set => playerInteractionHandler = value; }
+    public bool shouldStopMovement { get => myShouldStopMovement; set => myShouldStopMovement = value; }
+
+    bool myShouldStopMovement = true;
+
     [SerializeField] char[] code = { 'w', 'w', 's', 's', 'a', 'd', 'a', 'd', '0', '1' };
     char[] typedChars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
     public void OnInteracting()

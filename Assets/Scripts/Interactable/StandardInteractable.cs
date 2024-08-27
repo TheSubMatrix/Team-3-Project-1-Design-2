@@ -6,8 +6,11 @@ public class StandardInteractable : MonoBehaviour, IInteractable
 {
     PlayerInteractionHandler m_interactionHandler;
 
+    bool myShouldStopMovement;
     GameObject m_gameObject  { get; }
     public PlayerInteractionHandler interactionHandler { get; set ; }
+    public bool shouldStopMovement { get => myShouldStopMovement; set => myShouldStopMovement = value; }
+
     public void OnInteracting()
     {
         

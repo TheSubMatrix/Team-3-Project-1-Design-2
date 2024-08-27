@@ -6,6 +6,7 @@ public interface IInteractable
 {
     GameObject gameObject { get; }
     PlayerInteractionHandler interactionHandler { get; set; }
+    bool shouldStopMovement { get; set; }
 
     //ObjectAnimations animations { get; set; }
     void OnInteractStart(PlayerInteractionHandler incomingHandler)

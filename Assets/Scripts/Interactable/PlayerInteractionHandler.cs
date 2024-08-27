@@ -12,13 +12,17 @@ public class PlayerInteractionHandler : MonoBehaviour
     public class InteractionEvent : UnityEvent<GameObject> { }
     [Serializable]
     public class PickupEvent : UnityEvent<GameObject> { }
+    [SerializeField]
+    UnityEvent StopPlayerMovement;
+    [SerializeField]
+    UnityEvent RestartPlayerMovement;
+    public class StopPlayerMovementEvent : UnityEvent<GameObject> { }
     [SerializeField]LayerMask interactableLayers;
     [SerializeField] IHoldable heldObject;
     [SerializeField] public IInteractable interactingObject;
     [SerializeField] InteractionEvent InteractStarted;
     [SerializeField] InteractionEvent InteractEnded;
-    [SerializeField] InteractionEvent ArcadeMachineInteractStart;
-    [SerializeField] InteractionEvent ArcadeMachineInteractEnded;
+    
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
     [SerializeField] Vector3 holdablePosition;
@@ -71,7 +75,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         if(interactingObject.gameObject.CompareTag("Arcade Machine"))
         {
             Debug.Log("Contains Arcade Machine Tag");
-            ArcadeMachineInteractEnded.Invoke(interactingObject.gameObject);
+            
         }
         else
         {
@@ -92,16 +96,9 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         Debug.Log("Start Interaction");
         InteractStarted.Invoke(interactable.gameObject);
-
-        if (interactable.gameObject.CompareTag("Arcade Machine")) //// This is checking if the interactable object is tagged as the arcade machine in question
+        if (interactable.shouldStopMovement)
         {
-            Debug.Log("Contains Arcade Machine tag");
-            ArcadeMachineInteractStart.Invoke(interactable.gameObject);
-            
-        }
-        else
-        {
-            Debug.Log("Doesnt contain arcade machine tag");
+            StopPlayerMovement.Invoke();
         }
        
        
