@@ -11,7 +11,7 @@ public interface IInteractable
     void OnInteractStart(PlayerInteractionHandler incomingHandler)
     {
         {
-           // Debug.Log(gameObject.name);
+            Debug.Log(gameObject.name);
 
             
 

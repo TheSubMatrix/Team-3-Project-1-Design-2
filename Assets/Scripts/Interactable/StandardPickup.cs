@@ -26,7 +26,7 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
         }
     }
 
-    public void OnHoldStart()
+    public  void OnHoldStart()
     {
         m_isBeingInteractedWith = true;
         if(m_rigidbody != null)
@@ -39,4 +39,6 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     {
         return false;
     }
+
+    
 }

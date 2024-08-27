@@ -1,67 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] AudioManager audioManager;
+    [SerializeField] private AudioManager audioManager;
 
-    public LayerMask currentTerrain,oldTerrain;
-    
-    
-    [SerializeField]public bool movementStoped;
+    [SerializeField] private LayerMask currentTerrain;
+   
+    private const float defaultGravityForce = -9.8f;
 
-    
-    
     [Header("Player's Speed")]
     [SerializeField] float speed = 12f;
-    
-   
-    [Header("Player's Gravity")]
+
     [Space(1)]
-    
-    [Header("(Negative for normal gravity and positive for floating)")]
-    [SerializeField] float gravity;
-    [SerializeField] Vector3 gravityPull;
+
+    [Header("Player's Gravity")]
+    [Tooltip("(Negative for normal gravity and positive for floating)")]
+    [SerializeField] private float gravity;
+    [SerializeField] private Vector3 gravityPull;
 
     [Header("Player Jump")]
-    [SerializeField] float jumpHeight;
-    [SerializeField] float jumpDelay = 5f;
+    [SerializeField] private float jumpHeight;
+    [SerializeField] private float jumpDelay = 5f;
 
     [Header("Walkable Terrain")]
-    [SerializeField] LayerMask grassTerrain;
-    [SerializeField] LayerMask gravelTerrain;
-    [SerializeField] LayerMask futureArcadeTerrain;
+    [SerializeField] private LayerMask grassTerrain;
+    [SerializeField] private LayerMask gravelTerrain;
+    [SerializeField] private LayerMask futureArcadeTerrain;
 
-   
-    [SerializeField] Transform terrainChecker;
+    [SerializeField] private Transform terrainChecker;
 
     private CharacterController characterController;
 
     private bool isJumping = false;
-   
 
-    
-    private void Start()
-    {       
-       
+    private bool audioPlaying;
+
+    private bool movementStopped = true;
+
+    private void Awake()
+    {
+        //seeting varaibles should always be in awake
         characterController = GetComponent<CharacterController>();
         
-        //audioManager.AudioManagerReference.Play();
-
     }
 
     private void Update()
     {
-       
-        //Debug.Log();
+        CheckTerrain();
+        
+        
         PlayerGravity();
-        if (movementStoped != true && isJumping != true && Input.GetKeyDown(KeyCode.Space))
+        
+        
+
+        if ( characterController.isGrounded && !isJumping && Input.GetKeyDown(KeyCode.Space))
         {
+
             StartCoroutine(DelayJump(jumpDelay));
             Debug.Log("Jump");
             Jump();
@@ -69,54 +68,52 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
+        //movement is often interpolated, do you REALLY want it here?
         PlayerMove();
-        
+
 
     }
-    private void LateUpdate()
-    {
-        CheckTerrain();
-    }
-
+    
     /// <summary>
     /// Basic Player Movement with gravity, footstep sound affects
     /// </summary>
-    private void PlayerMove() 
-    { 
-        if(movementStoped != true)
-        {
-            float x = Input.GetAxisRaw("Horizontal");
-            float z = Input.GetAxisRaw("Vertical");
-
-            if ((x != 0 || z != 0) && characterController.isGrounded == true)
-            {
-               
-                audioManager.audioManagerReference.audioSource.enabled = true;
-            }
-            else
-            {
-                audioManager.audioManagerReference.audioSource.enabled = false;
-                //audioManager.AudioManagerReference.enabled = false;
-            }
-
-            Vector3 characterMove = transform.right * x + transform.forward * z;
-
-            characterController.Move(characterMove * speed * Time.deltaTime);
-        }
+    private void PlayerMove()
+    {
         
+            
+           
+            //you need to normalize this so you dont get weird values when x and z are at their peak together.
+           //think of this as a square. you go further when you go from the center to the corner rather than from the center to the top.
+           //the further you are from center, the faster you go.
+           Vector2 playerMovementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
 
-    }    
+        if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
+        {
+            movementStopped = false;
+            audioPlaying = true;
+            audioManager.audioManagerReference.audioSource.Play();
+        }
+
+        if ((playerMovementInput.magnitude == 0 || !characterController.isGrounded) && audioPlaying != false)
+        {
+            audioPlaying = false;
+            audioManager.audioManagerReference.audioSource.Stop();
+        }
+        Vector3 characterMove = transform.right * playerMovementInput.x + transform.forward * playerMovementInput.y;
+
+        characterController.Move(characterMove * speed * Time.fixedDeltaTime);
+
+    }
 
     private void Jump()
     {
-        Debug.Log("Start Jump");
-        gravityPull.y = Mathf.Sqrt( gravity * -jumpHeight);
-        Debug.Log("Start End");
+        gravityPull.y = Mathf.Sqrt(gravity * -jumpHeight);
+        //gravityPull.y = Mathf.Sqrt(gravity * -2 * jumpHeight);       
     }
 
     IEnumerator DelayJump(float delay)
     {
+        
         isJumping = true;
         yield return new WaitForSeconds(delay);
         isJumping = false;
@@ -124,68 +121,50 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayerGravity()
     {
-        if(isJumping == false && characterController.isGrounded == false && gravityPull.y < 0)
+        //where does the magic number -2 come from? plz comment and make it a const
+        if (isJumping == false && characterController.isGrounded == false && gravityPull.y < 0)
         {
-            gravityPull.y = -2;
+            gravityPull.y = defaultGravityForce;
+            
         }
-        
+
         gravityPull.y += gravity * Time.deltaTime;
 
         characterController.Move(gravityPull * Time.deltaTime);
     }
-
-    public void MovementStopped()
-    {
-        if (movementStoped == false)
-        {
-            movementStoped = true; 
-            
-        }
-        else
-        {
-            movementStoped = false;
-            
-        }
-
-        
-
-    }
-
-    private void ResetWalkingSFX()
-    {
-        audioManager.audioManagerReference.audioSource.enabled = false;
-        audioManager.audioManagerReference.audioSource.enabled = true;
-    }
-    public void CheckTerrain()
-    {
-        
-
-
-        if (Physics.CheckSphere(terrainChecker.position, .4f, futureArcadeTerrain))
-        {
-           
-            currentTerrain = futureArcadeTerrain;
-            
-            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[0];
-            
-        }
-        if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain))
-        {
-            currentTerrain = grassTerrain;
-            
-            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[2];
-
-        }
-        if (Physics.CheckSphere(terrainChecker.position, .4f, gravelTerrain))
-        {
-
-            currentTerrain = gravelTerrain;
-            
-            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[1];
-
-        }
-        
-        
-    }
     
+    void CheckTerrain()
+    {
+        if (!movementStopped)
+        {
+            if (Physics.CheckSphere(terrainChecker.position, .4f, futureArcadeTerrain) && currentTerrain != futureArcadeTerrain)
+            {
+                currentTerrain = futureArcadeTerrain;
+                PlayUpdatedSound(0);
+                Debug.Log("Playing arcade maybe");
+            }
+            if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain) && currentTerrain != grassTerrain)
+            {
+                currentTerrain = grassTerrain;
+                PlayUpdatedSound(2);
+            }
+            if (Physics.CheckSphere(terrainChecker.position, .4f, gravelTerrain) && currentTerrain != gravelTerrain)
+            {
+                currentTerrain = gravelTerrain;
+                PlayUpdatedSound(1);
+            }
+        }
+    
+    }
+
+    //move your logic out WHENEVER YOU CAN.
+    private void PlayUpdatedSound(int index)
+    {
+        
+            audioManager.audioManagerReference.audioSource.Stop();
+            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[index];
+            audioManager.audioManagerReference.audioSource.Play();
+        
+        
+    }
 }

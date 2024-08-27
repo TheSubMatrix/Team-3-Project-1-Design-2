@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
+
     [Serializable]
     public class InteractionEvent : UnityEvent<GameObject> { }
     [Serializable]
@@ -20,7 +22,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     [SerializeField] InteractionEvent ArcadeMachineInteractEnded;
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
-    
+    [SerializeField] Vector3 holdablePosition;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -55,7 +57,9 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
         if(heldObject != null)
         {
-            heldObject.OnHolding(transform.position + transform.forward * 2);
+            heldObject.OnHolding(transform.position + transform.forward + holdablePosition);
+             //heldObject.OnHolding(transform.position + transform.forward * 2);
+
         }
 
         if(interactingObject != null)
@@ -87,7 +91,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     } 
     public void StartIntreaction(IInteractable interactable)
     {
-        
+        Debug.Log("Start Interaction");
         InteractStarted.Invoke(interactable.gameObject);
 
         if (interactable.gameObject.CompareTag("Arcade Machine")) //// This is checking if the interactable object is tagged as the arcade machine in question
@@ -101,7 +105,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             Debug.Log("Doesnt contain arcade machine tag");
         }
        
-        Debug.Log("Start Interaction");
+       
         interactable.OnInteractStart(this);
         interactingObject = interactable;
     }
@@ -121,7 +125,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     public void WhileInteracting(IInteractable interactable)
     {
-        //Debug.Log("While Interacting");
+        
         interactable.OnInteracting();
     }
 }
