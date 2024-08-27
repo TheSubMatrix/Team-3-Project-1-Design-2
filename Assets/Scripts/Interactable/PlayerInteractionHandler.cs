@@ -72,14 +72,9 @@ public class PlayerInteractionHandler : MonoBehaviour
     }
     public void EndIntreaction()
     {
-        if(interactingObject.gameObject.CompareTag("Arcade Machine"))
+        if (interactingObject.shouldStopMovement)
         {
-            Debug.Log("Contains Arcade Machine Tag");
-            
-        }
-        else
-        {
-            Debug.Log("Doesnt contain arcade machine tag");
+            RestartPlayerMovement.Invoke();
         }
         InteractEnded.Invoke(interactingObject.gameObject);
         Debug.Log("End Interaction");

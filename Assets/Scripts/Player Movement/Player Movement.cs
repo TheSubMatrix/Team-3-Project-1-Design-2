@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private AudioManager audioManager;
 
-    [SerializeField] private LayerMask currentTerrain;
+     private LayerMask currentTerrain;
    
     private const float defaultGravityForce = -9.8f;
 
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player's Gravity")]
     [Tooltip("(Negative for normal gravity and positive for floating)")]
     [SerializeField] private float gravity;
-    [SerializeField] private Vector3 gravityPull;
+     private Vector3 gravityPull;
 
     [Header("Player Jump")]
     [SerializeField] private float jumpHeight;
@@ -40,7 +40,10 @@ public class PlayerMovement : MonoBehaviour
 
     private bool audioPlaying;
 
-    private bool movementStopped = true;
+    //private bool checkTerrainOff;
+
+    private bool movementStopped = false;
+
 
     private void Awake()
     {
@@ -86,22 +89,26 @@ public class PlayerMovement : MonoBehaviour
            //think of this as a square. you go further when you go from the center to the corner rather than from the center to the top.
            //the further you are from center, the faster you go.
            Vector2 playerMovementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-
-        if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
+        if (!movementStopped)
         {
-            movementStopped = false;
-            audioPlaying = true;
-            audioManager.audioManagerReference.audioSource.Play();
-        }
+            if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
+            {
+                movementStopped = false;
+                audioPlaying = true;
+                audioManager.audioManagerReference.audioSource.Play();
+            }
 
-        if ((playerMovementInput.magnitude == 0 || !characterController.isGrounded) && audioPlaying != false)
-        {
-            audioPlaying = false;
-            audioManager.audioManagerReference.audioSource.Stop();
-        }
-        Vector3 characterMove = transform.right * playerMovementInput.x + transform.forward * playerMovementInput.y;
+            if ((playerMovementInput.magnitude == 0 || !characterController.isGrounded) && audioPlaying != false)
+            {
+               
+                audioPlaying = false;
+                audioManager.audioManagerReference.audioSource.Stop();
+            }
+            Vector3 characterMove = transform.right * playerMovementInput.x + transform.forward * playerMovementInput.y;
 
-        characterController.Move(characterMove * speed * Time.fixedDeltaTime);
+            characterController.Move(characterMove * speed * Time.fixedDeltaTime);
+        }
+        
 
     }
 
@@ -164,7 +171,18 @@ public class PlayerMovement : MonoBehaviour
             audioManager.audioManagerReference.audioSource.Stop();
             audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[index];
             audioManager.audioManagerReference.audioSource.Play();
-        
-        
+            
+    }
+
+    public void TogglePlayerMovement()
+    {
+        if (movementStopped)
+        {
+            movementStopped = false;
+        }
+        else
+        {
+            movementStopped = true;
+        }
     }
 }
