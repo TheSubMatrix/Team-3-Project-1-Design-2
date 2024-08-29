@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
 {
-    bool m_isBeingInteractedWith;
     Rigidbody m_rigidbody;
     [SerializeField]
     Vector3 positionOffset;
@@ -14,9 +13,12 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     {
         m_rigidbody = GetComponent<Rigidbody>();
     }
+    public void OnHoldUpdate()
+    {
+
+    }
     public void OnHoldEnd(GameObject objectBeingLookedAt)
     {
-        m_isBeingInteractedWith = false;
         if (Place(objectBeingLookedAt))
         {
             Debug.Log("No");
@@ -32,7 +34,6 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
 
     public  void OnHoldStart()
     {
-        m_isBeingInteractedWith = true;
         if(m_rigidbody != null)
         {
             m_rigidbody.isKinematic = true;
@@ -43,6 +44,4 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     {
         return false;
     }
-
-    
 }

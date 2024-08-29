@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class CrowBar : MonoBehaviour, IHoldable
 {
-    Vector3 positionOffset;
+    [SerializeField] Vector3 positionOffset;
     public Vector3 holdPositionOffset => positionOffset;
+
+    public Vector3 TransformToOffsetPositionFrom { get; set; }
+
     [SerializeField] Collider breakableObject;
     private Rigidbody rb;
    private bool isHolding;
@@ -28,17 +31,10 @@ public class CrowBar : MonoBehaviour, IHoldable
         }
         
     }
-   
-    public void OnHolding()
-    {
-        
-        
-    }
 
-    
     public void OnHoldEnd(GameObject gameObject) ///Re-enables the collider when player drops it. Feel free to change
     {
-        Debug.Log($"Stopped {gameObject.name}");
+        //Debug.Log($"Stopped {gameObject.name}");
 
         if(rb != null)
         {

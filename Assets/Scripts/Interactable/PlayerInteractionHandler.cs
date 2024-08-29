@@ -16,13 +16,12 @@ public class PlayerInteractionHandler : MonoBehaviour
     UnityEvent StopPlayerMovement;
     [SerializeField]
     UnityEvent RestartPlayerMovement;
-    public class StopPlayerMovementEvent : UnityEvent<GameObject> { }
-    [SerializeField]LayerMask interactableLayers;
+    [SerializeField] LayerMask interactableLayers;
     [SerializeField] IHoldable heldObject;
     [SerializeField] public IInteractable interactingObject;
     [SerializeField] InteractionEvent InteractStarted;
     [SerializeField] InteractionEvent InteractEnded;
-    
+
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
     [SerializeField] Vector3 holdablePosition;
@@ -42,34 +41,47 @@ public class PlayerInteractionHandler : MonoBehaviour
                 {
                     StartPickup(holdable);
                 }
-                else if(interactable != null)
+                else if (interactable != null)
                 {
                     Debug.Log("here");
                     StartIntreaction(interactable);
                 }
             }
-            else if(interactingObject != null)
+            else if (interactingObject != null)
             {
                 EndIntreaction();
             }
-            else if(heldObject != null)
+            else if (heldObject != null)
             {
-                EndPickup(hitInfo.collider.gameObject, heldObject);
+                if(hitInfo.collider != null)
+                {
+                    EndPickup(hitInfo.collider.gameObject);
+                }
+                else
+                {
+                    EndPickup(null);
+                }
             }
 
         }
-        if(heldObject != null)
+        if (heldObject != null)
         {
-            heldObject.OnHolding(transform.position + transform.forward + holdablePosition);
-             //heldObject.OnHolding(transform.position + transform.forward * 2);
-
+            heldObject.OnHolding
+            (
+                transform.position + 
+                (transform.forward * heldObject.holdPositionOffset.z) +
+                (transform.right * heldObject.holdPositionOffset.x) +
+                (transform.up * heldObject.holdPositionOffset.y)
+            );
         }
-
-        if(interactingObject != null)
+        if (interactingObject != null)
         {
             WhileInteracting(interactingObject);
         }
     }
+    /// <summary>
+    /// Ends the current ongoing interaction
+    /// </summary>
     public void EndIntreaction()
     {
         if (interactingObject.ShouldStopMovement)
@@ -81,12 +93,20 @@ public class PlayerInteractionHandler : MonoBehaviour
         interactingObject.OnInteractEnd();
         interactingObject = null;
     }
+    /// <summary>
+    /// Starts to pickup a given holdable
+    /// </summary>
+    /// <param name="holdable">The holdable to pickup</param>
     public void StartPickup(IHoldable holdable)
     {
         PickupStarted.Invoke(holdable.gameObject);
         holdable.OnHoldStart();
         heldObject = holdable;
-    } 
+    }
+    /// <summary>
+    /// Starts an interaction with a given interactable
+    /// </summary>
+    /// <param name="interactable">A reference to the holdable object the pickup interaction will be ended with</param>
     public void StartIntreaction(IInteractable interactable)
     {
         interactingObject = interactable;
@@ -96,27 +116,27 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             StopPlayerMovement.Invoke();
         }
-        
-       
+
+
         interactable.OnInteractStart(this);
     }
-    public void EndPickup(GameObject objectForAttemptingPlace, IHoldable holdable)
+    /// <summary>
+    /// Ends the pickup interaction with the current pickup
+    /// </summary>
+    /// <param name="objectForAttemptingPlace">the gameobject the user was aiming at when the object was dropped. Used for placement of objects for puzzles</param>
+    public void EndPickup(GameObject objectForAttemptingPlace)
     {
-        if (objectForAttemptingPlace != null)
-        {
-            heldObject.OnHoldEnd(heldObject.gameObject);
-        }
-        else
-        {
-            heldObject.OnHoldEnd(null);
-        }
+        heldObject.OnHoldEnd(objectForAttemptingPlace);
         PickupEnded.Invoke(heldObject.gameObject);
         heldObject = null;
     }
-
+    /// <summary>
+    /// Updates an interactable
+    /// </summary>
+    /// <param name="interactable">The interactable to update</param>
     public void WhileInteracting(IInteractable interactable)
     {
-        
+
         interactable.OnInteracting();
     }
 }

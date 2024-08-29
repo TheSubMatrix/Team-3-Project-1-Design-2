@@ -963,6 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68004c514543d254184b154ff868f930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionOffset: {x: 0, y: 0, z: 2}
   breakableObject: {fileID: 0}
 --- !u!54 &892126290
 Rigidbody:
@@ -1472,6 +1473,14 @@ PrefabInstance:
     - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: holdablePosition.y
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: InteractEnded.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: InteractStarted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2621054631811605412, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Height
