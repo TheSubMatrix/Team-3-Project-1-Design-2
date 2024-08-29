@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Rendering;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask grassTerrain;
     [SerializeField] private LayerMask gravelTerrain;
     [SerializeField] private LayerMask futureArcadeTerrain;
+    [SerializeField] private LayerMask defaultTerrain;
 
     [SerializeField] private Transform terrainChecker;
 
@@ -40,9 +42,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool audioPlaying;
 
-    //private bool checkTerrainOff;
-
     private bool movementStopped = false;
+
+    private bool activateTerrainChecker = false;
 
 
     private void Awake()
@@ -52,15 +54,17 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
         CheckTerrain();
         
         
         PlayerGravity();
-        
-        
-
+                
         if ( characterController.isGrounded && !isJumping && Input.GetKeyDown(KeyCode.Space))
         {
 
@@ -93,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
             {
+                activateTerrainChecker = true;
                 movementStopped = false;
                 audioPlaying = true;
                 audioManager.audioManagerReference.audioSource.Play();
@@ -142,24 +147,30 @@ public class PlayerMovement : MonoBehaviour
     
     void CheckTerrain()
     {
-        if (!movementStopped)
+        if (!movementStopped && activateTerrainChecker)
         {
             if (Physics.CheckSphere(terrainChecker.position, .4f, futureArcadeTerrain) && currentTerrain != futureArcadeTerrain)
             {
                 currentTerrain = futureArcadeTerrain;
-                PlayUpdatedSound(0);
-                Debug.Log("Playing arcade maybe");
-            }
+                PlayUpdatedSound(0);            
+           }
             if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain) && currentTerrain != grassTerrain)
             {
                 currentTerrain = grassTerrain;
-                PlayUpdatedSound(2);
+                PlayUpdatedSound(2);               
             }
             if (Physics.CheckSphere(terrainChecker.position, .4f, gravelTerrain) && currentTerrain != gravelTerrain)
             {
                 currentTerrain = gravelTerrain;
-                PlayUpdatedSound(1);
+                PlayUpdatedSound(1);                
             }
+
+            if (Physics.CheckSphere(terrainChecker.position, .4f, defaultTerrain) && currentTerrain != defaultTerrain) // defaultTerrain is just the default Layer
+            {                                                                                                         // it plays a concrete walking sound
+                currentTerrain = defaultTerrain;
+                PlayUpdatedSound(3);
+            }
+            
         }
     
     }

@@ -96,7 +96,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             StopPlayerMovement.Invoke();
         }
-       
+        
        
         interactable.OnInteractStart(this);
     }

@@ -12,19 +12,19 @@ public class CrowBar : MonoBehaviour, IHoldable
         rb = GetComponent<Rigidbody>();
        
     }
-    public void OnHoldStart()
+
+    
+    public void OnHoldStart() ///When holding crowbar it dissables the collider so it doesn't collide with player when moving camera with it
     {
         Debug.Log("Holding a crowbar");
         isHolding = true;
         if(rb != null)
         {
             rb.isKinematic = true;
+            GetComponent<MeshCollider>().isTrigger = true;
             
         }
-        if(gameObject.GetComponent<Collider>() != null )
-        {
-            gameObject.GetComponent<Collider>().enabled = false;
-        }
+        
     }
    
     public void OnHolding()
@@ -33,7 +33,8 @@ public class CrowBar : MonoBehaviour, IHoldable
         
     }
 
-    public void OnHoldEnd(GameObject gameObject)
+    
+    public void OnHoldEnd(GameObject gameObject) ///Re-enables the collider when player drops it. Feel free to change
     {
         Debug.Log($"Stopped {gameObject.name}");
 
@@ -41,12 +42,10 @@ public class CrowBar : MonoBehaviour, IHoldable
         {
             isHolding = false;
             rb.isKinematic = false;
+            GetComponent<MeshCollider>().isTrigger = false;
         }
 
-        if (gameObject.GetComponent<Collider>() != null)
-        {
-            gameObject.GetComponent<Collider>().enabled = true;
-        }
+        
 
     }
 

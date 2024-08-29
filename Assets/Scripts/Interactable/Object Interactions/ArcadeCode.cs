@@ -10,8 +10,10 @@ public class ArcadeCode : MonoBehaviour, IInteractable
     PlayerInteractionHandler playerInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => playerInteractionHandler; set => playerInteractionHandler = value; }
     public bool ShouldStopMovement { get => myShouldStopMovement; set => myShouldStopMovement = value; }
+   
 
     bool myShouldStopMovement = true;
+  
 
     [SerializeField] char[] code = { 'w', 'w', 's', 's', 'a', 'd', 'a', 'd', '0', '1' };
     char[] typedChars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
