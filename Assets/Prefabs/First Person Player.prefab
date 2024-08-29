@@ -44,7 +44,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -144,7 +144,8 @@ MonoBehaviour:
   walkingSFX:
   - {fileID: 8300000, guid: f7982faf0f20b7c4fba38651409d35fb, type: 3}
   - {fileID: 8300000, guid: 207255a082ae0374080af4605c90f8be, type: 3}
-  - {fileID: 8300000, guid: 783a4f8864716d8419962ac8f2c49779, type: 3}
+  - {fileID: 8300000, guid: 84c7b19dffc35f44fbbb517feed5f2d9, type: 3}
+  - {fileID: 8300000, guid: b3329021341f1bf46972751e8d69f97f, type: 3}
   audioSource: {fileID: 0}
 --- !u!1 &3456107293829628794
 GameObject:
@@ -337,17 +338,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 7737702600801957160}
-  currentTerrain:
-    serializedVersion: 2
-    m_Bits: 0
-  oldTerrain:
-    serializedVersion: 2
-    m_Bits: 0
-  movementStoped: 0
   speed: 5
   gravity: -9
-  gravityPull: {x: 0, y: 0, z: 0}
-  jumpHeight: 2
+  jumpHeight: 5
   jumpDelay: 0.1
   grassTerrain:
     serializedVersion: 2
@@ -358,6 +351,9 @@ MonoBehaviour:
   futureArcadeTerrain:
     serializedVersion: 2
     m_Bits: 8
+  defaultTerrain:
+    serializedVersion: 2
+    m_Bits: 1
   terrainChecker: {fileID: 5714579118734952827}
 --- !u!114 &1688609250056563892
 MonoBehaviour:
@@ -541,21 +537,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9df2dd4d86efa249b25ab7fd677fdbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopPlayerMovement:
+    m_PersistentCalls:
+      m_Calls: []
+  RestartPlayerMovement:
+    m_PersistentCalls:
+      m_Calls: []
   interactableLayers:
     serializedVersion: 2
     m_Bits: 185
   InteractStarted:
     m_PersistentCalls:
-      m_Calls: []
-  InteractEnded:
-    m_PersistentCalls:
-      m_Calls: []
-  ArcadeMachineInteractStart:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StopPlayerMovement, Assembly-CSharp
-        m_MethodName: ChangePlayerMovement
+        m_TargetAssemblyTypeName: Trunk, Assembly-CSharp
+        m_MethodName: OpenTrunk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -565,12 +561,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  ArcadeMachineInteractEnded:
+  InteractEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StopPlayerMovement, Assembly-CSharp
-        m_MethodName: ChangePlayerMovement
+        m_TargetAssemblyTypeName: Trunk, Assembly-CSharp
+        m_MethodName: CloseTrunk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -586,3 +582,4 @@ MonoBehaviour:
   PickupEnded:
     m_PersistentCalls:
       m_Calls: []
+  holdablePosition: {x: 0, y: 0, z: 0}

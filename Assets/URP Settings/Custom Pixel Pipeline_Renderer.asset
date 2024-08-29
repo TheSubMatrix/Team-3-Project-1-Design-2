@@ -72,9 +72,9 @@ MonoBehaviour:
   m_Active: 0
   shader: {fileID: 4800000, guid: 55b882258b1db02429d7fb4f33ec19a2, type: 3}
   settings:
-    QuantizationAmounts: {x: 16, y: 16, z: 16, w: 32}
+    QuantizationAmounts: {x: 80, y: 80, z: 80, w: 32}
     Samples: 256
-    DitherSpread: 0.02
+    DitherSpread: 0.01
   _event: 500
 --- !u!114 &6378091308037690838
 MonoBehaviour:
