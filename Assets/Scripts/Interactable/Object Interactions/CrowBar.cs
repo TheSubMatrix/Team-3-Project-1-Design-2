@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CrowBar : MonoBehaviour, IHoldable
 {
+    Vector3 positionOffset;
+    public Vector3 holdPositionOffset => positionOffset;
     [SerializeField] Collider breakableObject;
     private Rigidbody rb;
    private bool isHolding;

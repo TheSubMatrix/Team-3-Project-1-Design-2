@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IHoldable
 {
+    public Vector3 holdPositionOffset { get; }
     Transform transform {  get; }
     GameObject gameObject { get; }
     void OnHoldStart();

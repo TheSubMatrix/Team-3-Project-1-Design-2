@@ -6,6 +6,10 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
 {
     bool m_isBeingInteractedWith;
     Rigidbody m_rigidbody;
+    [SerializeField]
+    Vector3 positionOffset;
+    public Vector3 holdPositionOffset => positionOffset;
+
     void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody>();
