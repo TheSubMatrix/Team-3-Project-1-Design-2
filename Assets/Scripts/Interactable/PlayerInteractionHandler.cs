@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -25,6 +26,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
     [SerializeField] Vector3 holdablePosition;
+
+    private IHoldable holdable;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -35,7 +38,8 @@ public class PlayerInteractionHandler : MonoBehaviour
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1);
             if (heldObject == null && interactingObject == null && hitInfo.collider != null)
             {
-                IHoldable holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
+                holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
+                //IHoldable holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
                 IInteractable interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
                 if (holdable != null)
                 {
@@ -51,8 +55,9 @@ public class PlayerInteractionHandler : MonoBehaviour
             {
                 EndIntreaction();
             }
-            else if (heldObject != null)
+            /*else if (heldObject != null)
             {
+                Debug.Log("Drop");
                 if(hitInfo.collider != null)
                 {
                     EndPickup(hitInfo.collider.gameObject);
@@ -61,8 +66,23 @@ public class PlayerInteractionHandler : MonoBehaviour
                 {
                     EndPickup(null);
                 }
-            }
+            }*/
 
+        }
+        if(heldObject != null && Input.GetKeyDown(KeyCode.Q))
+        {
+            const int raycastDistance = 5;
+            Ray ray = new Ray(transform.position, transform.forward);
+            Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
+            Debug.Log("Drop");
+            if (hitInfo.collider != null)
+            {
+                EndPickup(hitInfo.collider.gameObject);
+            }
+            else
+            {
+                EndPickup(null);
+            }
         }
         if (heldObject != null)
         {
