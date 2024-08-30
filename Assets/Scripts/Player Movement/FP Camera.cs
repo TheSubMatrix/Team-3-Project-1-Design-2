@@ -8,12 +8,14 @@ public class FP_Camera : MonoBehaviour
     [SerializeField] Transform cameraOrientation;
     [SerializeField] float sensitivityX, sensitivityY;
 
-    float xRotation, yRotation;
+    private float xRotation, yRotation;
 
+    GameObject defaultCamera;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        defaultCamera = gameObject;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -34,8 +36,22 @@ public class FP_Camera : MonoBehaviour
         cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 
-    private void SnaptoPlayer(Transform playerTransform)
+    public void ToggleActiceCamera(GameObject switchCamera)
     {
-        transform.position = playerTransform.position;
+        if(switchCamera != null)
+        {
+            Debug.Log("There is no camera for arcade machine");
+            if (defaultCamera.activeSelf)
+            {
+                defaultCamera.SetActive(false);
+                switchCamera.SetActive(true);
+            }
+            else
+            {
+                switchCamera.SetActive(false);
+                defaultCamera.SetActive(true);
+            }
+        }
+        
     }
 }

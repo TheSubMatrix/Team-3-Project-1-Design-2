@@ -25,7 +25,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
-    [SerializeField] Vector3 holdablePosition;
+    
 
     private IHoldable holdable;
     void Update()
