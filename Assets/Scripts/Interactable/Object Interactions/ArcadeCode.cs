@@ -13,7 +13,18 @@ public class ArcadeCode : MonoBehaviour, IInteractable
    
 
     bool myShouldStopMovement = true;
-  
+
+    Animator animator;
+
+    private void Awake()
+    {
+       if(GetComponent<Animator>() != null)
+        {
+            animator = GetComponent<Animator>();
+        }
+       
+    }
+
 
     [SerializeField] char[] code = { 'w', 'w', 's', 's', 'a', 'd', 'a', 'd', '0', '1' };
     char[] typedChars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
@@ -22,26 +33,32 @@ public class ArcadeCode : MonoBehaviour, IInteractable
         if(Input.GetKeyDown(KeyCode.W))
         {
             UpdateChars('w');
+            animator.Play("Up_Joystick");
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
             UpdateChars('a');
+            animator.Play("Left_Joystick");
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             UpdateChars('s');
+            animator.Play("Down_Joystick");
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             UpdateChars('d');
+            animator.Play("Right_Joystick");
         }
         if (Input.GetMouseButtonDown(0))
         {
             UpdateChars('0');
+            animator.Play("Button1 Push");
         }
         if (Input.GetMouseButtonDown(1))
         {
             UpdateChars('1');
+            animator.Play("Button2 Push");
         }
     }
     void CheckCode()

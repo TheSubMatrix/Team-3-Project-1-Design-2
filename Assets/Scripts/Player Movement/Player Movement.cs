@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool activateTerrainChecker = false;
 
+    
 
     private void Awake()
     {
@@ -72,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Jump");
             Jump();
         }
+
     }
     private void FixedUpdate()
     {
@@ -196,4 +198,5 @@ public class PlayerMovement : MonoBehaviour
             movementStopped = true;
         }
     }
+
 }

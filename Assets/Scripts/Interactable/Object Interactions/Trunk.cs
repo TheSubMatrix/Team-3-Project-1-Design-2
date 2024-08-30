@@ -22,11 +22,12 @@ public class Trunk : MonoBehaviour, IInteractable
         myAnimator = GetComponent<Animator>();
         myAudioSource = GetComponent<AudioSource>();
     }
-    void OnInteractStart(PlayerInteractionHandler incomingHandler)
+   public void OnInteractStart(PlayerInteractionHandler incomingHandler)
     {
 
         
         myInteractionHandler = incomingHandler;
+        Debug.Log("Open Trunk");
         OpenTrunk();
 
     }
