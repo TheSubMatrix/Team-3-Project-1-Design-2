@@ -1,4 +1,4 @@
-Shader "Unlit/Grass"
+Shader "Custom/Grass"
 {
     Properties
     {
@@ -23,6 +23,36 @@ Shader "Unlit/Grass"
         LOD 100
         Cull Off
         HLSLINCLUDE
+            #pragma shader_feature_local _NORMALMAP
+			#pragma shader_feature_local_fragment _ALPHATEST_ON
+			#pragma shader_feature_local_fragment _ALPHAPREMULTIPLY_ON
+			#pragma shader_feature_local_fragment _EMISSION
+			#pragma shader_feature_local_fragment _METALLICSPECGLOSSMAP
+			#pragma shader_feature_local_fragment _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+			#pragma shader_feature_local_fragment _OCCLUSIONMAP
+
+			#pragma shader_feature_local_fragment _SPECULARHIGHLIGHTS_OFF
+			#pragma shader_feature_local_fragment _ENVIRONMENTREFLECTIONS_OFF
+			#pragma shader_feature_local_fragment _SPECULAR_SETUP
+			#pragma shader_feature_local _RECEIVE_SHADOWS_OFF
+
+			// URP Keywords
+			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS
+			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
+			// Note, v11 changes this to :
+			// #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
+
+			#pragma multi_compile _ _SHADOWS_SOFT
+			#pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
+			#pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
+			#pragma multi_compile _ LIGHTMAP_SHADOW_MIXING // v10+ only, renamed from "_MIXED_LIGHTING_SUBTRACTIVE"
+			#pragma multi_compile _ SHADOWS_SHADOWMASK // v10+ only
+
+			// Unity Keywords
+			#pragma multi_compile _ LIGHTMAP_ON
+			#pragma multi_compile _ DIRLIGHTMAP_COMBINED
+			#pragma multi_compile_fog
+
             #define BLADE_SEGMENTS 3
             #define UNITY_PI            3.14159265359f
             #define UNITY_TWO_PI        6.28318530718f
