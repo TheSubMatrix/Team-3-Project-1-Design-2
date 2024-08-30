@@ -98,7 +98,7 @@ Material:
     - _DitherSpread: 0.1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _EffectAmount: 4.4
+    - _EffectAmount: 4.6
     - _EnvironmentReflections: 1
     - _Exposure: 0.6
     - _GlossMapScale: 0
@@ -108,7 +108,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
-    - _Radius: 5
+    - _Radius: 11.77
     - _ReceiveShadows: 1
     - _SampleAmount: 100
     - _Samples: 20
