@@ -24,26 +24,26 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _GrassMask:
-        m_Texture: {fileID: 2800000, guid: 7be423dc835515145a8a12b2064c96e7, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 99967bb61a982114b92c78f5f1f4851f, type: 3}
+        m_Scale: {x: 20, y: 20}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e3f0c0ea88f54a240b29ed838864c599, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4708777b49302e94098aaa5e1b2ead25, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BendRotationRandom: 0
+    - _BendRotationRandom: 0.206
     - _BladeCurvatureAmount: 1
-    - _BladeCurveAmount: 2.24
+    - _BladeCurveAmount: 4
     - _BladeCurveDeviation: 0.08
-    - _BladeForwardAmount: 0.08
+    - _BladeForwardAmount: 0.18
     - _BladeHeight: 0.22
     - _BladeHeightDeviation: 0.13
     - _BladeWidth: 0.002
     - _BladeWidthDeviation: 0.005
-    - _GrassMaskThreshold: 0.032
-    - _TessellationUniform: 38.8
+    - _GrassMaskThreshold: 0.001
+    - _TessellationUniform: 33.5
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &1158181437801355595
