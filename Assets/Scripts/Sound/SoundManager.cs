@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
     SO_SoundList levelSounds;
     public static SoundManager Instance { get { return instance; } }
+  
     [SerializeField, Range(0f, 1f)]
     public float soundVolume = 1f;
+    
     [SerializeField, Range(0f, 1f)]
     public float musicVolume = 1f;
+   
     static SoundManager instance;
     public Dictionary<GameObject, Sound> playingSounds = new Dictionary<GameObject, Sound>();
+
+     [SerializeField]  public GameObject newSoundGO;
+    
     void Awake()
     {
         if (instance != null && instance != this)
@@ -96,10 +102,12 @@ public class SoundManager : MonoBehaviour
                     soundToPlay = sound;
                 }
             }
-
+            
             if (soundToPlay != null)
             {
-                GameObject newSoundGO = new GameObject(soundToPlay.soundName);
+                //GameObject newSoundGO = new GameObject(soundToPlay.soundName);
+                newSoundGO = new GameObject(soundToPlay.soundName);
+
                 AudioSource source = newSoundGO.AddComponent<AudioSource>();
                 newSoundGO.AddComponent<SoundUpdater>();
                 newSoundGO.GetComponent<SoundUpdater>().objectForSound =  obj;
@@ -109,6 +117,7 @@ public class SoundManager : MonoBehaviour
                 source.loop = loop;
                 source.clip = soundToPlay.sound;
                 source.Play();
+
                 if (!loop)
                 {
                     Destroy(newSoundGO, soundToPlay.sound.length + 0.1f);
@@ -128,4 +137,9 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+
+    public void StopSoundAffect(GameObject sound)
+    {
+        Destroy(sound);
+    }
 }

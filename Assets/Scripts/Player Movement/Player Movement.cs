@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEditor.Rendering;
 using UnityEditor.ShaderGraph.Internal;
@@ -8,9 +9,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] private AudioManager audioManager;
+   
 
-     private LayerMask currentTerrain;
+   
+
+     public LayerMask currentTerrain;
    
     private const float defaultGravityForce = -9.8f;
 
@@ -46,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool activateTerrainChecker = false;
 
+    private string soundName;
     
 
     private void Awake()
@@ -53,16 +57,16 @@ public class PlayerMovement : MonoBehaviour
         //seeting varaibles should always be in awake
         characterController = GetComponent<CharacterController>();
         
+        
     }
 
     private void Start()
     {
-        
+        CheckTerrain();
     }
     private void Update()
     {
         CheckTerrain();
-        
         
         PlayerGravity();
                 
@@ -79,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //movement is often interpolated, do you REALLY want it here?
         PlayerMove();
-
 
     }
     
@@ -99,17 +102,31 @@ public class PlayerMovement : MonoBehaviour
         {
             if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
             {
+                Debug.Log("Start moving");
                 activateTerrainChecker = true;
                 movementStopped = false;
                 audioPlaying = true;
-                audioManager.audioManagerReference.audioSource.Play();
+               
+                PlayUpdatedSound(soundName);
+
+
+
             }
 
             if ((playerMovementInput.magnitude == 0 || !characterController.isGrounded) && audioPlaying != false)
             {
                
                 audioPlaying = false;
-                audioManager.audioManagerReference.audioSource.Stop();
+               
+                if(SoundManager.Instance.newSoundGO != null)
+                {
+                    SoundManager.Instance.StopSoundAffect(SoundManager.Instance.newSoundGO);
+                }
+                else
+                {
+                    Debug.Log("Nothing to delete");
+                }
+                
             }
             Vector3 characterMove = transform.right * playerMovementInput.x + transform.forward * playerMovementInput.y;
 
@@ -151,26 +168,36 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!movementStopped && activateTerrainChecker)
         {
+          
             if (Physics.CheckSphere(terrainChecker.position, .4f, futureArcadeTerrain) && currentTerrain != futureArcadeTerrain)
             {
                 currentTerrain = futureArcadeTerrain;
-                PlayUpdatedSound(0);            
-           }
-            if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain) && currentTerrain != grassTerrain)
+                soundName = "Carpet Walking";
+                PlayUpdatedSound(soundName);
+
+            }
+            
+            if (Physics.CheckSphere(terrainChecker.position, .4f, grassTerrain) && currentTerrain != grassTerrain )
             {
                 currentTerrain = grassTerrain;
-                PlayUpdatedSound(2);               
+                
+                soundName = "Grass Walking";
+                PlayUpdatedSound(soundName);
             }
-            if (Physics.CheckSphere(terrainChecker.position, .4f, gravelTerrain) && currentTerrain != gravelTerrain)
+            if (Physics.CheckSphere(terrainChecker.position, .4f, gravelTerrain) && currentTerrain != gravelTerrain )
             {
                 currentTerrain = gravelTerrain;
-                PlayUpdatedSound(1);                
+                soundName = "Gravel Walking";
+                PlayUpdatedSound(soundName);
+                
             }
 
-            if (Physics.CheckSphere(terrainChecker.position, .4f, defaultTerrain) && currentTerrain != defaultTerrain) // defaultTerrain is just the default Layer
-            {                                                                                                         // it plays a concrete walking sound
+            if (Physics.CheckSphere(terrainChecker.position, .4f, defaultTerrain) && currentTerrain != defaultTerrain ) // defaultTerrain is just the default Layer
+            {                                                                                                          // it plays a concrete walking sound
                 currentTerrain = defaultTerrain;
-                PlayUpdatedSound(3);
+                soundName = "Concrete Walking";
+                PlayUpdatedSound(soundName);
+                
             }
             
         }
@@ -178,13 +205,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //move your logic out WHENEVER YOU CAN.
-    private void PlayUpdatedSound(int index)
+    private void PlayUpdatedSound(string soundName)
     {
-        
-            audioManager.audioManagerReference.audioSource.Stop();
-            audioManager.audioManagerReference.audioSource.clip = audioManager.audioManagerReference.walkingSFX[index];
-            audioManager.audioManagerReference.audioSource.Play();
-            
+        SoundManager.Instance.StopSoundAffect(SoundManager.Instance.newSoundGO);
+        SoundManager.Instance.PlaySoundOnObject(gameObject, soundName, true);           
     }
 
     public void TogglePlayerMovement()
