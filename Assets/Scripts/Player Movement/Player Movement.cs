@@ -223,4 +223,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+   /* private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.gameObject.name == "LargePlane")
+        {
+            Debug.Log("Conrete");
+        }
+    }*/
 }

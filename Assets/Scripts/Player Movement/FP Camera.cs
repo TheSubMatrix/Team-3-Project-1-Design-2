@@ -8,9 +8,10 @@ public class FP_Camera : MonoBehaviour
     [SerializeField] Transform cameraOrientation;
     [SerializeField] float sensitivityX, sensitivityY;
 
+    
     private float xRotation, yRotation;
 
-    GameObject defaultCamera;
+   private GameObject defaultCamera;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class FP_Camera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         
         float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
@@ -32,8 +33,12 @@ public class FP_Camera : MonoBehaviour
 
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
+
+       
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
+         cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
+
+        
     }
 
     public void ToggleActiceCamera(GameObject switchCamera)
