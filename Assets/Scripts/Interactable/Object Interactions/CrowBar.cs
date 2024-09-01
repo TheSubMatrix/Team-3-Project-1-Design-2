@@ -5,9 +5,11 @@ using UnityEngine;
 public class CrowBar : MonoBehaviour, IHoldable
 {
     [SerializeField] Vector3 positionOffset;
-    public Vector3 holdPositionOffset => positionOffset;
+     [SerializeField]Quaternion rotationOffset = Quaternion.identity;
+    public Vector3 HoldPositionOffset => positionOffset;
 
     public Vector3 TransformToOffsetPositionFrom { get; set; }
+    public Quaternion HoldRotationOffset => rotationOffset;
 
     [SerializeField] Collider breakableObject;
     private Rigidbody rb;

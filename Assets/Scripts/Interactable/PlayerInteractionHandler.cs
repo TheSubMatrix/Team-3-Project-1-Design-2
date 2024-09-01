@@ -89,10 +89,12 @@ public class PlayerInteractionHandler : MonoBehaviour
             heldObject.OnHolding
             (
                 transform.position + 
-                (transform.forward * heldObject.holdPositionOffset.z) +
-                (transform.right * heldObject.holdPositionOffset.x) +
-                (transform.up * heldObject.holdPositionOffset.y)
+                (transform.forward * heldObject.HoldPositionOffset.z) +
+                (transform.right * heldObject.HoldPositionOffset.x) +
+                (transform.up * heldObject.HoldPositionOffset.y),
+                transform.rotation * heldObject.HoldRotationOffset
             );
+
         }
         if (interactingObject != null)
         {

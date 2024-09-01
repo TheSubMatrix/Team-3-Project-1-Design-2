@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SoundManager : MonoBehaviour
 {
+    public class SoundPlayedEvent : UnityEvent<Sound> { }
+    [SerializeField] SoundPlayedEvent OnSoundPlayed;
     [SerializeField] 
     SO_SoundList levelSounds;
     public static SoundManager Instance { get { return instance; } }
@@ -71,7 +74,7 @@ public class SoundManager : MonoBehaviour
                 source.loop = loop;
                 source.clip = soundToPlay.sound;
                 source.Play();
-
+                OnSoundPlayed.Invoke(soundToPlay);
                 if (!loop)
                 {
                     Destroy(newSoundGO, soundToPlay.sound.length);
@@ -117,7 +120,7 @@ public class SoundManager : MonoBehaviour
                 source.loop = loop;
                 source.clip = soundToPlay.sound;
                 source.Play();
-
+                OnSoundPlayed.Invoke(soundToPlay);
                 if (!loop)
                 {
                     Destroy(newSoundGO, soundToPlay.sound.length + 0.1f);
