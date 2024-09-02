@@ -30,6 +30,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     private IHoldable holdable;
     void Update()
     {
+        Debug.DrawLine(transform.position, transform.forward); 
         if (Input.GetKeyDown(KeyCode.E))
         {
 

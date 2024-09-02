@@ -7,7 +7,7 @@ public class Trunk : MonoBehaviour, IInteractable
    PlayerInteractionHandler myInteractionHandler;
    private  bool shouldStopMovement = false;
 
-    private bool trunkIsOpen = false;
+    private bool trunkIsOpen;
     private Animator myAnimator;
     //private AudioSource myAudioSource;
     [SerializeField] AudioClip trunkOpenSFX;
@@ -27,45 +27,27 @@ public class Trunk : MonoBehaviour, IInteractable
 
         
         myInteractionHandler = incomingHandler;
-        Debug.Log("Open Trunk");
-        ToggleTrunk();
-        // OpenTrunk();
+        
+        
+       
+        
 
     }
     public void OnInteracting()
     {
-
+       myInteractionHandler.EndIntreaction();
        
     }
 
    public void OnInteractEnd()
     {
-        Debug.Log("Closing");
+
         ToggleTrunk();
-        //CloseTrunk();
+        Debug.Log("Trunk open is " + trunkIsOpen);
     }
 
 
-   /* public void OpenTrunk()
-    {
-        myAnimator.Play("Open");
-        if (myAudioSource != null)
-        {
-            myAudioSource.PlayOneShot(trunkOpenSFX);
-        }
-        
-
-    }
-    public void CloseTrunk()
-    {
-        Debug.Log("Stop Interaction");
-        myAnimator.Play("Close");
-        if (myAudioSource != null)
-        {
-            myAudioSource.PlayOneShot(trunkCloseSFX);
-        }
-       
-    }*/
+   
     private void ToggleTrunk()
     {
         if (!trunkIsOpen)
@@ -82,14 +64,18 @@ public class Trunk : MonoBehaviour, IInteractable
 
     public void PlayTrunkSoundSFX()
     {
-        if(trunkIsOpen)
+        if(SoundManager.Instance != null)
         {
-            SoundManager.Instance.PlaySoundOnObject(gameObject, "Trunk Open", false);
+            if (trunkIsOpen)
+            {
+                SoundManager.Instance.PlaySoundOnObject(gameObject, "Trunk Open", false);
+            }
+            else
+            {
+                SoundManager.Instance.PlaySoundOnObject(gameObject, "Trunk Close", false);
+            }
         }
-        else
-        {
-            SoundManager.Instance.PlaySoundOnObject(gameObject, "Trunk Close", false);
-        }
+        
     }
 
 }
