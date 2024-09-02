@@ -36,9 +36,11 @@ public class FP_Camera : MonoBehaviour
 
        
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-         cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
-        
+       // transform.position = new Vector3(Mathf.Sin(Time.time) * 0.5f, transform.position.y, transform.position.z);
+
+        // transform.position = transform.position + new Vector3(transform.position.x,Mathf.Sin(Time.time) * 0.5f, transform.position.y);
     }
 
     public void ToggleActiceCamera(GameObject switchCamera)

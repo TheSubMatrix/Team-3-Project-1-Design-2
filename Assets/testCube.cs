@@ -24,19 +24,13 @@ public class testCube : MonoBehaviour
 
         //transform.position = new Vector3(transform.position.x, Mathf.Sin(Time.time), transform.position.z);
 
-        if(Input.GetKeyDown(KeyCode.G))
-        {
-            RotateMe();
-        }
+        
 
-        transform.rotation = Quaternion.Euler(new Vector3(Mathf.Sin(Time.time * speed) * 45,0,0));
+        //transform.rotation = Quaternion.Euler(new Vector3(Mathf.Sin(Time.time * speed) * 45,0,0));
+        transform.position =  new Vector3(Mathf.Sin(Time.time) * speed, transform.position.y, transform.position.z);
        
         // transform.Rotate(Mathf.Sin(Time.deltaTime * speed) * 45, 0, 0);
     }
 
-    public void RotateMe()
-    {
-        transform.Rotate(Mathf.Sin(Time.deltaTime * speed) * 45, 0, 0);
-        //transform.Rotate(45, 0, 0, Space.Self);
-    }
+    
 }

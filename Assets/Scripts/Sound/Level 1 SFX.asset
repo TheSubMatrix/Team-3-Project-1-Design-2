@@ -13,23 +13,39 @@ MonoBehaviour:
   m_Name: Level 1 SFX
   m_EditorClassIdentifier: 
   soundList:
-  - sound: {fileID: 8300000, guid: b3329021341f1bf46972751e8d69f97f, type: 3}
+  - soundName: Concrete Walking
+    sound: {fileID: 8300000, guid: b3329021341f1bf46972751e8d69f97f, type: 3}
     isMusic: 0
-    soundName: Concrete Walking
     volume: 1
     pitch: 1
-  - sound: {fileID: 8300000, guid: 84c7b19dffc35f44fbbb517feed5f2d9, type: 3}
+    associatedText: 
+  - soundName: Grass Walking
+    sound: {fileID: 8300000, guid: 84c7b19dffc35f44fbbb517feed5f2d9, type: 3}
     isMusic: 0
-    soundName: Grass Walking
     volume: 1
     pitch: 1
-  - sound: {fileID: 8300000, guid: 20a8072b168835e4caff884b7c648a35, type: 3}
+    associatedText: 
+  - soundName: Carpet Walking
+    sound: {fileID: 8300000, guid: 20a8072b168835e4caff884b7c648a35, type: 3}
     isMusic: 0
-    soundName: Carpet Walking
     volume: 1
     pitch: 1
-  - sound: {fileID: 8300000, guid: 207255a082ae0374080af4605c90f8be, type: 3}
+    associatedText: 
+  - soundName: Gravel Walking
+    sound: {fileID: 8300000, guid: 207255a082ae0374080af4605c90f8be, type: 3}
     isMusic: 0
-    soundName: Gravel Walking
     volume: 1
     pitch: 1
+    associatedText: 
+  - soundName: Trunk Close
+    sound: {fileID: 8300000, guid: e4f5549f781eb3a489caa74063da8e77, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Trunk Open
+    sound: {fileID: 8300000, guid: d4c0826546417794c93c629bb0b0fe5a, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 

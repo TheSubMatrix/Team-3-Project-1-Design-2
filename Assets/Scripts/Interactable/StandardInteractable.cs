@@ -25,6 +25,6 @@ public class StandardInteractable : MonoBehaviour, IInteractable
     }
     public void OnInteractEnd()
     {
-
+        Debug.Log("End");
     }
 }
