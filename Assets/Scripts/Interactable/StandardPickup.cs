@@ -7,7 +7,7 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     Rigidbody m_rigidbody;
     [SerializeField]
     Vector3 positionOffset;
-    [SerializeField] Quaternion rotationOffset = Quaternion.identity;
+    Quaternion rotationOffset = Quaternion.identity;
     public Vector3 HoldPositionOffset => positionOffset;
     public Quaternion HoldRotationOffset => rotationOffset;
 
@@ -45,5 +45,10 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     public bool Place(GameObject objectToTryAndPlaceOn)
     {
         return false;
+    }
+
+    public void OnHolding(GameObject pickUpObj)
+    {
+        throw new System.NotImplementedException();
     }
 }

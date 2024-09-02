@@ -36,7 +36,7 @@ public class CrowBar : MonoBehaviour, IHoldable
     
     public void OnHoldEnd(GameObject gameObject) ///Re-enables the collider when player drops it. Feel free to change
     {
-        //Debug.Log($"Stopped {gameObject.name}");
+        
 
         if(rb != null)
         {
@@ -51,21 +51,6 @@ public class CrowBar : MonoBehaviour, IHoldable
     }
 
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if(isHolding)
-        {
-            if(other == breakableObject)
-            {
-                Destroy(other.gameObject);
-            }
-            else
-            {
-                Debug.Log(other.gameObject.name);
-            }
-        }
-        
-        
-    }
+   
 
 }

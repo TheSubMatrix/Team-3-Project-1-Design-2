@@ -118,14 +118,18 @@ public class PlayerMovement : MonoBehaviour
                
                 audioPlaying = false;
                
-                if(SoundManager.Instance.newSoundGO != null)
+                if(SoundManager.Instance != null)
                 {
-                    SoundManager.Instance.StopSoundAffect(SoundManager.Instance.newSoundGO);
+                    if (SoundManager.Instance.newSoundGO != null)
+                    {
+                        SoundManager.Instance.StopSoundAffect(SoundManager.Instance.newSoundGO);
+                    }
+                    else
+                    {
+                        Debug.Log("Nothing to delete");
+                    }
                 }
-                else
-                {
-                    Debug.Log("Nothing to delete");
-                }
+                
                 
             }
             Vector3 characterMove = transform.right * playerMovementInput.x + transform.forward * playerMovementInput.y;
@@ -207,8 +211,12 @@ public class PlayerMovement : MonoBehaviour
     //move your logic out WHENEVER YOU CAN.
     private void PlayUpdatedSound(string soundName)
     {
-        SoundManager.Instance.StopSoundAffect(SoundManager.Instance.newSoundGO);
-        SoundManager.Instance.PlaySoundOnObject(gameObject, soundName, true);           
+        if(SoundManager.Instance != null)
+        {
+            SoundManager.Instance.StopSoundAffect(SoundManager.Instance.newSoundGO);
+            SoundManager.Instance.PlaySoundOnObject(gameObject, soundName, true);
+        }
+              
     }
 
     public void TogglePlayerMovement()
