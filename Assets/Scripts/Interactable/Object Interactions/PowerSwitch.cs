@@ -24,19 +24,19 @@ public class PowerSwitch : MonoBehaviour, IInteractable
 
     public void OnInteracting()
     {
+        
+        
+        Debug.Log("Switch Powered: " + switchIsPowered);
+       // switchStateChangedEvent.Invoke(switchIsPowered);
+        interactionHandler.EndIntreaction();
 
+       // switchStateChangedEvent.Invoke(switchIsPowered);
     }
     public void OnInteractStart(PlayerInteractionHandler incomingHandler)
     {
-        {
-            currentInteractor = incomingHandler;
-            switchIsPowered = !switchIsPowered;
-            Debug.Log("Switch Powered: " + switchIsPowered);
-            
-             switchStateChangedEvent.Invoke(switchIsPowered);
-            
-            
-        }
+        Debug.Log("Interact Start");
+        currentInteractor = incomingHandler;
+                                          
     }
 
     public void OnInteractEnd()
@@ -44,6 +44,7 @@ public class PowerSwitch : MonoBehaviour, IInteractable
         switchIsPowered = !switchIsPowered;
         Debug.Log("Switch Powered: " + switchIsPowered);
         switchStateChangedEvent.Invoke(switchIsPowered);
+        Debug.Log("Interact End");
 
     }
 

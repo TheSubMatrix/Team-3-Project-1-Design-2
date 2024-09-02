@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
             {
-                Debug.Log("Start moving");
+                
                 activateTerrainChecker = true;
                 movementStopped = false;
                 audioPlaying = true;
