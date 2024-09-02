@@ -20,16 +20,33 @@ public class Board : MonoBehaviour, IInteractable
     public void OnInteractStart(PlayerInteractionHandler playerInteractionHandler)
     {
         myInteractionHandler = playerInteractionHandler;
-        Debug.Log(gameObject.name);
-        Debug.Log("Start animation");
-        BoardsFall(gameObject.name);
-        OnInteractEnd();
        
+        if(playerInteractionHandler.heldObject != null)
+        {
+            if (playerInteractionHandler.heldObject.gameObject.name == "CrowBar")
+            {
+                BoardsFall(gameObject.name);
+            }
+        }
+        else
+        {
+            Debug.Log("I need a crowbar");
+        }
+        
+        
+       
+        
+        
+        
+        
+        
+        
+        myInteractionHandler.interactingObject = null;
     }
     
     public void OnInteracting()
     {
-
+        
     }
     
 

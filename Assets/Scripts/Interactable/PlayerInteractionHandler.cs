@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,26 +18,41 @@ public class PlayerInteractionHandler : MonoBehaviour
     [SerializeField]
     UnityEvent RestartPlayerMovement;
     [SerializeField] LayerMask interactableLayers;
-    [SerializeField] IHoldable heldObject;
+    [SerializeField] public IHoldable heldObject;
     [SerializeField] public IInteractable interactingObject;
     [SerializeField] InteractionEvent InteractStarted;
     [SerializeField] InteractionEvent InteractEnded;
 
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
-    [SerializeField] Vector3 holdablePosition;
+    
+
+    private IHoldable holdable;
     void Update()
     {
+        Debug.DrawLine(transform.position, transform.forward); 
         if (Input.GetKeyDown(KeyCode.E))
         {
+
             const int raycastDistance = 5;
             Ray ray = new Ray(transform.position, transform.forward);
             Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1);
-            if (heldObject == null && interactingObject == null && hitInfo.collider != null)
+            
+            if(interactingObject!= null)   //I moved this up here so that way it will check to EndIntreaction and if it does
+            {                             // it will return not triggering the rest. Also check spelling on EndIntreaction for future use
+                Debug.Log("End Interaction");
+                EndIntreaction();
+                return;
+            }
+            
+            
+            if ((heldObject == null || interactingObject == null) && hitInfo.collider != null)  // If the && is replaced with || then by pressing E it wont EndInteraction
             {
-                IHoldable holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
+                holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
+                //IHoldable holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
                 IInteractable interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
+                
                 if (holdable != null)
                 {
                     StartPickup(holdable);
@@ -47,32 +63,42 @@ public class PlayerInteractionHandler : MonoBehaviour
                     StartIntreaction(interactable);
                 }
             }
-            else if (interactingObject != null)
+            /*else if (interactingObject != null)
             {
+                Debug.Log("End Interaction");
                 EndIntreaction();
-            }
-            else if (heldObject != null)
-            {
-                if(hitInfo.collider != null)
-                {
-                    EndPickup(hitInfo.collider.gameObject);
-                }
-                else
-                {
-                    EndPickup(null);
-                }
-            }
+            }*/
 
+            
+
+
+        }
+        if(heldObject != null && Input.GetKeyDown(KeyCode.Q))
+        {
+            const int raycastDistance = 5;
+            Ray ray = new Ray(transform.position, transform.forward);
+            Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
+            Debug.Log("Drop");
+            if (hitInfo.collider != null)
+            {
+                EndPickup(hitInfo.collider.gameObject);
+            }
+            else
+            {
+                EndPickup(null);
+            }
         }
         if (heldObject != null)
         {
             heldObject.OnHolding
             (
                 transform.position + 
-                (transform.forward * heldObject.holdPositionOffset.z) +
-                (transform.right * heldObject.holdPositionOffset.x) +
-                (transform.up * heldObject.holdPositionOffset.y)
+                (transform.forward * heldObject.HoldPositionOffset.z) +
+                (transform.right * heldObject.HoldPositionOffset.x) +
+                (transform.up * heldObject.HoldPositionOffset.y),
+                transform.rotation * heldObject.HoldRotationOffset
             );
+
         }
         if (interactingObject != null)
         {

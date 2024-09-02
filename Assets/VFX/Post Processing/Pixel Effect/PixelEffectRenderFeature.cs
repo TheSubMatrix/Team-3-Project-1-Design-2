@@ -6,7 +6,7 @@ public class PixelEffectRenderFeature : ScriptableRendererFeature
 {
     public Shader shader;
     private Material material = null;
-    public Settings settings;
+    public PixelEffectSettings settings;
     private PixelEffectPass pass;
     public RenderPassEvent _event = RenderPassEvent.AfterRenderingPostProcessing;
     public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
@@ -37,7 +37,7 @@ public class PixelEffectRenderFeature : ScriptableRendererFeature
         pass.ReleaseTargets();
     }
     [System.Serializable]
-    public class Settings
+    public class PixelEffectSettings
     {
         public Vector4 QuantizationAmounts;
         public int Samples;
@@ -48,10 +48,10 @@ public class PixelEffectRenderFeature : ScriptableRendererFeature
 class PixelEffectPass : ScriptableRenderPass
 {
     RTHandle rtTemp, rtColor;
-    PixelEffectRenderFeature.Settings settings;
+    PixelEffectRenderFeature.PixelEffectSettings settings;
     Material blitMaterial;
     private ProfilingSampler _profilingSampler;
-    public PixelEffectPass(Material material, PixelEffectRenderFeature.Settings settings, string name)
+    public PixelEffectPass(Material material, PixelEffectRenderFeature.PixelEffectSettings settings, string name)
     {
         this.settings = settings;
         this.profilingSampler = new ProfilingSampler(name);

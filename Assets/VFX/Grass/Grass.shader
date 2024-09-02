@@ -1,4 +1,4 @@
-Shader "Unlit/Grass"
+Shader "Custom/Grass"
 {
     Properties
     {
@@ -23,9 +23,11 @@ Shader "Unlit/Grass"
         LOD 100
         Cull Off
         HLSLINCLUDE
+
             #define BLADE_SEGMENTS 3
             #define UNITY_PI            3.14159265359f
             #define UNITY_TWO_PI        6.28318530718f
+
             #include "CustomTessellation.cginc"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/ShadowCasterPass.hlsl"
@@ -44,7 +46,15 @@ Shader "Unlit/Grass"
 	            float4 pos : SV_POSITION;
                 float2 uv : TEXCOORD0;
             };
-
+            float3 ApplyScaleToPosition(float3 pos)
+            {
+                float3 scale = float3(
+                    length(unity_ObjectToWorld._m00_m10_m20),
+                    length(unity_ObjectToWorld._m01_m11_m21),
+                    length(unity_ObjectToWorld._m02_m12_m22)
+                );
+                return pos / scale;
+            }
             float rand(float3 co)
 	        {
 		        return frac(sin(dot(co.xyz, float3(12.9898, 78.233, 53.539))) * 43758.5453);
@@ -74,19 +84,20 @@ Shader "Unlit/Grass"
             }
             geometryOutput GenerateGrassVertex(float3 vertexPosition, float width, float height, float forward, float2 uv, float3x3 transformMatrix)
             {
-	            float3 tangentPoint = float3(width, forward, height);
+	            float3 tangentPoint = ApplyScaleToPosition(float3(width, forward, height));
 	            float3 localPosition = vertexPosition + mul(transformMatrix, tangentPoint);
 	            return ConvertToGeometryOutput(localPosition, uv);
             }
             Texture2D _GrassMask;
             sampler sampler_GrassMask;
             sampler2D _MainTex;
-            float4 _MainTex_ST;
+            float4 _MainTex_ST, _GrassMask_ST;
             float _BendRotationRandom, _BladeWidth, _BladeWidthDeviation, _BladeHeight, _BladeHeightDeviation, _BladeForwardAmount, _BladeCurveAmount, _GrassMaskThreshold;
             [maxvertexcount(BLADE_SEGMENTS * 2 + 1 + 3)]
             void geo(triangle vertexOutput IN[3] : SV_POSITION, inout TriangleStream<geometryOutput> triStream)
             {
-                float maskVal = _GrassMask.SampleLevel(sampler_GrassMask, IN[0].uv, 0);
+                float2 tiledUVs = IN[0].uv * _GrassMask_ST.xy + _GrassMask_ST.zw;
+                float maskVal = _GrassMask.SampleLevel(sampler_GrassMask, tiledUVs, 0);
                 float4 pos = IN[0].vertex;
                 float3 normal = IN[0].normal;
                 float4 tangent = IN[0].tangent;
