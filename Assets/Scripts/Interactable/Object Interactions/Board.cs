@@ -11,38 +11,19 @@ public class Board : MonoBehaviour, IInteractable
     
     public bool ShouldStopMovement { get => stopMovement; set => stopMovement = value; }
 
-    private bool stopMovement;
+    private bool stopMovement = false;
    
     void Awake()
     {
         animator = GetComponent<Animator>();
-        
-    }
-
-    void Start()
-    {
-        
     }
     public void OnInteractStart(PlayerInteractionHandler playerInteractionHandler)
     {
         myInteractionHandler = playerInteractionHandler;
-                
+        Debug.Log(gameObject.name);
         Debug.Log("Start animation");
-        
-        if(myInteractionHandler.heldObject != null)
-        {
-            if (myInteractionHandler.heldObject.gameObject.name == "CrowBar")
-            {
-                BoardsFall(gameObject.name);
-                myInteractionHandler.interactingObject = null;
-            }
-            else
-            {
-                Debug.Log("Need crowbar to breakdown");
-            }
-        }
-        
-        //OnInteractEnd();
+        BoardsFall(gameObject.name);
+        OnInteractEnd();
        
     }
     
@@ -50,13 +31,14 @@ public class Board : MonoBehaviour, IInteractable
     {
 
     }
+    
 
-    /*public void OnInteractEnd()
+    public void OnInteractEnd()
     {
+        Debug.Log("Doom");
         Debug.Log("Delete board");
-
-    }*/
-
+        //BoardsFall(gameObject.name);
+    }
 
     void BoardsFall(string boardName)  ///Depending on which board is interacted with will play it's respective animation
     {

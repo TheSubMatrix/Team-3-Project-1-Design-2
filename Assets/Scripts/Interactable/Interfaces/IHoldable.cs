@@ -9,9 +9,6 @@ public interface IHoldable
     Transform transform {  get; }
     GameObject gameObject { get; }
     void OnHoldStart();
-    
-   // void OnHolding(GameObject pickUpObj);
-    
     void OnHolding(Vector3 desiredPosition, Quaternion desiredRotation)
     {
         transform.position = desiredPosition;

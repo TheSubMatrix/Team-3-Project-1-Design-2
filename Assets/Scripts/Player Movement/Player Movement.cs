@@ -8,13 +8,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
-     private LayerMask currentTerrain;
+
+   
+
+   
+
+     public LayerMask currentTerrain;
    
     private const float defaultGravityForce = -9.8f;
 
     [Header("Player's Speed")]
-    [SerializeField] private float speed = 12f;
+    [SerializeField] float speed = 12f;
 
     [Space(1)]
 
@@ -46,13 +50,13 @@ public class PlayerMovement : MonoBehaviour
     private bool activateTerrainChecker = false;
 
     private string soundName;
-
+    
 
     private void Awake()
     {
         //seeting varaibles should always be in awake
         characterController = GetComponent<CharacterController>();
-
+        
         
     }
 
@@ -70,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
             StartCoroutine(DelayJump(jumpDelay));
-            
+            Debug.Log("Jump");
             Jump();
         }
 
@@ -98,14 +102,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
             {
-                
+                Debug.Log("Start moving");
                 activateTerrainChecker = true;
                 movementStopped = false;
                 audioPlaying = true;
                
                 PlayUpdatedSound(soundName);
 
-                
 
 
             }
