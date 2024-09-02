@@ -1,13 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class PixelEffectRenderFeature : ScriptableRendererFeature
+public class OutlineRenderFeature : ScriptableRendererFeature
 {
     public Shader shader;
     private Material material = null;
-    public PixelEffectSettings settings;
-    private PixelEffectPass pass;
+    public OutlineSettings settings;
+    private OutlineRenderPass pass;
     public RenderPassEvent _event = RenderPassEvent.AfterRenderingPostProcessing;
     public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
     {
@@ -20,7 +21,7 @@ public class PixelEffectRenderFeature : ScriptableRendererFeature
     }
     public override void Create()
     {
-        if (material == null || material.shader != shader)
+        if (material == null || material.shader != shader && shader != null)
         {
             // only create material if null or different shader has been assigned
 
@@ -29,7 +30,11 @@ public class PixelEffectRenderFeature : ScriptableRendererFeature
 
             material = CoreUtils.CreateEngineMaterial(shader);
         }
-        pass = new PixelEffectPass(material, settings, name);
+        if(shader == null)
+        {
+            if (material != null) CoreUtils.Destroy(material);
+        }
+        pass = new OutlineRenderPass(material, settings, name);
         pass.renderPassEvent = _event;
     }
     protected override void Dispose(bool disposing)
@@ -37,34 +42,44 @@ public class PixelEffectRenderFeature : ScriptableRendererFeature
         pass.ReleaseTargets();
     }
     [System.Serializable]
-    public class PixelEffectSettings
+     public class OutlineSettings
     {
-        public Vector4 QuantizationAmounts;
-        public int Samples;
-        public float DitherSpread;
+        public List<string> ShaderTags;
+        public LayerMask layerMask;
     }
 
 }
-class PixelEffectPass : ScriptableRenderPass
+class OutlineRenderPass : ScriptableRenderPass
 {
-    RTHandle rtTemp, rtColor;
-    PixelEffectRenderFeature.PixelEffectSettings settings;
+    RTHandle rtTemp, rtColor, rtOutlinePass;
+    OutlineRenderFeature.OutlineSettings settings;
     Material blitMaterial;
+    private List<ShaderTagId> shaderTagsList = new List<ShaderTagId>();
     private ProfilingSampler _profilingSampler;
-    public PixelEffectPass(Material material, PixelEffectRenderFeature.PixelEffectSettings settings, string name)
+    private FilteringSettings filteringSettings = FilteringSettings.defaultValue;
+    public OutlineRenderPass(Material material, OutlineRenderFeature.OutlineSettings settings, string name)
     {
+        filteringSettings = new FilteringSettings(RenderQueueRange.opaque, settings.layerMask);
         this.settings = settings;
         this.profilingSampler = new ProfilingSampler(name);
         blitMaterial = material;
-        blitMaterial.SetFloat("_DitherSpread", settings.DitherSpread);
-        blitMaterial.SetInt("_SampleAmount", settings.Samples);
-        blitMaterial.SetVector("_QuantizationAmounts", settings.QuantizationAmounts);
+        if(settings.ShaderTags.Count > 0)
+        {
+            foreach (string tag in settings.ShaderTags)
+            {
+                shaderTagsList.Add(new ShaderTagId(tag));
+            }
+        }
+        shaderTagsList.Add(new ShaderTagId("SRPDefaultUnlit"));
+        shaderTagsList.Add(new ShaderTagId("UniversalForward"));
+        shaderTagsList.Add(new ShaderTagId("UniversalForwardOnly"));
     }
     public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
     {
         RenderTextureDescriptor desc = renderingData.cameraData.cameraTargetDescriptor;
         desc.depthBufferBits = 0;
         RenderingUtils.ReAllocateIfNeeded(ref rtTemp, desc, name: "_TemporaryColorTexture");
+        RenderingUtils.ReAllocateIfNeeded(ref rtOutlinePass, desc, name: "_OutlinePass");
     }
     public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
     {
@@ -74,10 +89,16 @@ class PixelEffectPass : ScriptableRenderPass
 
             context.ExecuteCommandBuffer(cmd);
             cmd.Clear();
-            if (rtTemp.rt == null || rtColor.rt == null)
+            cmd.SetRenderTarget(rtOutlinePass);
+            cmd.ClearRenderTarget(true, true, Color.clear);
+            SortingCriteria sortingCriteria = renderingData.cameraData.defaultOpaqueSortFlags;
+            if (rtTemp.rt == null || rtColor.rt == null || blitMaterial == null)
             {
                 return;
             }
+            DrawingSettings drawingSettings = CreateDrawingSettings(shaderTagsList, ref renderingData, sortingCriteria);
+            context.DrawRenderers(renderingData.cullResults, ref drawingSettings, ref filteringSettings);
+            blitMaterial.SetTexture("_OutlinesPass", rtOutlinePass);
             Blitter.BlitCameraTexture(cmd, rtColor, rtTemp, blitMaterial, 0);
             Blitter.BlitCameraTexture(cmd, rtTemp, rtColor, Vector2.one);
         }
@@ -93,5 +114,6 @@ class PixelEffectPass : ScriptableRenderPass
     {
         rtTemp?.Release();
         rtColor?.Release();
+        rtOutlinePass?.Release();
     }
 }

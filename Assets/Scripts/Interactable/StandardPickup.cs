@@ -7,7 +7,7 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     Rigidbody m_rigidbody;
     [SerializeField]
     Vector3 positionOffset;
-    Quaternion rotationOffset = Quaternion.identity;
+    [SerializeField] Quaternion rotationOffset = Quaternion.identity;
     public Vector3 HoldPositionOffset => positionOffset;
     public Quaternion HoldRotationOffset => rotationOffset;
 
