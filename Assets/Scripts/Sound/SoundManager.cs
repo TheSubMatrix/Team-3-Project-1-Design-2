@@ -120,7 +120,7 @@ public class SoundManager : MonoBehaviour
                 source.loop = loop;
                 source.clip = soundToPlay.sound;
                 source.Play();
-                OnSoundPlayed.Invoke(soundToPlay);
+                OnSoundPlayed?.Invoke(soundToPlay);
                 if (!loop)
                 {
                     Destroy(newSoundGO, soundToPlay.sound.length + 0.1f);

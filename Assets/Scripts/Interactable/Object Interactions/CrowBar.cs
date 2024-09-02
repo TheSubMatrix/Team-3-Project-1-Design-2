@@ -7,7 +7,7 @@ public class CrowBar : MonoBehaviour, IHoldable
     [SerializeField] Vector3 positionOffset;
      [SerializeField]Quaternion rotationOffset = Quaternion.identity;
     public Vector3 HoldPositionOffset => positionOffset;
-
+    public GameObject hands;
     public Vector3 TransformToOffsetPositionFrom { get; set; }
     public Quaternion HoldRotationOffset => rotationOffset;
 
@@ -29,11 +29,11 @@ public class CrowBar : MonoBehaviour, IHoldable
         {
             rb.isKinematic = true;
             GetComponent<MeshCollider>().isTrigger = true;
-            
+            hands.SetActive(false);
         }
         
     }
-
+    
     public void OnHoldEnd(GameObject gameObject) ///Re-enables the collider when player drops it. Feel free to change
     {
         //Debug.Log($"Stopped {gameObject.name}");
@@ -43,6 +43,7 @@ public class CrowBar : MonoBehaviour, IHoldable
             isHolding = false;
             rb.isKinematic = false;
             GetComponent<MeshCollider>().isTrigger = false;
+            hands.SetActive(true);
         }
 
         
