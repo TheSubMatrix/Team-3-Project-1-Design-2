@@ -59,12 +59,5 @@ public class CrowBar : MonoBehaviour, IHoldable
             hands.SetActive(true);
             transform.parent = null;
         }
-
-        
-
     }
-
-
-   
-
 }

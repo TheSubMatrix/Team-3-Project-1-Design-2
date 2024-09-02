@@ -21,7 +21,7 @@ public class OutlineRenderFeature : ScriptableRendererFeature
     }
     public override void Create()
     {
-        if (material == null || material.shader != shader && shader != null)
+        if ((material == null || material.shader != shader) && shader != null)
         {
             // only create material if null or different shader has been assigned
 
@@ -30,9 +30,9 @@ public class OutlineRenderFeature : ScriptableRendererFeature
 
             material = CoreUtils.CreateEngineMaterial(shader);
         }
-        if(shader == null)
+        if(shader == null && material != null)
         {
-            if (material != null) CoreUtils.Destroy(material);
+            CoreUtils.Destroy(material);
         }
         pass = new OutlineRenderPass(material, settings, name);
         pass.renderPassEvent = _event;
@@ -44,6 +44,9 @@ public class OutlineRenderFeature : ScriptableRendererFeature
     [System.Serializable]
      public class OutlineSettings
     {
+        public int outlineMaterialPass;
+        public Material OutlineMaterial;
+        public float KernelSize;
         public List<string> ShaderTags;
         public LayerMask layerMask;
     }
@@ -52,15 +55,15 @@ public class OutlineRenderFeature : ScriptableRendererFeature
 class OutlineRenderPass : ScriptableRenderPass
 {
     RTHandle rtTemp, rtColor, rtOutlinePass;
-    OutlineRenderFeature.OutlineSettings settings;
     Material blitMaterial;
+    Material outlineMaterial;
+    int outlineMaterialPass;
     private List<ShaderTagId> shaderTagsList = new List<ShaderTagId>();
     private ProfilingSampler _profilingSampler;
     private FilteringSettings filteringSettings = FilteringSettings.defaultValue;
     public OutlineRenderPass(Material material, OutlineRenderFeature.OutlineSettings settings, string name)
     {
-        filteringSettings = new FilteringSettings(RenderQueueRange.opaque, settings.layerMask);
-        this.settings = settings;
+        filteringSettings = new FilteringSettings(RenderQueueRange.opaque, settings.layerMask);;
         this.profilingSampler = new ProfilingSampler(name);
         blitMaterial = material;
         if(settings.ShaderTags.Count > 0)
@@ -73,6 +76,9 @@ class OutlineRenderPass : ScriptableRenderPass
         shaderTagsList.Add(new ShaderTagId("SRPDefaultUnlit"));
         shaderTagsList.Add(new ShaderTagId("UniversalForward"));
         shaderTagsList.Add(new ShaderTagId("UniversalForwardOnly"));
+        blitMaterial.SetFloat("_KernelSize", settings.KernelSize);
+        outlineMaterial = settings.OutlineMaterial;
+        outlineMaterialPass = settings.outlineMaterialPass;
     }
     public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
     {
@@ -80,6 +86,8 @@ class OutlineRenderPass : ScriptableRenderPass
         desc.depthBufferBits = 0;
         RenderingUtils.ReAllocateIfNeeded(ref rtTemp, desc, name: "_TemporaryColorTexture");
         RenderingUtils.ReAllocateIfNeeded(ref rtOutlinePass, desc, name: "_OutlinePass");
+        ConfigureTarget(rtOutlinePass);
+        ConfigureClear(ClearFlag.Color, Color.clear);
     }
     public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
     {
@@ -89,14 +97,17 @@ class OutlineRenderPass : ScriptableRenderPass
 
             context.ExecuteCommandBuffer(cmd);
             cmd.Clear();
-            cmd.SetRenderTarget(rtOutlinePass);
-            cmd.ClearRenderTarget(true, true, Color.clear);
             SortingCriteria sortingCriteria = renderingData.cameraData.defaultOpaqueSortFlags;
             if (rtTemp.rt == null || rtColor.rt == null || blitMaterial == null)
             {
                 return;
             }
             DrawingSettings drawingSettings = CreateDrawingSettings(shaderTagsList, ref renderingData, sortingCriteria);
+            if(outlineMaterial != null)
+            {
+                drawingSettings.overrideMaterialPassIndex = outlineMaterialPass;
+                drawingSettings.overrideMaterial = outlineMaterial;
+            }
             context.DrawRenderers(renderingData.cullResults, ref drawingSettings, ref filteringSettings);
             blitMaterial.SetTexture("_OutlinesPass", rtOutlinePass);
             Blitter.BlitCameraTexture(cmd, rtColor, rtTemp, blitMaterial, 0);

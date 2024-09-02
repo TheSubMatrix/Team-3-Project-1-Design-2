@@ -40,7 +40,7 @@ MonoBehaviour:
   m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 1023
+    m_Bits: 4294967295
   m_TransparentLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -92,8 +92,11 @@ MonoBehaviour:
   m_Active: 1
   shader: {fileID: 4800000, guid: fcbf1c13075b1ba4dac3194328ae21f5, type: 3}
   settings:
+    outlineMaterialPass: 0
+    OutlineMaterial: {fileID: 2100000, guid: 5b95a4ac392bb334388aabbfa5f89426, type: 2}
+    KernelSize: 11.29
     ShaderTags: []
     layerMask:
       serializedVersion: 2
       m_Bits: 1024
-  _event: 250
+  _event: 550
