@@ -43,7 +43,7 @@ Material:
     - _BladeWidth: 0.002
     - _BladeWidthDeviation: 0.005
     - _GrassMaskThreshold: 0.001
-    - _TessellationUniform: 27.6
+    - _TessellationUniform: 26.2
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &1158181437801355595

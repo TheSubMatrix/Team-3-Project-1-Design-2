@@ -41,6 +41,10 @@ public class OutlineRenderFeature : ScriptableRendererFeature
     {
         pass.ReleaseTargets();
     }
+    private void OnDestroy()
+    {
+        pass.ReleaseTargets();
+    }
     [System.Serializable]
      public class OutlineSettings
     {
@@ -80,6 +84,7 @@ class OutlineRenderPass : ScriptableRenderPass
         outlineMaterial = settings.OutlineMaterial;
         outlineMaterialPass = settings.outlineMaterialPass;
     }
+
     public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
     {
         RenderTextureDescriptor desc = renderingData.cameraData.cameraTargetDescriptor;
@@ -97,11 +102,11 @@ class OutlineRenderPass : ScriptableRenderPass
 
             context.ExecuteCommandBuffer(cmd);
             cmd.Clear();
-            SortingCriteria sortingCriteria = renderingData.cameraData.defaultOpaqueSortFlags;
-            if (rtTemp.rt == null || rtColor.rt == null || blitMaterial == null)
+            if (rtTemp.rt == null || rtColor.rt == null || rtOutlinePass.rt == null || blitMaterial == null)
             {
                 return;
             }
+            SortingCriteria sortingCriteria = renderingData.cameraData.defaultOpaqueSortFlags;
             DrawingSettings drawingSettings = CreateDrawingSettings(shaderTagsList, ref renderingData, sortingCriteria);
             if(outlineMaterial != null)
             {
