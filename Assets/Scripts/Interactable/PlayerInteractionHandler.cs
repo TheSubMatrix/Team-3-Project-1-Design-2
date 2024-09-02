@@ -17,17 +17,22 @@ public class PlayerInteractionHandler : MonoBehaviour
     UnityEvent StopPlayerMovement;
     [SerializeField]
     UnityEvent RestartPlayerMovement;
-    [SerializeField] LayerMask interactableLayers;
-    [SerializeField] IHoldable heldObject;
-    [SerializeField] public IInteractable interactingObject;
-    [SerializeField] InteractionEvent InteractStarted;
-    [SerializeField] InteractionEvent InteractEnded;
+    [SerializeField] 
+    LayerMask interactableLayers;
+    [SerializeField] 
+    public IHoldable heldObject;
+    [SerializeField] 
+    public IInteractable interactingObject;
+    [SerializeField] 
+    InteractionEvent InteractStarted;
+    [SerializeField] 
+    InteractionEvent InteractEnded;
 
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
-    
 
-    private IHoldable holdable;
+    
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -36,10 +41,10 @@ public class PlayerInteractionHandler : MonoBehaviour
             Ray ray = new Ray(transform.position, transform.forward);
             Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1);
-            if (heldObject == null && interactingObject == null && hitInfo.collider != null)
+            if ((heldObject == null || interactingObject == null) && hitInfo.collider != null)
             {
-                holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
-                //IHoldable holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
+                
+                IHoldable holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
                 IInteractable interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
                 if (holdable != null)
                 {
@@ -55,19 +60,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             {
                 EndIntreaction();
             }
-            /*else if (heldObject != null)
-            {
-                Debug.Log("Drop");
-                if(hitInfo.collider != null)
-                {
-                    EndPickup(hitInfo.collider.gameObject);
-                }
-                else
-                {
-                    EndPickup(null);
-                }
-            }*/
-
+            
         }
         if(heldObject != null && Input.GetKeyDown(KeyCode.Q))
         {
@@ -88,12 +81,15 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             heldObject.OnHolding
             (
-                transform.position + 
-                (transform.forward * heldObject.HoldPositionOffset.z) +
-                (transform.right * heldObject.HoldPositionOffset.x) +
-                (transform.up * heldObject.HoldPositionOffset.y),
-                transform.rotation * heldObject.HoldRotationOffset
-            );
+               //heldObject.gameObject
+            transform.position + 
+            (transform.forward * heldObject.HoldPositionOffset.z) +
+            (transform.right * heldObject.HoldPositionOffset.x) +
+            (transform.up * heldObject.HoldPositionOffset.y),
+            transform.rotation * heldObject.HoldRotationOffset
+
+
+            ) ; 
 
         }
         if (interactingObject != null)
