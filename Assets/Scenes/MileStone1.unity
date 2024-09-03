@@ -1474,10 +1474,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6038947443029297089, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e63dc164afe58dc4aafb5b1d0f8d9eee, type: 2}
+    - target: {fileID: -5803147795620679842, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e63dc164afe58dc4aafb5b1d0f8d9eee, type: 2}
+    - target: {fileID: -2195407104471221312, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b5b2b8ef26250341afa5e92beb65555, type: 2}
     - target: {fileID: 919132149155446097, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Name
       value: FinalArcadeScene
       objectReference: {fileID: 0}
+    - target: {fileID: 3005253654429964575, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9abf3d6162a7cf747b680533f198a8c7, type: 2}
+    - target: {fileID: 4387225900367583320, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc5d8d3444819414789b3fce8e75152b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
