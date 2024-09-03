@@ -32,21 +32,19 @@ public class SceneTransition : MonoBehaviour
         Debug.Log(sceneCount);
     }
 
-    public void ChangeScene()
+    public void ChangeScene(string sceneName)
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if(currentSceneIndex < sceneCount-1)
-        {
-            StartCoroutine(DelayChangeScene(1f, currentSceneIndex));
-        }             
+        
+            StartCoroutine(DelayChangeScene(1f, sceneName));
+                    
     }
 
-    IEnumerator DelayChangeScene(float seconds, int sceneIndex)
+    IEnumerator DelayChangeScene(float seconds, string sceneName)
     {
         Debug.Log("FadeOut");
         animator.SetTrigger("FadeOut");
         yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene(sceneIndex + 1);
+        SceneManager.LoadScene(sceneName);
        
         Debug.Log("FadeIn");
        
