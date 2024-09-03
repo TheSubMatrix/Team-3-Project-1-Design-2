@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     public void WhenStartButtonisClicked()
     {
-        SceneTransition.Instance.ChangeScene(4,1,"MileStone1");
+        SceneTransition.Instance.ChangeScene(1,4,"MileStone1");
        // SceneManager.LoadScene("MileStone1");
 
     }
