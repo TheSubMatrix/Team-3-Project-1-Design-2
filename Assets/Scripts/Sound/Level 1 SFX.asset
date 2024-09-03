@@ -70,7 +70,7 @@ MonoBehaviour:
   - soundName: Dialogue 5
     sound: {fileID: 8300000, guid: 389f0b204701beb47b6e489ca7afce2d, type: 3}
     isMusic: 0
-    volume: 1
+    volume: 0.5
     pitch: 1
     associatedText: 
   - soundName: Car Door Shut

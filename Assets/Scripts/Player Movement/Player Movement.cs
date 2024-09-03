@@ -4,9 +4,10 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Rendering;
-using UnityEditor.ShaderGraph.Internal;
-using UnityEngine;
 
+//using UnityEditor.ShaderGraph.Internal;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     
@@ -64,7 +65,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(StartDialogue());
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            StartCoroutine(StartDialogue("Dialogue 1", 5f));
+            StartCoroutine(StartDialogue("Dialogue 2", 15f));
+        }
+        
         CheckTerrain();
        
     }
@@ -241,10 +247,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    IEnumerator StartDialogue()
+    IEnumerator StartDialogue(string dialogueLine, float waitTime)
     {
-        yield return new WaitForSeconds(5f);
-        SoundManager.Instance.PlaySoundAtLocation(transform.position, "Dialogue 1", false);
+        yield return new WaitForSeconds(waitTime);
+        SoundManager.Instance.PlaySoundAtLocation(transform.position, dialogueLine, false);
     }
 }
 

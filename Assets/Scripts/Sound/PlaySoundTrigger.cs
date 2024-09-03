@@ -30,9 +30,16 @@ public class PlaySoundTrigger : MonoBehaviour
         {
             if (!hasPlayed && other.gameObject.tag == "Player" && SoundManager.Instance != null)
             {
+                if(soundToPlay == "Dialogue 5")
+                {
+                    
+                    SceneTransition.Instance.ChangeScene(5, 1, "DemoScene");
+                    
+                }
                 Debug.Log("Exit");     
                 
                 SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
+                hasPlayed = true;
             }
         }
     }
@@ -45,6 +52,7 @@ public class PlaySoundTrigger : MonoBehaviour
             {
                 Debug.Log("Enter");
                 SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
+                hasPlayed = true;
             }
         }
 

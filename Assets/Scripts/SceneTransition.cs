@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
@@ -39,12 +39,12 @@ public class SceneTransition : MonoBehaviour
                     
     }
 
-    IEnumerator DelayChangeScene(float fadoutSeconds, float fadeInSeconds,  string sceneName)
+    IEnumerator DelayChangeScene(float fadeOutSeconds, float fadeInSeconds,  string sceneName)
     {
 
         Debug.Log("FadeOut");
         animator.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(fadeInSeconds);
+        yield return new WaitForSeconds(fadeOutSeconds);
         SceneManager.LoadScene(sceneName);
         yield return new WaitForSeconds(fadeInSeconds);
         animator.SetTrigger("FadeIn");
