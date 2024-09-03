@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe324918a78d4fa40bcc1c566cc10deb, type: 3}
   m_Name: OutlineRenderFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   shader: {fileID: 4800000, guid: fcbf1c13075b1ba4dac3194328ae21f5, type: 3}
   settings:
     outlineMaterialPass: 0
