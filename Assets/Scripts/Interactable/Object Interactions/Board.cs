@@ -12,6 +12,9 @@ public class Board : MonoBehaviour, IInteractable
     public bool ShouldStopMovement { get => stopMovement; set => stopMovement = value; }
 
     private bool stopMovement = false;
+
+   [SerializeField] FrontDoor frontDoorRef;
+
    
     void Awake()
     {
@@ -46,14 +49,16 @@ public class Board : MonoBehaviour, IInteractable
     
     public void OnInteracting()
     {
-        
+        myInteractionHandler.EndIntreaction();
     }
     
 
     public void OnInteractEnd()
     {
-        Debug.Log("Doom");
-        Debug.Log("Delete board");
+        frontDoorRef.boardCount++;
+        Debug.Log(frontDoorRef.boardCount);
+        Destroy(gameObject);
+        
         //BoardsFall(gameObject.name);
     }
 

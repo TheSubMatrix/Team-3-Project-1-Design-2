@@ -27,10 +27,10 @@ public class PowerSwitch : MonoBehaviour, IInteractable
         
         
         Debug.Log("Switch Powered: " + switchIsPowered);
-       // switchStateChangedEvent.Invoke(switchIsPowered);
+       
         interactionHandler.EndIntreaction();
 
-       // switchStateChangedEvent.Invoke(switchIsPowered);
+       
     }
     public void OnInteractStart(PlayerInteractionHandler incomingHandler)
     {

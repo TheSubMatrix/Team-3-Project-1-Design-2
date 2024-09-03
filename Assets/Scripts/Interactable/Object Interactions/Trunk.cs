@@ -22,7 +22,11 @@ public class Trunk : MonoBehaviour, IInteractable
         myAnimator = GetComponent<Animator>();
         //myAudioSource = GetComponent<AudioSource>();
     }
-   public void OnInteractStart(PlayerInteractionHandler incomingHandler)
+    private void Start()
+    {
+        SoundManager.Instance.PlaySoundAtLocation(transform.position,"Car Door Shut",false);
+    }
+    public void OnInteractStart(PlayerInteractionHandler incomingHandler)
     {
 
         

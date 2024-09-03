@@ -43,7 +43,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool audioPlaying;
 
-    private bool movementStopped = false;
+    public bool movementStopped { get;set; }
+    //private bool movementStopped = false;
 
     private bool activateTerrainChecker = false;
 
@@ -56,12 +57,14 @@ public class PlayerMovement : MonoBehaviour
     {
         //seeting varaibles should always be in awake
         characterController = GetComponent<CharacterController>();
+        movementStopped = true;
         
-        
+
     }
 
     private void Start()
     {
+        StartCoroutine(StartDialogue());
         CheckTerrain();
        
     }
@@ -237,5 +240,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    IEnumerator StartDialogue()
+    {
+        yield return new WaitForSeconds(5f);
+        SoundManager.Instance.PlaySoundAtLocation(transform.position, "Dialogue 1", false);
+    }
 }
 

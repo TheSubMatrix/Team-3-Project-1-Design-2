@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     public void WhenStartButtonisClicked()
     {
-        SceneTransition.Instance.ChangeScene("MileStone1");
+        SceneTransition.Instance.ChangeScene(1,4,"MileStone1");
        // SceneManager.LoadScene("MileStone1");
 
     }
@@ -20,18 +20,18 @@ public class UIManager : MonoBehaviour
     public void WhenHelpButtonisClicked()
     {
 
-        SceneTransition.Instance.ChangeScene("Help");
+        SceneTransition.Instance.ChangeScene(1,1,"Help");
         //SceneManager.LoadScene("Help");
 
     }
     public void WhenCreditsButtonisClicked()
     {
        // SceneManager.LoadScene("Credits");
-        SceneTransition.Instance.ChangeScene("Credits");
+        SceneTransition.Instance.ChangeScene(1,1,"Credits");
     }
     public void WhenReplayButtonisClicked()
     {
-        SceneTransition.Instance.ChangeScene("MainMenu");
+        SceneTransition.Instance.ChangeScene(1,1,"MainMenu");
        // SceneManager.LoadScene("MainMenu");
 
     }
@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     public void WhenBackButtonisClicked()
     {
-        SceneTransition.Instance.ChangeScene("MainMenu");
+        SceneTransition.Instance.ChangeScene(1,1,"MainMenu");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
