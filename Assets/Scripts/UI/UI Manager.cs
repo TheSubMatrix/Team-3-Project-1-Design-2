@@ -6,31 +6,33 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-   
 
+
+   
 
     public void WhenStartButtonisClicked()
     {
-
-        SceneManager.LoadScene("MileStone1");
+        SceneTransition.Instance.ChangeScene("MileStone1");
+       // SceneManager.LoadScene("MileStone1");
 
     }
 
     public void WhenHelpButtonisClicked()
     {
 
-        SceneManager.LoadScene("Help");
+        SceneTransition.Instance.ChangeScene("Help");
+        //SceneManager.LoadScene("Help");
 
     }
     public void WhenCreditsButtonisClicked()
     {
-        SceneManager.LoadScene("Credits");
-
+       // SceneManager.LoadScene("Credits");
+        SceneTransition.Instance.ChangeScene("Credits");
     }
     public void WhenReplayButtonisClicked()
     {
-
-        SceneManager.LoadScene("MainMenu");
+        SceneTransition.Instance.ChangeScene("MainMenu");
+       // SceneManager.LoadScene("MainMenu");
 
     }
     public void WhenQuitButtonisClicked()
@@ -46,8 +48,8 @@ public class UIManager : MonoBehaviour
 
     public void WhenBackButtonisClicked()
     {
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneTransition.Instance.ChangeScene("MainMenu");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
    
