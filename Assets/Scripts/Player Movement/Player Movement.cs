@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Rendering;
 using UnityEditor.ShaderGraph.Internal;
@@ -8,12 +9,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
 
-   
-
-   
-
-     public LayerMask currentTerrain;
+     private LayerMask currentTerrain;
    
     private const float defaultGravityForce = -9.8f;
 
@@ -31,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpHeight;
     [SerializeField] private float jumpDelay = 5f;
 
-    [Header("Walkable Terrain")]
+    [Header("Walkable Terrains")]
     [SerializeField] private LayerMask grassTerrain;
     [SerializeField] private LayerMask gravelTerrain;
     [SerializeField] private LayerMask futureArcadeTerrain;
@@ -52,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
     private string soundName;
     
 
+    
+
     private void Awake()
     {
         //seeting varaibles should always be in awake
@@ -63,9 +63,15 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         CheckTerrain();
+       
     }
     private void Update()
     {
+
+        /*if (Input.GetKeyDown(KeyCode.V ))
+        {
+            SceneTransition.Instance.ChangeScene();
+        }*/
         CheckTerrain();
         
         PlayerGravity();
@@ -231,12 +237,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-   /* private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.gameObject.name == "LargePlane")
-        {
-            Debug.Log("Conrete");
-        }
-    }*/
 }
+
