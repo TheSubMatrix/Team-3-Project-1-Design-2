@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class OutlineRenderFeature : ScriptableRendererFeature
 {
     public Shader shader;
-    private Material material = null;
+    public Material material = null;
     public OutlineSettings settings;
     private OutlineRenderPass pass;
     public RenderPassEvent _event = RenderPassEvent.AfterRenderingPostProcessing;
