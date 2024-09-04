@@ -16,9 +16,8 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
-  - {fileID: 6378091308037690838}
   - {fileID: 7964697576925919877}
-  m_RendererFeatureMap: d6d5978840888358857a15583f4a886e
+  m_RendererFeatureMap: 857a15583f4a886e
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -53,30 +52,10 @@ MonoBehaviour:
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
-  m_DepthPrimingMode: 0
+  m_DepthPrimingMode: 1
   m_CopyDepthMode: 1
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 0
---- !u!114 &6378091308037690838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
-  m_Name: Fog
-  m_EditorClassIdentifier: 
-  m_Active: 0
-  injectionPoint: 600
-  fetchColorBuffer: 1
-  requirements: 1
-  passMaterial: {fileID: 2100000, guid: 9b310ea8ff738ce44b47c58421443c18, type: 2}
-  passIndex: 0
-  bindDepthStencilAttachment: 0
-  m_Version: 1
 --- !u!114 &7964697576925919877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,14 +69,13 @@ MonoBehaviour:
   m_Name: OutlineRenderFeature
   m_EditorClassIdentifier: 
   m_Active: 1
-  shader: {fileID: 4800000, guid: fcbf1c13075b1ba4dac3194328ae21f5, type: 3}
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: 6ac05ea217243f04997af415986ddaa1, type: 2}
   settings:
     outlineMaterialPass: 0
     OutlineMaterial: {fileID: 2100000, guid: 5b95a4ac392bb334388aabbfa5f89426, type: 2}
-    KernelSize: 5.14
+    KernelSize: 10
     ShaderTags: []
     layerMask:
       serializedVersion: 2
       m_Bits: 1024
-  _event: 500
+  _event: 300

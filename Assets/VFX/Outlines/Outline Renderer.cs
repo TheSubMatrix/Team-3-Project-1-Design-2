@@ -5,7 +5,6 @@ using UnityEngine.Rendering.Universal;
 
 public class OutlineRenderFeature : ScriptableRendererFeature
 {
-    public Shader shader;
     public Material material = null;
     public OutlineSettings settings;
     private OutlineRenderPass pass;
@@ -21,19 +20,6 @@ public class OutlineRenderFeature : ScriptableRendererFeature
     }
     public override void Create()
     {
-        if ((material == null || material.shader != shader) && shader != null)
-        {
-            // only create material if null or different shader has been assigned
-
-            if (material != null) CoreUtils.Destroy(material);
-            // destroy material using previous shader
-
-            material = CoreUtils.CreateEngineMaterial(shader);
-        }
-        if(shader == null && material != null)
-        {
-            CoreUtils.Destroy(material);
-        }
         pass = new OutlineRenderPass(material, settings, name);
         pass.renderPassEvent = _event;
     }

@@ -494,7 +494,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
@@ -1230,6 +1230,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1698167913692979313, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+--- !u!1 &705913598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705913600}
+  - component: {fileID: 705913599}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &705913599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705913598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 00b6c587ff959984bb7bd2198e988e6d, type: 2}
+--- !u!4 &705913600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705913598}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.244541, y: 2.2804909, z: 2.7368536}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &741616619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,6 +2611,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4244427646935967968, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244427646935967968, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -2570,12 +2623,20 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4244427646935967968, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_FocalLength
+      value: 32.96973
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244427646935967968, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4244427646935967968, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244427646935967968, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4549320522367794548, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Layer
@@ -2615,6 +2676,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5490350372264523229, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Dithering
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490350372264523229, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_CameraType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5490350372264523229, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
@@ -2712,6 +2777,14 @@ PrefabInstance:
     - target: {fileID: 7248944095677222694, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337267982204302223, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337267982204302223, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_ShowCameraFrustum
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536408299978125524, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Layer
@@ -4231,3 +4304,4 @@ SceneRoots:
   - {fileID: 338469770}
   - {fileID: 2034674330}
   - {fileID: 741616623}
+  - {fileID: 705913600}
