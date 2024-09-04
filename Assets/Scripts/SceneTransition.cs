@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
@@ -8,8 +8,8 @@ public class SceneTransition : MonoBehaviour
 
     int sceneCount;
     static SceneTransition instance;
-    Animator animator;
-
+    private Animator animator;
+   
     public static SceneTransition Instance { get { return instance; } }
     private void Awake()
     {
@@ -32,22 +32,27 @@ public class SceneTransition : MonoBehaviour
         Debug.Log(sceneCount);
     }
 
-    public void ChangeScene(string sceneName)
+    public void ChangeScene(float fadoutSeconds, float fadeInSeconds, string sceneName)
     {
         
-            StartCoroutine(DelayChangeScene(1f, sceneName));
+            StartCoroutine(DelayChangeScene(fadoutSeconds, fadeInSeconds, sceneName));
                     
     }
 
-    IEnumerator DelayChangeScene(float seconds, string sceneName)
+    IEnumerator DelayChangeScene(float fadeOutSeconds, float fadeInSeconds,  string sceneName)
     {
+
         Debug.Log("FadeOut");
         animator.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(fadeOutSeconds);
         SceneManager.LoadScene(sceneName);
-       
+        yield return new WaitForSeconds(fadeInSeconds);
+        animator.SetTrigger("FadeIn");
         Debug.Log("FadeIn");
-       
+
+
+
+
     }
 
 }

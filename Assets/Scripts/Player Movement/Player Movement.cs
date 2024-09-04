@@ -4,9 +4,9 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Rendering;
-using UnityEditor.ShaderGraph.Internal;
+//using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     
@@ -43,7 +43,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool audioPlaying;
 
-    private bool movementStopped = false;
+    public bool movementStopped { get;set; }
+    //private bool movementStopped = false;
 
     private bool activateTerrainChecker = false;
 
@@ -56,12 +57,19 @@ public class PlayerMovement : MonoBehaviour
     {
         //seeting varaibles should always be in awake
         characterController = GetComponent<CharacterController>();
+        movementStopped = true;
         
-        
+
     }
 
     private void Start()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            StartCoroutine(StartDialogue("Dialogue 1", 5f));
+            StartCoroutine(StartDialogue("Dialogue 2", 15f));
+        }
+        
         CheckTerrain();
        
     }
@@ -237,5 +245,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    IEnumerator StartDialogue(string dialogueLine, float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        SoundManager.Instance.PlaySoundAtLocation(transform.position, dialogueLine, false);
+    }
 }
 
