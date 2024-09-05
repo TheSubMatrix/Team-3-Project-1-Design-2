@@ -28,7 +28,7 @@ public class FrontDoor : MonoBehaviour, IInteractable
     }
     public void OnInteracting()
     {
-       interactionHandler.EndIntreaction();
+       interactionHandler.EndInteraction();
     }
 
    public void OnInteractStart( PlayerInteractionHandler incomingInteractionHandler)

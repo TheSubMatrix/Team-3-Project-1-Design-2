@@ -3,7 +3,7 @@ Shader "Custom/Outline"
     Properties
     {
         _OutlinesPass("Outlines Pass", 2D) = ""{}
-        _KernelSize("Kernel Size", float) = 10
+        _KernelSize("Kernel Size", float) = 3
         _BrightnessMultiplier("Brightness Multiplier", float) = 2
     }
 
