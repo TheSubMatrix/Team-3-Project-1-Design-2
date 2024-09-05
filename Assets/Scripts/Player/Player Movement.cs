@@ -57,7 +57,17 @@ public class PlayerMovement : MonoBehaviour
     {
         //seeting varaibles should always be in awake
         characterController = GetComponent<CharacterController>();
-        movementStopped = true;
+       
+       if(GameObject.Find("Sound Manager") == null)
+        {
+            Debug.LogWarning("There is no object in current scene named Sound Manager");
+            movementStopped = false;
+        }
+       else
+        {
+            movementStopped = true;
+        }
+        
         
 
     }
@@ -86,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
                 
         if ( characterController.isGrounded && !isJumping && Input.GetKeyDown(KeyCode.Space))
         {
-
+            SoundManager.Instance.PlaySoundOnObject(gameObject, "Jump", false);
             StartCoroutine(DelayJump(jumpDelay));
             Debug.Log("Jump");
             Jump();
