@@ -10,6 +10,9 @@ public class FrontDoor : MonoBehaviour, IInteractable
     public bool ShouldStopMovement { get => shouldStopMovement; set => shouldStopMovement = value; }
 
     bool shouldStopMovement = false;
+    
+
+    public bool switchEnabled = false;
    [SerializeField] public int boardCount { get;set; }
 
     
@@ -37,14 +40,18 @@ public class FrontDoor : MonoBehaviour, IInteractable
 
     public void OnInteractEnd()
     {
-        if(boardCount == 5)
+        if(boardCount >= 5 && switchEnabled)
         {
             animator.Play("Open");
         }
         else
         {
-            Debug.Log("Need all boards down");
+            Debug.Log("Need all boards down and switch enabled");
         }
        
+    }
+    public void UpdateSwitchState(bool newSwitchState) 
+    {
+        switchEnabled = newSwitchState;
     }
 }
