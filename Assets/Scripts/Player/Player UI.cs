@@ -3,34 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 public class PlayerUI : MonoBehaviour
 {
-    [SerializeField] private List<TMP_Text> displayedText;
+    [SerializeField] private List<Image> playerUIImages;
 
-   // float fadeDuration = 5f;
-    private void Update()
+    float elapsedTime = 0f;
+    bool controlsImageDisappear;
+
+
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            StartCoroutine(FadeOutPlayerUI(displayedText[0], 1,0,2));
-        
-        
-        }
-
-            
+        StartCoroutine(FadeOutPlayerUI(playerUIImages[0], 1, 0, 5, 10f));
     }
 
-    IEnumerator FadeOutPlayerUI(TMP_Text text, int startAlpha, int endAlpha, float duration)
+
+    IEnumerator FadeOutPlayerUI(Image image, int startAlpha, int endAlpha, float duration, float delay)
     {
         float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
+        elapsedTime += Time.deltaTime;
+        Debug.Log(elapsedTime);
+        Color imageColor = image.color;
+        if(elapsedTime > delay)
         {
-            elapsedTime += Time.deltaTime;
-            text.alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime/duration);
-            Debug.Log(elapsedTime);
-            yield return null;
+            while (elapsedTime < duration)
+            {
+               
+                Debug.Log(elapsedTime);
+                imageColor.a = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / duration);
+                image.color = imageColor;
+                yield return null;
+            }
         }
+        
+    }
 
+
+    void HidePlayerIU(Image image, int startAlpha, int endAlhpa, float duration, bool fadeIn)
+    {
+       if(fadeIn)
+        {
+            StartCoroutine(FadeOutPlayerUI(image, 0, 1, 5f, 10f));
+        }
+        else
+        {
+            StartCoroutine(FadeOutPlayerUI(image, 1, 0, 5f, 10f));
+        }
+        
     }
 }
+
+
