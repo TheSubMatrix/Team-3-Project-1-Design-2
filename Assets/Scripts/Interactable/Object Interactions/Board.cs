@@ -49,7 +49,7 @@ public class Board : MonoBehaviour, IInteractable
     
     public void OnInteracting()
     {
-        myInteractionHandler.EndIntreaction();
+        myInteractionHandler.EndInteraction();
     }
     
 

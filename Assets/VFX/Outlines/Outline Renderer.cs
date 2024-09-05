@@ -73,11 +73,14 @@ class OutlineRenderPass : ScriptableRenderPass
 
     public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
     {
-        RenderTextureDescriptor desc = renderingData.cameraData.cameraTargetDescriptor;
-        desc.depthBufferBits = 0;
-        RenderingUtils.ReAllocateIfNeeded(ref rtTemp, desc, name: "_TemporaryColorTexture");
-        RenderingUtils.ReAllocateIfNeeded(ref rtOutlinePass, desc, name: "_OutlinePass");
-        ConfigureTarget(rtOutlinePass);
+        RenderTextureDescriptor colorPassDesc = renderingData.cameraData.cameraTargetDescriptor;
+        RenderTextureDescriptor rtOutlinePassDesc = renderingData.cameraData.cameraTargetDescriptor;
+        rtOutlinePassDesc.depthBufferBits = 0;
+        rtOutlinePassDesc.colorFormat = RenderTextureFormat.Default;
+        colorPassDesc.depthBufferBits = 0;
+        RenderingUtils.ReAllocateIfNeeded(ref rtTemp, colorPassDesc, name: "_TemporaryColorTexture");
+        RenderingUtils.ReAllocateIfNeeded(ref rtOutlinePass, rtOutlinePassDesc, name: "_OutlinePass");
+        ConfigureTarget(rtOutlinePass, renderingData.cameraData.renderer.cameraDepthTargetHandle);
         ConfigureClear(ClearFlag.Color, Color.clear);
     }
     public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)

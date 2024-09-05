@@ -39,7 +39,7 @@ public class Trunk : MonoBehaviour, IInteractable
     }
     public void OnInteracting()
     {
-       myInteractionHandler.EndIntreaction();
+       myInteractionHandler.EndInteraction();
        
     }
 

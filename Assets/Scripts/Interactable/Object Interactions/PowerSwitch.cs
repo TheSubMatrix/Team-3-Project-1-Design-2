@@ -28,7 +28,7 @@ public class PowerSwitch : MonoBehaviour, IInteractable
         
         Debug.Log("Switch Powered: " + switchIsPowered);
        
-        interactionHandler.EndIntreaction();
+        interactionHandler.EndInteraction();
 
        
     }

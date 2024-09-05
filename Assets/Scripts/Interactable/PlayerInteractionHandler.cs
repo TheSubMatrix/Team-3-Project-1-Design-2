@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-//using UnityEditor.PackageManager;
 using UnityEngine.Events;
 
 public class PlayerInteractionHandler : MonoBehaviour
@@ -25,33 +23,68 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
-    
+
+    private GameObject hoveredObject;
 
     private IHoldable holdable;
+    private IInteractable interactable;
     void Update()
     {
+        const int raycastDistance = 5;
+        Ray ray = new Ray(transform.position, transform.forward);
+        Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
+        if(hitInfo.collider != null)
+        {
+            holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
+            interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
+            if (hitInfo.collider.gameObject != hoveredObject)
+            {
+                if (interactable != null || holdable != null)
+                {
+
+                    if (hoveredObject != null)
+                    {
+                        hoveredObject.layer = LayerMask.NameToLayer("Default");
+                        hoveredObject = null;
+                    }
+                    hoveredObject = hitInfo.collider.gameObject;
+                    hoveredObject.layer = LayerMask.NameToLayer("Outlines");
+                }
+                else 
+                {
+                    if (hoveredObject != null)
+                    {
+                        hoveredObject.layer = LayerMask.NameToLayer("Default");
+                        hoveredObject = null;
+                    }
+                }
+
+            }
+        }
+        else 
+        {
+            if (hoveredObject != null)
+            {
+                hoveredObject.layer = LayerMask.NameToLayer("Default");
+                hoveredObject = null;
+            }
+        }
+
+
         Debug.DrawLine(transform.position, transform.forward); 
         if (Input.GetKeyDown(KeyCode.E))
         {
-
-            const int raycastDistance = 5;
-            Ray ray = new Ray(transform.position, transform.forward);
-            Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
-            Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1);
             
             if(interactingObject!= null)   //I moved this up here so that way it will check to EndIntreaction and if it does
             {                             // it will return not triggering the rest. Also check spelling on EndIntreaction for future use
                 Debug.Log("End Interaction");
-                EndIntreaction();
+                EndInteraction();
                 return;
             }
             
             
             if ((heldObject == null || interactingObject == null) && hitInfo.collider != null)  // If the && is replaced with || then by pressing E it wont EndInteraction
             {
-                holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
-                //IHoldable holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
-                IInteractable interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
                 
                 if (holdable != null)
                 {
@@ -60,7 +93,7 @@ public class PlayerInteractionHandler : MonoBehaviour
                 else if (interactable != null)
                 {
                     Debug.Log("here");
-                    StartIntreaction(interactable);
+                    StartInteraction(interactable);
                 }
             }
             /*else if (interactingObject != null)
@@ -75,9 +108,6 @@ public class PlayerInteractionHandler : MonoBehaviour
         }
         if(heldObject != null && Input.GetKeyDown(KeyCode.Q))
         {
-            const int raycastDistance = 5;
-            Ray ray = new Ray(transform.position, transform.forward);
-            Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
             Debug.Log("Drop");
             if (hitInfo.collider != null)
             {
@@ -108,7 +138,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     /// <summary>
     /// Ends the current ongoing interaction
     /// </summary>
-    public void EndIntreaction()
+    public void EndInteraction()
     {
         if (interactingObject.ShouldStopMovement)
         {
@@ -133,7 +163,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     /// Starts an interaction with a given interactable
     /// </summary>
     /// <param name="interactable">A reference to the holdable object the pickup interaction will be ended with</param>
-    public void StartIntreaction(IInteractable interactable)
+    public void StartInteraction(IInteractable interactable)
     {
         interactingObject = interactable;
         Debug.Log("Start Interaction");
