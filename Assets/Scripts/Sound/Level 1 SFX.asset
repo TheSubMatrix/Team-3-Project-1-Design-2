@@ -79,3 +79,9 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     associatedText: 
+  - soundName: Car Door Shut
+    sound: {fileID: 8300000, guid: e2ae8e3509f02784784d1c05fae3a390, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
