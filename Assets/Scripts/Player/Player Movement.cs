@@ -261,5 +261,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         SoundManager.Instance.PlaySoundAtLocation(transform.position, dialogueLine, false);
     }
+
+    
 }
 

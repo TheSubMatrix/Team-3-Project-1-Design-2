@@ -6,15 +6,10 @@ using TMPro;
 using Unity.VisualScripting;
 public class PlayerUI : MonoBehaviour
 {
-    [SerializeField] private List<Image> playerUIImages;
-
-    float elapsedTime = 0f;
-    bool controlsImageDisappear;
-
-
+    [SerializeField] Image controls;
     private void Start()
     {
-        
+        HidePlayerUI(controls, false, 20, 5);
     }
 
 
@@ -27,14 +22,14 @@ public class PlayerUI : MonoBehaviour
         while(delayHolder < delay)
         {
             delayHolder += Time.deltaTime;
-            Debug.Log(delayHolder);
+            
             yield return null;
         }
        
             while (elapsedTime < duration)
             {
                 elapsedTime += Time.deltaTime;
-                Debug.Log(elapsedTime);
+               
                 imageColor.a = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / duration);
                 image.color = imageColor;
                 yield return null;
@@ -44,15 +39,15 @@ public class PlayerUI : MonoBehaviour
     }
 
 
-    void HidePlayerUI(Image image, bool fadeIn, float delay)
+   public void HidePlayerUI(Image image, bool fadeIn, float delay, float duration )
     {
        if(fadeIn)
         {
-            StartCoroutine(FadeOutPlayerUI(image, 0, 1, 5f, delay));
+            StartCoroutine(FadeOutPlayerUI(image, 0, 1, duration, delay));
         }
         else
         {
-            StartCoroutine(FadeOutPlayerUI(image, 1, 0, 5f, delay));
+            StartCoroutine(FadeOutPlayerUI(image, 1, 0, duration, delay));
         }
         
     }

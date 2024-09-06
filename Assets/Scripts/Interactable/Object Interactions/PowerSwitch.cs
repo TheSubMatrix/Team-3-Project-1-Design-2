@@ -13,7 +13,7 @@ public class PowerSwitch : MonoBehaviour, IInteractable
     [SerializeField] SwitchStateChanged switchStateChangedEvent;
     bool shouldStopMovement = false;
     bool switchIsPowered = false;
- 
+    bool stayOn = false;
     public PlayerInteractionHandler interactionHandler { get => currentInteractor; set => currentInteractor = value; }
     public bool ShouldStopMovement { get => shouldStopMovement; set => shouldStopMovement = value; }
 
@@ -41,10 +41,14 @@ public class PowerSwitch : MonoBehaviour, IInteractable
 
     public void OnInteractEnd()
     {
-        switchIsPowered = !switchIsPowered;
-        Debug.Log("Switch Powered: " + switchIsPowered);
-        switchStateChangedEvent.Invoke(switchIsPowered);
-        Debug.Log("Interact End");
+        if(!stayOn)
+        {
+            switchIsPowered = !switchIsPowered;
+            Debug.Log("Switch Powered: " + switchIsPowered);
+            switchStateChangedEvent.Invoke(switchIsPowered);
+            Debug.Log("Interact End");
+        }
+        
 
     }
 
@@ -54,6 +58,7 @@ public class PowerSwitch : MonoBehaviour, IInteractable
         if (switchOn)
         {
             animator.Play("Turn On");
+            stayOn = true;
         }
         else
         {
