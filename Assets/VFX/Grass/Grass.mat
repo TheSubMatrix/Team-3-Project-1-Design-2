@@ -40,10 +40,10 @@ Material:
     - _BladeForwardAmount: 0.18
     - _BladeHeight: 0.22
     - _BladeHeightDeviation: 0.13
-    - _BladeWidth: 0.002
+    - _BladeWidth: 0.01
     - _BladeWidthDeviation: 0.005
     - _GrassMaskThreshold: 0.001
-    - _TessellationUniform: 25.4
+    - _TessellationUniform: 15
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &1158181437801355595
