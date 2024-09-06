@@ -41,7 +41,8 @@ public class PlayerInteractionHandler : MonoBehaviour
             {
                 if (interactable != null || holdable != null)
                 {
-
+                    Debug.Log($"Interactable is {interactable} and holdable is  {holdable}");
+                  
                     if (hoveredObject != null)
                     {
                         hoveredObject.layer = LayerMask.NameToLayer("Default");
