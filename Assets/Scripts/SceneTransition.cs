@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
 
-    int sceneCount;
+    
     static SceneTransition instance;
     private Animator animator;
    
@@ -24,12 +24,12 @@ public class SceneTransition : MonoBehaviour
         }
 
         animator = GetComponent<Animator>();
-        sceneCount = SceneManager.sceneCountInBuildSettings;
+        
     }
 
     private void Start()
     {
-        Debug.Log(sceneCount);
+       
     }
 
     public void ChangeScene(float fadoutSeconds, float fadeInSeconds, string sceneName)

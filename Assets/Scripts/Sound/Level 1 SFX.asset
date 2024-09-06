@@ -85,3 +85,9 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     associatedText: 
+  - soundName: Dialogue 4
+    sound: {fileID: 8300000, guid: f369f041f42da4349941b79009622ec3, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
