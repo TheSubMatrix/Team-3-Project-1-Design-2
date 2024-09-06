@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class CrowBar : MonoBehaviour, IHoldable
 {
     [SerializeField] Vector3 positionOffset;
@@ -15,7 +15,9 @@ public class CrowBar : MonoBehaviour, IHoldable
     private float pickUpSpeed = 1f;
     private float rotateSpeed = 1f;
 
+    [SerializeField] Image crowbarUIImage;
 
+    [SerializeField] PlayerUI playerUIRef;
     private Rigidbody rb;
    private bool isHolding;
     private void Awake()
@@ -35,6 +37,7 @@ public class CrowBar : MonoBehaviour, IHoldable
             GetComponent<MeshCollider>().isTrigger = true;
             hands.SetActive(false);
             transform.parent = objectPos.transform;
+            playerUIRef.HidePlayerUI(crowbarUIImage, false, 0, 2);
         }
         
     }
