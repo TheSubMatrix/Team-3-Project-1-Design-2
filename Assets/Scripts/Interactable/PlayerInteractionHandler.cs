@@ -6,7 +6,8 @@ using UnityEngine.Events;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
-
+    [SerializeField]
+    PlayerUI playerUI;
     [Serializable]
     public class InteractionEvent : UnityEvent<GameObject> { }
     [Serializable]
@@ -28,6 +29,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private IHoldable holdable;
     private IInteractable interactable;
+    private IUsesUI uiUser;
     void Update()
     {
         const int raycastDistance = 5;
@@ -37,11 +39,12 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
             interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
+            uiUser = hitInfo.collider.gameObject.GetComponent<IUsesUI>();
             if (hitInfo.collider.gameObject != hoveredObject)
             {
                 if (interactable != null || holdable != null)
                 {
-                    Debug.Log($"Interactable is {interactable} and holdable is  {holdable}");
+                    //Debug.Log($"Interactable is {interactable} and holdable is  {holdable}");
                   
                     if (hoveredObject != null)
                     {
@@ -89,12 +92,11 @@ public class PlayerInteractionHandler : MonoBehaviour
                 
                 if (holdable != null)
                 {
-                    StartPickup(holdable);
+                    StartPickup(holdable, uiUser);
                 }
                 else if (interactable != null)
                 {
-                    Debug.Log("here");
-                    StartInteraction(interactable);
+                    StartInteraction(interactable, uiUser);
                 }
             }
             /*else if (interactingObject != null)
@@ -154,17 +156,22 @@ public class PlayerInteractionHandler : MonoBehaviour
     /// Starts to pickup a given holdable
     /// </summary>
     /// <param name="holdable">The holdable to pickup</param>
-    public void StartPickup(IHoldable holdable)
+    public void StartPickup(IHoldable holdable, IUsesUI uiUser)
     {
         PickupStarted.Invoke(holdable.gameObject);
         holdable.OnHoldStart();
+        if (uiUser != null)
+        {
+            uiUser.PlayerUI = playerUI;
+        }
         heldObject = holdable;
+
     }
     /// <summary>
     /// Starts an interaction with a given interactable
     /// </summary>
     /// <param name="interactable">A reference to the holdable object the pickup interaction will be ended with</param>
-    public void StartInteraction(IInteractable interactable)
+    public void StartInteraction(IInteractable interactable, IUsesUI uiUser)
     {
         interactingObject = interactable;
         Debug.Log("Start Interaction");
@@ -173,8 +180,10 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             StopPlayerMovement.Invoke();
         }
-
-
+        if(uiUser != null)
+        {
+            uiUser.PlayerUI = playerUI;
+        }
         interactable.OnInteractStart(this);
     }
     /// <summary>

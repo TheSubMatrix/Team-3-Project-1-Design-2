@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-public class FrontDoor : MonoBehaviour, IInteractable
+public class FrontDoor : MonoBehaviour, IInteractable, IUsesUI
 {
 
 
@@ -15,13 +16,12 @@ public class FrontDoor : MonoBehaviour, IInteractable
     bool showingPowerSwitchUI = false;
     BoxCollider doorCollider;
 
-    [SerializeField] PlayerUI playerUI;
-    [SerializeField] Image powerSwitchUIImage; 
+    [SerializeField] Image powerSwitchUIImage => PlayerUI?.GetComponentsInChildren<Image>().Where(o => o.gameObject.name == "gen").First();
 
     public bool switchEnabled = false;
    [SerializeField] public int boardCount { get;set; }
+    public PlayerUI PlayerUI { get; set; }
 
-    
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -70,7 +70,7 @@ public class FrontDoor : MonoBehaviour, IInteractable
 
             if (!showingPowerSwitchUI && switchEnabled == false)
             {
-                playerUI.HidePlayerUI(powerSwitchUIImage, true, 0, 2);
+                PlayerUI?.HidePlayerUI(powerSwitchUIImage, true, 0, 2);
                 showingPowerSwitchUI = true;
             }
            

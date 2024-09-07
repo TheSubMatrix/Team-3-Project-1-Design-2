@@ -1,25 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-public class CrowBar : MonoBehaviour, IHoldable
+public class CrowBar : MonoBehaviour, IHoldable, IUsesUI
 {
     [SerializeField] Vector3 positionOffset;
      [SerializeField]Quaternion rotationOffset = Quaternion.identity;
     public Vector3 HoldPositionOffset => positionOffset;
-    public GameObject hands;
-    public GameObject objectPos;
+    //public GameObject hands;
+    //public GameObject objectPos;
     public Vector3 TransformToOffsetPositionFrom { get; set; }
     public Quaternion HoldRotationOffset => rotationOffset;
 
-    private float pickUpSpeed = 1f;
-    private float rotateSpeed = 1f;
+    public PlayerUI PlayerUI { get; set; }
 
-    [SerializeField] Image crowbarUIImage;
+    private float pickUpSpeed = 100f;
+    private float rotateSpeed = 10000f;
 
-    [SerializeField] PlayerUI playerUIRef;
+    [SerializeField] Image crowbarUIImage => PlayerUI?.GetComponentsInChildren<Image>().Where(o => o.gameObject.name == "Break Inside").First();
+
     private Rigidbody rb;
-   private bool isHolding;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,9 +36,9 @@ public class CrowBar : MonoBehaviour, IHoldable
         {
             rb.isKinematic = true;
             GetComponent<MeshCollider>().isTrigger = true;
-            hands.SetActive(false);
-            transform.parent = objectPos.transform;
-            playerUIRef.HidePlayerUI(crowbarUIImage, false, 0, 2);
+            //hands.SetActive(false);
+            //transform.parent = objectPos.transform;
+            PlayerUI?.HidePlayerUI(crowbarUIImage, false, 0, 2);
         }
         
     }
@@ -45,7 +46,7 @@ public class CrowBar : MonoBehaviour, IHoldable
     public void OnHolding(Vector3 desiredPos, Quaternion desiredRot)
     {
         transform.position = Vector3.MoveTowards(transform.position,desiredPos,Time.deltaTime * pickUpSpeed);
-        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
 
         //transform.position = Vector3.Lerp(transform.position, desiredPos, Time.deltaTime * pickUpSpeed);
         //transform.rotation = Quaternion.Lerp(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
@@ -59,7 +60,7 @@ public class CrowBar : MonoBehaviour, IHoldable
            // isHolding = false;
             rb.isKinematic = false;
             GetComponent<MeshCollider>().isTrigger = false;
-            hands.SetActive(true);
+            //hands.SetActive(true);
             transform.parent = null;
         }
     }
