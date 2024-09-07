@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559486fe9db09d4468d6a19b0315da8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559486fe9db09d4468d6a19b0315da8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -325,6 +325,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3484847929291256521, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
   m_PrefabInstance: {fileID: 956681697}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &495868209 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8271509771468858765, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+  m_PrefabInstance: {fileID: 956681697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &852416134 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1688609250056563892, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
@@ -472,6 +477,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8581416488532765280, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3796124234073031882, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
@@ -479,8 +488,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6020728984651252500, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 996406010}
-    - targetCorrespondingSourceObject: {fileID: 3484847929291256521, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
-      insertIndex: 0
+    - targetCorrespondingSourceObject: {fileID: 8271509771468858765, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7772879000593741873}
     - targetCorrespondingSourceObject: {fileID: 3484847929291256521, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       insertIndex: -1
@@ -662,11 +671,11 @@ Transform:
   m_GameObject: {fileID: 343197068685242268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.628, z: 3.145}
+  m_LocalPosition: {x: 0, y: 0, z: 2.75}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 304232267}
+  m_Father: {fileID: 495868209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8022779751678742720
 MeshRenderer:

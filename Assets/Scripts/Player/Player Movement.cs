@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
                 
         if ( characterController.isGrounded && !isJumping && Input.GetKeyDown(KeyCode.Space))
         {
-            SoundManager.Instance.PlaySoundOnObject(gameObject, "Jump", false);
+            SoundManager.Instance?.PlaySoundOnObject(gameObject, "Jump", false);
             StartCoroutine(DelayJump(jumpDelay));
             Debug.Log("Jump");
             Jump();
