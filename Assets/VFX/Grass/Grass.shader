@@ -31,7 +31,6 @@ Shader "Custom/Grass"
             #include "CustomTessellation.cginc"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/ShadowCasterPass.hlsl"
-            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/SurfaceData.hlsl"
             inline float4 UnityObjectToClipPos(in float3 pos)
             {
             #if defined(STEREO_CUBEMAP_RENDER_ON)

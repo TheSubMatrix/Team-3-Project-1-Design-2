@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLevelSwitcher : MonoBehaviour
 {
+    bool shouldFinishTransition = false;
     [SerializeField] float m_DelayBeforeTransition;
     [SerializeField] List<TransitionData> m_transitions = new List<TransitionData>();
+    [SerializeField] Material warpMaterial;
+    [SerializeField] Animator animator;
     [System.Serializable]
     struct TransitionData
     {
@@ -17,12 +20,17 @@ public class PlayerLevelSwitcher : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            StartCoroutine(TransitionSceneAsync(m_transitions, m_DelayBeforeTransition));
+            animator.SetTrigger("Start Transition");
+            StartCoroutine(TransitionSceneAsync(m_transitions));
         }
     }
-    IEnumerator TransitionSceneAsync(List<TransitionData> scenesToParse, float timeToWait)
+    public void CompleteSceneTransition()
     {
-        float elapsedTime = 0;
+        shouldFinishTransition = true;
+    }
+    IEnumerator TransitionSceneAsync(List<TransitionData> scenesToParse)
+    {
+
         string sceneName = null;
         string currentScene = SceneManager.GetActiveScene().name;
         for (int i = 0; i < scenesToParse.Count; i++)
@@ -39,11 +47,10 @@ public class PlayerLevelSwitcher : MonoBehaviour
         }
         AsyncOperation asyncSceneLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         asyncSceneLoad.allowSceneActivation = false;
-        while (!Mathf.Approximately(asyncSceneLoad.progress, 0.9f) || elapsedTime < timeToWait)
+        while (!Mathf.Approximately(asyncSceneLoad.progress, 0.9f) || !shouldFinishTransition)
         {
             Debug.Log(asyncSceneLoad.progress);
-            elapsedTime += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
         asyncSceneLoad.allowSceneActivation = true;
         yield return new WaitForEndOfFrame();
@@ -52,6 +59,6 @@ public class PlayerLevelSwitcher : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
         SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetSceneByName(sceneName));
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(currentScene));
-        Debug.Log("Done");
+        animator.SetTrigger("End Transition");
     }
 }

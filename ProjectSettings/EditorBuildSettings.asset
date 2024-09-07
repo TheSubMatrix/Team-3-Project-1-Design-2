@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoScene.unity
     guid: 29384dcb698ff814b8f49da60b83e55e
+  - enabled: 1
+    path: Assets/Scenes/Level Two.unity
+    guid: 5610d7e9d120b9f41acb349ff0409039
+  - enabled: 1
+    path: Assets/Scenes/Level Two Destroyed.unity
+    guid: 538d6544d73e3e543b9eb37c3588dcd5
   m_configObjects: {}
