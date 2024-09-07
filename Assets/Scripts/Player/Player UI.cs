@@ -9,7 +9,11 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] Image controls;
     private void Start()
     {
-        HidePlayerUI(controls, false, 20, 5);
+        if(controls != null)
+        {
+            HidePlayerUI(controls, false, 20, 5);
+        }
+       
     }
 
 
