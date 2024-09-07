@@ -19,7 +19,7 @@ public class CinemachineCameraSwitcher : MonoBehaviour
     }
     private void Start()
     {
-        //StartCoroutine(SwitchBetweenCameras(cameras));
+        SwitchCamera(cameras[0], cameras[1], 5, 5, 5);
     }
 
     private void Update()
@@ -30,9 +30,9 @@ public class CinemachineCameraSwitcher : MonoBehaviour
             
         }*/
     } 
-    void SwitchCamera(GameObject currentCamera, GameObject nextCamera, float cameraOneAnimationOver,float cameraTwoAnimationOver, float defaultCameraDelay)
+    void SwitchCamera(GameObject cameraOne, GameObject cameraTwo, float cameraOneAnimationOver,float cameraTwoAnimationOver, float defaultCameraDelay)
     {
-        StartCoroutine(SwitchCameraCoroutine(currentCamera, nextCamera, cameraOneAnimationOver,cameraTwoAnimationOver, defaultCameraDelay));
+        StartCoroutine(SwitchCameraCoroutine(cameraOne, cameraTwo, cameraOneAnimationOver,cameraTwoAnimationOver, defaultCameraDelay));
     }
 
     IEnumerator SwitchCameraCoroutine(GameObject cameraOne, GameObject cameraTwo, float cameraOneAnimationOver, float cameraTwoAnimationOver, float defaultCameraDelay)
@@ -57,7 +57,20 @@ public class CinemachineCameraSwitcher : MonoBehaviour
             playerCamera.SetActive(true);
             yield break;
         }
-
+        else
+        {
+            playerCamera.SetActive(false);
+            cameraOne.SetActive(true);
+            yield return new WaitForSeconds(defaultCameraDelay);
+            Debug.Log("Switch to camera 2");
+            cameraOne.SetActive(false);
+            cameraTwo.SetActive(true);
+            yield return new WaitForSeconds(defaultCameraDelay);
+            Debug.Log("Switch to Player");
+            playerMovementRef.TogglePlayerMovement();
+            cameraTwo.SetActive(false);
+            playerCamera.SetActive(true);
+        }
 
     }
     public void BackToPlayerCamera()

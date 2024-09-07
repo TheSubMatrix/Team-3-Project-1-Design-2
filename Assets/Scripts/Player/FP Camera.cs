@@ -8,6 +8,7 @@ public class FP_Camera : MonoBehaviour
     [SerializeField] Transform cameraOrientation;
     [SerializeField] float sensitivityX, sensitivityY;
 
+    private float elaspedTime;
     
     private float xRotation, yRotation;
 
@@ -16,6 +17,7 @@ public class FP_Camera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         defaultCamera = gameObject;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -24,19 +26,23 @@ public class FP_Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        elaspedTime += Time.deltaTime;
+        if (elaspedTime > 10f)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
+
+            yRotation += mouseX;
+            xRotation -= mouseY;
+
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+
+
+            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        }
         
-        float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
-
-        yRotation += mouseX;
-        xRotation -= mouseY;
-
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-
-       
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
        // transform.position = new Vector3(Mathf.Sin(Time.time) * 0.5f, transform.position.y, transform.position.z);
 
