@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
-    
+    [SerializeField] Transform levelOneStartPos;
 
      private LayerMask currentTerrain;
    
@@ -74,10 +74,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+
+        
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             StartCoroutine(StartDialogue("Dialogue 1", 5f));
             StartCoroutine(StartDialogue("Dialogue 2", 15f));
+        }
+        {
+            transform.position = levelOneStartPos.position;
         }
         
         CheckTerrain();
