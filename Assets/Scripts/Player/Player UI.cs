@@ -14,12 +14,11 @@ using UnityEngine.Events;public class PlayerUI : MonoBehaviour
 
     private void Awake()
     {
-        imageLocatorChannel.locateImage.AddListener(GetImageReference);
-
+        imageLocatorChannel?.locateImage.AddListener(GetImageReference);
+        objectiveDisplayChannel?.OnFadeImage.AddListener(FadePlayerUIImage);
     }
     private void Start()
     {
-        objectiveDisplayChannel?.OnFadeImage.AddListener(FadePlayerUIImage);
         if(controls != null)
         {
             HidePlayerUI(controls, false, 15, 5);

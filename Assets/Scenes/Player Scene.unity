@@ -536,6 +536,10 @@ PrefabInstance:
       propertyPath: playerUI
       value: 
       objectReference: {fileID: 545191647}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: updatePlayerMovement
+      value: 
+      objectReference: {fileID: 11400000, guid: 71312b1e4f85da244897d6ddfdf89219, type: 2}
     - target: {fileID: 1035282920307820648, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Name
       value: Grab Crow Bar
@@ -662,7 +666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537492319886193358, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.02
+      value: 30.83
       objectReference: {fileID: 0}
     - target: {fileID: 6537492319886193358, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_LocalRotation.w

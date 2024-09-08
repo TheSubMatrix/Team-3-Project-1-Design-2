@@ -95,13 +95,10 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void PlayerMove()
     {
-        
-            
-           
-            //you need to normalize this so you dont get weird values when x and z are at their peak together.
-           //think of this as a square. you go further when you go from the center to the corner rather than from the center to the top.
-           //the further you are from center, the faster you go.
-           Vector2 playerMovementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        //you need to normalize this so you dont get weird values when x and z are at their peak together.
+        //think of this as a square. you go further when you go from the center to the corner rather than from the center to the top.
+        //the further you are from center, the faster you go.
+        Vector2 playerMovementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         if (shouldBeAllowedToMove)
         {
             if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
@@ -146,8 +143,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        gravityPull.y = Mathf.Sqrt(gravity * -jumpHeight);
-        //gravityPull.y = Mathf.Sqrt(gravity * -2 * jumpHeight);       
+        if (shouldBeAllowedToMove)
+        {
+            gravityPull.y = Mathf.Sqrt(gravity * -jumpHeight);
+        }
     }
 
     IEnumerator DelayJump(float delay)
