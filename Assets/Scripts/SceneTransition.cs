@@ -32,10 +32,17 @@ public class SceneTransition : MonoBehaviour
        
     }
 
-    public void ChangeScene(float fadoutSeconds, float fadeInSeconds, string sceneName)
+    public void ChangeScene(float fadoutSeconds, float fadeInSeconds, string sceneNameOne, string sceneNameTwo, bool startOfGame = false)
     {
-        
-            StartCoroutine(DelayChangeScene(fadoutSeconds, fadeInSeconds, sceneName));
+        if(startOfGame)
+        {
+            StartCoroutine(StartLevelOneScene(fadoutSeconds,fadeInSeconds, sceneNameOne, sceneNameTwo));
+        }
+        else
+        {
+            StartCoroutine(DelayChangeScene(fadoutSeconds, fadeInSeconds, sceneNameOne));
+        }
+            
                     
     }
 
@@ -49,10 +56,21 @@ public class SceneTransition : MonoBehaviour
         yield return new WaitForSeconds(fadeInSeconds);
         animator.SetTrigger("FadeIn");
         Debug.Log("FadeIn");
-
-
-
-
     }
+
+
+    IEnumerator StartLevelOneScene(float fadeOutSeconds, float fadeInSeconds, string sceneOneName,string sceneTwoName)
+    {
+
+        Debug.Log("FadeOut");
+        animator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(fadeOutSeconds);
+        SceneManager.LoadScene(sceneOneName);
+        SceneManager.LoadScene(sceneTwoName, LoadSceneMode.Additive);
+        yield return new WaitForSeconds(fadeInSeconds);
+        animator.SetTrigger("FadeIn");
+        Debug.Log("FadeIn");
+    }
+
 
 }

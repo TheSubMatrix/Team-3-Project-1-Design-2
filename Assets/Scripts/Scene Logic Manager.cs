@@ -10,13 +10,14 @@ public class SceneLogicManager : MonoBehaviour
     [SerializeField] SO_BoolChannel playerMovementStateChannel;
     private void Awake()
     {
-        CheckSceneSpecificLogic(SceneManager.GetSceneByName("Level One"), SceneManager.GetSceneByName("Main Menu"));
-        SceneManager.activeSceneChanged += CheckSceneSpecificLogic;
+        /*CheckSceneSpecificLogic(SceneManager.GetSceneByName("Level One"), SceneManager.GetSceneByName("Main Menu"));
+        SceneManager.activeSceneChanged += CheckSceneSpecificLogic;*/
     }
     void CheckSceneSpecificLogic(Scene newScene, Scene currentScene)
     {
         if (newScene == SceneManager.GetSceneByName("Level One"))
         {
+            SceneManager.LoadScene("Player Scene", LoadSceneMode.Additive);
             playerMovementStateChannel?.boolEvent?.Invoke(false);
             levelOneStartChannel?.myEvent?.Invoke();
         }

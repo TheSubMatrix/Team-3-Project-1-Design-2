@@ -4,16 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
-public class PlayerUI : MonoBehaviour
+using UnityEngine.Events;public class PlayerUI : MonoBehaviour
 {
     [SerializeField] SO_ImageDisplayChannel objectiveDisplayChannel;
+    [SerializeField] SO_RetrieveImage imageLocatorChannel;
+    
     [SerializeField] Image controls;
+
+
+    private void Awake()
+    {
+        imageLocatorChannel.locateImage.AddListener(GetImageReference);
+
+    }
     private void Start()
     {
         objectiveDisplayChannel?.OnFadeImage.AddListener(FadePlayerUIImage);
         if(controls != null)
         {
-            HidePlayerUI(controls, false, 20, 5);
+            HidePlayerUI(controls, false, 15, 5);
         }
        
     }
@@ -65,6 +74,21 @@ public class PlayerUI : MonoBehaviour
             StartCoroutine(FadePlayerUI(image, 1, 0, duration, delay));
         }
         
+    }
+
+
+    public void GetImageReference(string imageName)
+    {
+        Image imageToReturn = null;
+        foreach(Image image in GetComponentsInChildren<Image>())
+        {
+            if(image.gameObject.name == imageName)
+            {
+                imageToReturn = image;
+
+            }
+        }
+        imageLocatorChannel.returnImage.Invoke(imageToReturn);
     }
 }
 

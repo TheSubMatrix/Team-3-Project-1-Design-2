@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 155604f38b36b0942aab4191d85b1c4a
   - enabled: 1
-    path: Assets/Scenes/Level One Old.unity
+    path: Assets/Scenes/Level One.unity
     guid: 53a36fe37214cab49a95375d4fa7c270
   - enabled: 1
     path: Assets/Scenes/Level Two Destroyed.unity
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level Two.unity
     guid: 5610d7e9d120b9f41acb349ff0409039
+  - enabled: 1
+    path: Assets/Scenes/Player Scene.unity
+    guid: 25326a7d730f87545a0c497b2fdcbaa1
   m_configObjects: {}

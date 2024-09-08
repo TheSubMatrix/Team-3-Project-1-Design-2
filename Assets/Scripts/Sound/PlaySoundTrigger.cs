@@ -52,7 +52,7 @@ public class PlaySoundTrigger : MonoBehaviour
                         Debug.LogWarning("No instance");
                         return;
                     }
-                    SceneTransition.Instance.ChangeScene(5, 1, "DemoScene");
+                   // SceneTransition.Instance.ChangeScene(5, 1, "DemoScene");
                     
                     
                 }
