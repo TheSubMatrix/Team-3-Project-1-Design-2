@@ -36,10 +36,7 @@ public class FrontDoor : MonoBehaviour, IInteractable
         
         if(switchEnabled || boardCount >= 5)
         {
-            /*if(switchEnabled)
-            {
-                playerUI.HidePlayerUI(powerSwitchUIImage, false, 0, 2);
-            }*/
+            
             doorCollider.enabled = true;
         }
     }
