@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-public class CrowBar : MonoBehaviour, IHoldable, IUsesUI
+public class CrowBar : MonoBehaviour, IHoldable
 {
     [SerializeField] Vector3 positionOffset;
-     [SerializeField]Quaternion rotationOffset = Quaternion.identity;
+    [SerializeField] Quaternion rotationOffset = Quaternion.identity;
+    [SerializeField] SO_ImageDisplayChannel uiPopupChannel;
     public Vector3 HoldPositionOffset => positionOffset;
     //public GameObject hands;
     //public GameObject objectPos;
@@ -18,7 +19,7 @@ public class CrowBar : MonoBehaviour, IHoldable, IUsesUI
     private float pickUpSpeed = 100f;
     private float rotateSpeed = 10000f;
 
-    [SerializeField] Image crowbarUIImage => PlayerUI?.GetComponentsInChildren<Image>().Where(o => o.gameObject.name == "Break Inside").First();
+    
 
     private Rigidbody rb;
     private void Awake()
@@ -38,7 +39,8 @@ public class CrowBar : MonoBehaviour, IHoldable, IUsesUI
             GetComponent<MeshCollider>().isTrigger = true;
             //hands.SetActive(false);
             //transform.parent = objectPos.transform;
-            PlayerUI?.HidePlayerUI(crowbarUIImage, false, 0, 2);
+            uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Break Inside", 0, 1, .5f, 0));
+            uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Break Inside", 1, 0, .5f, 5));
         }
         
     }

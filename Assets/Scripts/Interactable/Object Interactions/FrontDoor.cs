@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-public class FrontDoor : MonoBehaviour, IInteractable, IUsesUI
+public class FrontDoor : MonoBehaviour, IInteractable
 {
 
-
+    [SerializeField] SO_ImageDisplayChannel uiPopupChannel;
     Animator animator;
     PlayerInteractionHandler currentInteractable;
     public PlayerInteractionHandler interactionHandler { get => currentInteractable; set => currentInteractable = value; }
@@ -15,8 +15,6 @@ public class FrontDoor : MonoBehaviour, IInteractable, IUsesUI
     bool shouldStopMovement = false;
     bool showingPowerSwitchUI = false;
     BoxCollider doorCollider;
-
-    [SerializeField] Image powerSwitchUIImage => PlayerUI?.GetComponentsInChildren<Image>().Where(o => o.gameObject.name == "gen").First();
 
     public bool switchEnabled = false;
    [SerializeField] public int boardCount { get;set; }
@@ -70,7 +68,8 @@ public class FrontDoor : MonoBehaviour, IInteractable, IUsesUI
 
             if (!showingPowerSwitchUI && switchEnabled == false)
             {
-                PlayerUI?.HidePlayerUI(powerSwitchUIImage, true, 0, 2);
+                uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 0, 1, 0.5f, 0));
+                uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 1, 0, 0.5f, 5));
                 showingPowerSwitchUI = true;
             }
            

@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 public class UIManager : MonoBehaviour
 {
-
     private AudioSource audioSource;
     [SerializeField] AudioClip buttonClickSFX;
 
@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        
         audioSource = GetComponent<AudioSource>();
     }
     private void Start()
@@ -74,5 +73,12 @@ public class UIManager : MonoBehaviour
        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
+    public void DisplayImage(string imageToDisplay)
+    {
+        foreach(Image image in GetComponentsInChildren<Image>())
+        {
+
+        }
+    }
    
 }

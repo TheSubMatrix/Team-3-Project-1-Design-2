@@ -6,9 +6,11 @@ using TMPro;
 using Unity.VisualScripting;
 public class PlayerUI : MonoBehaviour
 {
+    [SerializeField] SO_ImageDisplayChannel objectiveDisplayChannel;
     [SerializeField] Image controls;
     private void Start()
     {
+        objectiveDisplayChannel?.OnFadeImage.AddListener(FadePlayerUIImage);
         if(controls != null)
         {
             HidePlayerUI(controls, false, 20, 5);
@@ -16,8 +18,17 @@ public class PlayerUI : MonoBehaviour
        
     }
 
-
-    IEnumerator FadeOutPlayerUI(Image image, int startAlpha, int endAlpha, float duration, float delay)
+    void FadePlayerUIImage(SO_ImageDisplayChannel.ImageDisplayInfo imageDisplayInfo)
+    {
+        foreach(Image image in GetComponentsInChildren<Image>()) 
+        {
+            if(image.gameObject.name == imageDisplayInfo.image) 
+            {
+                StartCoroutine(FadePlayerUI(image, imageDisplayInfo.startAlpha, imageDisplayInfo.endAlpha, imageDisplayInfo.duration, imageDisplayInfo.delay));
+            }
+        }
+    }
+    IEnumerator FadePlayerUI(Image image, int startAlpha, int endAlpha, float duration, float delay)
     {
         float elapsedTime = 0f;
         float delayHolder = 0f;      
@@ -47,11 +58,11 @@ public class PlayerUI : MonoBehaviour
     {
        if(fadeIn)
         {
-            StartCoroutine(FadeOutPlayerUI(image, 0, 1, duration, delay));
+            StartCoroutine(FadePlayerUI(image, 0, 1, duration, delay));
         }
         else
         {
-            StartCoroutine(FadeOutPlayerUI(image, 1, 0, duration, delay));
+            StartCoroutine(FadePlayerUI(image, 1, 0, duration, delay));
         }
         
     }

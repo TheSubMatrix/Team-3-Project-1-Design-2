@@ -29,7 +29,6 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private IHoldable holdable;
     private IInteractable interactable;
-    private IUsesUI uiUser;
     void Update()
     {
         const int raycastDistance = 5;
@@ -39,7 +38,6 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             holdable = hitInfo.collider.gameObject.GetComponent<IHoldable>();
             interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
-            uiUser = hitInfo.collider.gameObject.GetComponent<IUsesUI>();
             if (hitInfo.collider.gameObject != hoveredObject)
             {
                 if (interactable != null || holdable != null)
@@ -92,11 +90,11 @@ public class PlayerInteractionHandler : MonoBehaviour
                 
                 if (holdable != null)
                 {
-                    StartPickup(holdable, uiUser);
+                    StartPickup(holdable);
                 }
                 else if (interactable != null)
                 {
-                    StartInteraction(interactable, uiUser);
+                    StartInteraction(interactable);
                 }
             }
             /*else if (interactingObject != null)
@@ -156,14 +154,10 @@ public class PlayerInteractionHandler : MonoBehaviour
     /// Starts to pickup a given holdable
     /// </summary>
     /// <param name="holdable">The holdable to pickup</param>
-    public void StartPickup(IHoldable holdable, IUsesUI uiUser)
+    public void StartPickup(IHoldable holdable)
     {
         PickupStarted.Invoke(holdable.gameObject);
         holdable.OnHoldStart();
-        if (uiUser != null)
-        {
-            uiUser.PlayerUI = playerUI;
-        }
         heldObject = holdable;
 
     }
@@ -171,7 +165,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     /// Starts an interaction with a given interactable
     /// </summary>
     /// <param name="interactable">A reference to the holdable object the pickup interaction will be ended with</param>
-    public void StartInteraction(IInteractable interactable, IUsesUI uiUser)
+    public void StartInteraction(IInteractable interactable)
     {
         interactingObject = interactable;
         Debug.Log("Start Interaction");
@@ -179,10 +173,6 @@ public class PlayerInteractionHandler : MonoBehaviour
         if (interactable.ShouldStopMovement)
         {
             StopPlayerMovement.Invoke();
-        }
-        if(uiUser != null)
-        {
-            uiUser.PlayerUI = playerUI;
         }
         interactable.OnInteractStart(this);
     }

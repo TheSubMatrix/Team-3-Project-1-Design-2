@@ -5488,8 +5488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4f508574f0e174a91a38f0e5d5d1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUI: {fileID: 0}
-  powerSwitchUIImage: {fileID: 0}
+  uiPopupChannel: {fileID: 11400000, guid: 652aec808897f694ea3ba77f4433abc8, type: 2}
   switchEnabled: 0
 --- !u!65 &847355970
 BoxCollider:
@@ -5573,10 +5572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionOffset: {x: 0.4, y: -0.3, z: 1}
   rotationOffset: {x: 0.2418448, y: -0.35355338, z: 0.664463, w: -0.61237246}
-  hands: {fileID: 0}
-  objectPos: {fileID: 0}
-  crowbarUIImage: {fileID: 0}
-  playerUIRef: {fileID: 0}
+  uiPopupChannel: {fileID: 11400000, guid: 652aec808897f694ea3ba77f4433abc8, type: 2}
 --- !u!54 &892126290
 Rigidbody:
   m_ObjectHideFlags: 0
