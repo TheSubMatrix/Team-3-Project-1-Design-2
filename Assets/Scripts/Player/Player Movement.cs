@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] SO_BoolChannel allowPlayerMovementChannel;
     [SerializeField] Transform levelOneStartPos;
-
-     private LayerMask currentTerrain;
-   
+    private LayerMask currentTerrain;
     private const float defaultGravityForce = -9.8f;
 
     [Header("Player's Speed")]
@@ -38,8 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool audioPlaying;
 
-    public bool movementStopped { get;set; }
-    //private bool movementStopped = false;
+    bool shouldBeAllowedToMove = false;
 
     private bool activateTerrainChecker = false;
 
@@ -52,37 +50,18 @@ public class PlayerMovement : MonoBehaviour
     {
         //seeting varaibles should always be in awake
         characterController = GetComponent<CharacterController>();
-       
-       if(GameObject.Find("Sound Manager") == null)
-        {
-            Debug.LogWarning("There is no object in current scene named Sound Manager");
-            movementStopped = false;
-        }
-       else
-        {
-            movementStopped = true;
-        }
-        
-        
-
+        allowPlayerMovementChannel.boolEvent.AddListener(OnPlayerMovementEventUpdated);
     }
 
     private void Start()
     {
-
-        
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             StartCoroutine(StartDialogue("Dialogue 1", 5f));
             StartCoroutine(StartDialogue("Dialogue 2", 15f));
             transform.position = new Vector3(-6.69f, 1.003f, 16.852f);
         }
-        
-          
-        
-        
         CheckTerrain();
-       
     }
     private void Update()
     {
@@ -123,13 +102,13 @@ public class PlayerMovement : MonoBehaviour
            //think of this as a square. you go further when you go from the center to the corner rather than from the center to the top.
            //the further you are from center, the faster you go.
            Vector2 playerMovementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-        if (!movementStopped)
+        if (shouldBeAllowedToMove)
         {
             if ((playerMovementInput.magnitude > 0) && characterController.isGrounded == true && audioPlaying != true)
             {
                 
                 activateTerrainChecker = true;
-                movementStopped = false;
+                shouldBeAllowedToMove = true;
                 audioPlaying = true;
                
                 PlayUpdatedSound(soundName);
@@ -147,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (SoundManager.Instance.newSoundGO != null)
                     {
-                        SoundManager.Instance.StopSoundAffect(SoundManager.Instance.newSoundGO);
+                        SoundManager.Instance.StopSoundEffect(SoundManager.Instance.newSoundGO);
                     }
                     else
                     {
@@ -195,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
     
     void CheckTerrain()
     {
-        if (!movementStopped && activateTerrainChecker)
+        if (shouldBeAllowedToMove && activateTerrainChecker)
         {
           
             if (Physics.CheckSphere(terrainChecker.position, .4f, futureArcadeTerrain) && currentTerrain != futureArcadeTerrain)
@@ -238,31 +217,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if(SoundManager.Instance != null)
         {
-            SoundManager.Instance.StopSoundAffect(SoundManager.Instance.newSoundGO);
+            SoundManager.Instance.StopSoundEffect(SoundManager.Instance.newSoundGO);
             SoundManager.Instance.PlaySoundOnObject(gameObject, soundName, true);
         }
               
     }
-
-    public void TogglePlayerMovement()
-    {
-        if (movementStopped)
-        {
-            movementStopped = false;
-        }
-        else
-        {
-            movementStopped = true;
-        }
-    }
-
-
     IEnumerator StartDialogue(string dialogueLine, float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         SoundManager.Instance.PlaySoundAtLocation(transform.position, dialogueLine, false);
     }
 
-    
+    public void OnPlayerMovementEventUpdated(bool newState)
+    {
+        shouldBeAllowedToMove = newState;
+    }
 }
 

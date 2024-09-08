@@ -4,30 +4,34 @@ using UnityEngine;
 
 public class FP_Camera : MonoBehaviour
 {
+    public SO_BoolChannel playerMovementActivationChannel;
     [Header("Camera Settings")]
     [SerializeField] Transform cameraOrientation;
     [SerializeField] float sensitivityX, sensitivityY;
 
-    private float elaspedTime;
-    
+    bool canMoveCamera = false;
     private float xRotation, yRotation;
 
    private GameObject defaultCamera;
-    
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        playerMovementActivationChannel.boolEvent.AddListener(UpdatePlayerMovementState);
+    }
     void Start()
     {
-
         defaultCamera = gameObject;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
+    void UpdatePlayerMovementState(bool newState) 
+    {
+        canMoveCamera = newState;
+    }
     // Update is called once per frame
     void Update()
     {
-        elaspedTime += Time.deltaTime;
-        if (elaspedTime > 10f)
+        if (canMoveCamera)
         {
             float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;

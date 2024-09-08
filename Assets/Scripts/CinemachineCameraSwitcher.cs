@@ -6,30 +6,17 @@ using UnityEngine;
 
 public class CinemachineCameraSwitcher : MonoBehaviour
 {
+    [SerializeField] SO_BoolChannel playerMovementUpdateChannel;
     [SerializeField] GameObject playerCamera;
     [SerializeField] List<GameObject> cameras = new List<GameObject>();
-    private PlayerMovement playerMovementRef;
     private bool cameraOneAnimDone;
     Animator cameraAnimatorOne,cameraAnimatorTwo;
     bool cameraAnimationDone;
-    private void Awake()
-    {
-        playerMovementRef = GameObject.Find("First Person Player").GetComponent<PlayerMovement>();
 
-    }
     private void Start()
     {
         SwitchCamera(cameras[0], cameras[1], 5, 5, 5);
     }
-
-    private void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.H))
-        {
-            SwitchCamera(cameras[0], cameras[1], 10,10,6);
-            
-        }*/
-    } 
     void SwitchCamera(GameObject cameraOne, GameObject cameraTwo, float cameraOneAnimationOver,float cameraTwoAnimationOver, float defaultCameraDelay)
     {
         StartCoroutine(SwitchCameraCoroutine(cameraOne, cameraTwo, cameraOneAnimationOver,cameraTwoAnimationOver, defaultCameraDelay));
@@ -67,7 +54,7 @@ public class CinemachineCameraSwitcher : MonoBehaviour
             cameraTwo.SetActive(true);
             yield return new WaitForSeconds(defaultCameraDelay);
             Debug.Log("Switch to Player");
-            playerMovementRef.TogglePlayerMovement();
+            playerMovementUpdateChannel?.boolEvent?.Invoke(true);
             cameraTwo.SetActive(false);
             playerCamera.SetActive(true);
         }
