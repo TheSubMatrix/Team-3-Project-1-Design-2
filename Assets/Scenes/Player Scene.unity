@@ -576,6 +576,10 @@ PrefabInstance:
       propertyPath: m_StepOffset
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2797765485663489680, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3642505261544364086, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -695,6 +699,10 @@ PrefabInstance:
     - target: {fileID: 8581416488532765280, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719103807791212162, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

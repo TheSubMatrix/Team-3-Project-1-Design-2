@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890f30b51e69085469bffedc6c787f80, type: 3}
   m_Name: UI Fade Channel
   m_EditorClassIdentifier: 
+  OnFadeImage:
+    m_PersistentCalls:
+      m_Calls: []

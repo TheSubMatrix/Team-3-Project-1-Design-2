@@ -1605,6 +1605,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArcadeScene
       objectReference: {fileID: 0}
+    - target: {fileID: 4046733379545518729, guid: 76789d37d8d65df4e805ba8e78cc74aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 164
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681066615598161740, guid: 76789d37d8d65df4e805ba8e78cc74aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 164
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -674449036139524865, guid: 76789d37d8d65df4e805ba8e78cc74aa, type: 3}

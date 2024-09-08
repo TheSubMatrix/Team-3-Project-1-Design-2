@@ -7,8 +7,8 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName = "Scriptable Objects/Channels/Image Display Channel")]
 public class SO_ImageDisplayChannel : ScriptableObject
 {
-    
-    public struct ImageDisplayInfo 
+    [System.Serializable]
+    public class ImageDisplayInfo 
     {
         public ImageDisplayInfo(string image, int startAlpha, int endAlpha, float duration, float delay) 
         {
