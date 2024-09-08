@@ -52,8 +52,9 @@ public class PlaySoundTrigger : MonoBehaviour
                         Debug.LogWarning("No instance");
                         return;
                     }
-                   // SceneTransition.Instance.ChangeScene(5, 1, "DemoScene");
-                    
+                    SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
+                    SceneTransition.Instance.ChangeScene(4, 1, "Level Two Destroyed",null);
+                    return;
                     
                 }
                 Debug.Log("Exit");     
