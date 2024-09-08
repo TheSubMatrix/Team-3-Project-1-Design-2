@@ -6,8 +6,12 @@ public class LevelTransitionAnimatonEventHandler : MonoBehaviour
 {
     [SerializeField]
     private PlayerLevelSwitcher playerLevelSwitcher;
-    public void OnAnimationCompleted() 
+    public void OnStartAnimationCompleted() 
     {
         playerLevelSwitcher.CompleteSceneTransition();
+    }
+    public void OnEndAnimationCompleted()
+    {
+        playerLevelSwitcher.ResetSceneTransitionStatus();
     }
 }

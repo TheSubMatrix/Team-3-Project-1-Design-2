@@ -8,7 +8,6 @@ public class PlayerLevelSwitcher : MonoBehaviour
     bool shouldFinishTransition = false;
     [SerializeField] float m_DelayBeforeTransition;
     [SerializeField] List<TransitionData> m_transitions = new List<TransitionData>();
-    [SerializeField] Material warpMaterial;
     [SerializeField] Animator animator;
     [System.Serializable]
     struct TransitionData
@@ -18,7 +17,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && !shouldFinishTransition)
         {
             animator.SetTrigger("Start Transition");
             StartCoroutine(TransitionSceneAsync(m_transitions));
@@ -27,6 +26,10 @@ public class PlayerLevelSwitcher : MonoBehaviour
     public void CompleteSceneTransition()
     {
         shouldFinishTransition = true;
+    }
+    public void ResetSceneTransitionStatus()
+    {
+        shouldFinishTransition = false;
     }
     IEnumerator TransitionSceneAsync(List<TransitionData> scenesToParse)
     {
@@ -55,9 +58,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
         asyncSceneLoad.allowSceneActivation = true;
         yield return new WaitForEndOfFrame();
         yield return null;
-        DontDestroyOnLoad(gameObject);
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
-        SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetSceneByName(sceneName));
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(currentScene));
         animator.SetTrigger("End Transition");
     }
