@@ -36,14 +36,6 @@ public class Board : MonoBehaviour, IInteractable
             Debug.Log("I need a crowbar");
         }
         
-        
-       
-        
-        
-        
-        
-        
-        
         myInteractionHandler.interactingObject = null;
     }
     

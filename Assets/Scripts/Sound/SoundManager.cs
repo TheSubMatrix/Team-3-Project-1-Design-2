@@ -141,7 +141,7 @@ public class SoundManager : MonoBehaviour
     }
 
 
-    public void StopSoundAffect(GameObject sound)
+    public void StopSoundEffect(GameObject sound)
     {
         Destroy(sound);
     }

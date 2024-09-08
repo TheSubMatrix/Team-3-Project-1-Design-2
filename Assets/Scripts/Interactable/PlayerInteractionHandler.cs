@@ -6,15 +6,13 @@ using UnityEngine.Events;
 
 public class PlayerInteractionHandler : MonoBehaviour
 {
-
+    [SerializeField]
+    PlayerUI playerUI;
     [Serializable]
     public class InteractionEvent : UnityEvent<GameObject> { }
     [Serializable]
     public class PickupEvent : UnityEvent<GameObject> { }
-    [SerializeField]
-    UnityEvent StopPlayerMovement;
-    [SerializeField]
-    UnityEvent RestartPlayerMovement;
+    [SerializeField] SO_BoolChannel updatePlayerMovement;
     [SerializeField] LayerMask interactableLayers;
     [SerializeField] public IHoldable heldObject;
     [SerializeField] public IInteractable interactingObject;
@@ -41,7 +39,7 @@ public class PlayerInteractionHandler : MonoBehaviour
             {
                 if (interactable != null || holdable != null)
                 {
-                    Debug.Log($"Interactable is {interactable} and holdable is  {holdable}");
+                    //Debug.Log($"Interactable is {interactable} and holdable is  {holdable}");
                   
                     if (hoveredObject != null)
                     {
@@ -93,7 +91,6 @@ public class PlayerInteractionHandler : MonoBehaviour
                 }
                 else if (interactable != null)
                 {
-                    Debug.Log("here");
                     StartInteraction(interactable);
                 }
             }
@@ -143,7 +140,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         if (interactingObject.ShouldStopMovement)
         {
-            RestartPlayerMovement.Invoke();
+            updatePlayerMovement.boolEvent?.Invoke(false);
         }
         InteractEnded.Invoke(interactingObject.gameObject);
         Debug.Log("End Interaction");
@@ -159,6 +156,7 @@ public class PlayerInteractionHandler : MonoBehaviour
         PickupStarted.Invoke(holdable.gameObject);
         holdable.OnHoldStart();
         heldObject = holdable;
+
     }
     /// <summary>
     /// Starts an interaction with a given interactable
@@ -171,10 +169,8 @@ public class PlayerInteractionHandler : MonoBehaviour
         InteractStarted.Invoke(interactable.gameObject);
         if (interactable.ShouldStopMovement)
         {
-            StopPlayerMovement.Invoke();
+            updatePlayerMovement.boolEvent?.Invoke(true);
         }
-
-
         interactable.OnInteractStart(this);
     }
     /// <summary>

@@ -845,6 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39a03d0117402a4e838331650541c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectiveDisplayChannel: {fileID: 0}
   controls: {fileID: 0}
 --- !u!114 &548500162
 MonoBehaviour:
@@ -1603,6 +1604,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 76789d37d8d65df4e805ba8e78cc74aa, type: 3}
       propertyPath: m_Name
       value: ArcadeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046733379545518729, guid: 76789d37d8d65df4e805ba8e78cc74aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 164
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681066615598161740, guid: 76789d37d8d65df4e805ba8e78cc74aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 164
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

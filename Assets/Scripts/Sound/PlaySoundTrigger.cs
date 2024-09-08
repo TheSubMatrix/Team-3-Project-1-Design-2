@@ -6,6 +6,9 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 public class PlaySoundTrigger : MonoBehaviour
 {
+    [SerializeField] SO_ImageDisplayChannel imageChannel;
+    [SerializeField] SO_ImageDisplayChannel.ImageDisplayInfo imageInfo;
+
     [System.Serializable]
     public class UpdateUIUnityEvent : UnityEvent<Image, bool, float, float> { } 
 
@@ -49,13 +52,15 @@ public class PlaySoundTrigger : MonoBehaviour
                         Debug.LogWarning("No instance");
                         return;
                     }
-                    SceneTransition.Instance.ChangeScene(5, 1, "DemoScene");
-                    
+                    SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
+                    SceneTransition.Instance.ChangeScene(4, 1, "Level Two Destroyed",null);
+                    return;
                     
                 }
                 Debug.Log("Exit");     
                 
                 SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
+                imageChannel.OnFadeImage?.Invoke(imageInfo);
                 Debug.Log("Show Image");
                 updateUI?.Invoke(updateImage, true, 1, 2);
                 hasPlayed = true;

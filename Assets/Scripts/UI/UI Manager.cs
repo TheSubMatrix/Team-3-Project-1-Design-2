@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 public class UIManager : MonoBehaviour
 {
-
     private AudioSource audioSource;
     [SerializeField] AudioClip buttonClickSFX;
 
+    
    
 
     private void Awake()
     {
-        
         audioSource = GetComponent<AudioSource>();
     }
     private void Start()
@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-     if(SceneManager.GetActiveScene().name == "LevelOne")
+     if(SceneManager.GetActiveScene().name == "Level One")
         {
             Destroy(this);
         }   
@@ -31,15 +31,19 @@ public class UIManager : MonoBehaviour
     public void WhenStartButtonisClicked()
     {
         audioSource.PlayOneShot(buttonClickSFX);
-        SceneTransition.Instance.ChangeScene(1,5,"Level One");
-       // SceneManager.LoadScene("MileStone1");
+
+        SceneTransition.Instance.ChangeScene(1, 5, "Level One", "Player Scene", true);
+
+        /*SceneManager.LoadScene("Level One");
+        SceneManager.LoadScene("Player Scene", LoadSceneMode.Additive);*/
+        
 
     }
 
     public void WhenHelpButtonisClicked()
     {
         audioSource.PlayOneShot(buttonClickSFX);
-        SceneTransition.Instance.ChangeScene(1,1,"Help");
+        SceneTransition.Instance.ChangeScene(1,1,"Help", null);
        // SceneManager.LoadScene("Help");
 
     }
@@ -47,12 +51,12 @@ public class UIManager : MonoBehaviour
     {
         // SceneManager.LoadScene("Credits");
         audioSource.PlayOneShot(buttonClickSFX);
-        SceneTransition.Instance.ChangeScene(1,1,"Credits");
+        SceneTransition.Instance.ChangeScene(1,1,"Credits", null);
     }
     public void WhenReplayButtonisClicked()
     {
         audioSource.PlayOneShot(buttonClickSFX);
-        SceneTransition.Instance.ChangeScene(1,1,"MainMenu");
+        SceneTransition.Instance.ChangeScene(1,1,"MainMenu", null);
         //SceneManager.LoadScene("MainMenu");
 
     }
@@ -70,9 +74,8 @@ public class UIManager : MonoBehaviour
     public void WhenBackButtonisClicked()
     {
         audioSource.PlayOneShot(buttonClickSFX);
-        SceneTransition.Instance.ChangeScene(1,1,"MainMenu");
+        SceneTransition.Instance.ChangeScene(1,1,"MainMenu", null);
        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
-
    
 }

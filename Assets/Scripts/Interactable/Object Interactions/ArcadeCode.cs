@@ -18,9 +18,13 @@ public class ArcadeCode : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-       if(GetComponent<Animator>() != null)
+        if(GetComponent<Animator>() != null)
         {
             animator = GetComponent<Animator>();
+        }
+        else
+        {
+            Debug.LogWarning("No animator found");
         }
        
     }

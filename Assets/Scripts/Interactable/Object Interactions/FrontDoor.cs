@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 public class FrontDoor : MonoBehaviour, IInteractable
 {
 
-
+    [SerializeField] SO_ImageDisplayChannel uiPopupChannel;
     Animator animator;
     PlayerInteractionHandler currentInteractable;
     public PlayerInteractionHandler interactionHandler { get => currentInteractable; set => currentInteractable = value; }
@@ -15,13 +16,10 @@ public class FrontDoor : MonoBehaviour, IInteractable
     bool showingPowerSwitchUI = false;
     BoxCollider doorCollider;
 
-    [SerializeField] PlayerUI playerUI;
-    [SerializeField] Image powerSwitchUIImage; 
-
     public bool switchEnabled = false;
    [SerializeField] public int boardCount { get;set; }
+    public PlayerUI PlayerUI { get; set; }
 
-    
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -38,10 +36,7 @@ public class FrontDoor : MonoBehaviour, IInteractable
         
         if(switchEnabled || boardCount >= 5)
         {
-            /*if(switchEnabled)
-            {
-                playerUI.HidePlayerUI(powerSwitchUIImage, false, 0, 2);
-            }*/
+            
             doorCollider.enabled = true;
         }
     }
@@ -70,7 +65,8 @@ public class FrontDoor : MonoBehaviour, IInteractable
 
             if (!showingPowerSwitchUI && switchEnabled == false)
             {
-                playerUI.HidePlayerUI(powerSwitchUIImage, true, 0, 2);
+                uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 0, 1, 0.5f, 0));
+                uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 1, 0, 0.5f, 5));
                 showingPowerSwitchUI = true;
             }
            
