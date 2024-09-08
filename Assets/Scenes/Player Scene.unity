@@ -589,6 +589,10 @@ PrefabInstance:
       value: Player Stats
       objectReference: {fileID: 0}
     - target: {fileID: 3820384023450363742, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: imageLocatorChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 9608f5660902a474eb4155f4b17bd507, type: 2}
+    - target: {fileID: 3820384023450363742, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: objectiveDisplayChannel
       value: 
       objectReference: {fileID: 11400000, guid: 652aec808897f694ea3ba77f4433abc8, type: 2}

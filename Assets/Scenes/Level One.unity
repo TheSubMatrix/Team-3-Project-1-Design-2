@@ -5584,6 +5584,7 @@ MonoBehaviour:
   positionOffset: {x: 0.4, y: -0.3, z: 1}
   rotationOffset: {x: 0.2418448, y: -0.35355338, z: 0.664463, w: -0.61237246}
   uiPopupChannel: {fileID: 11400000, guid: 652aec808897f694ea3ba77f4433abc8, type: 2}
+  imageLocaterChannel: {fileID: 11400000, guid: 9608f5660902a474eb4155f4b17bd507, type: 2}
 --- !u!54 &892126290
 Rigidbody:
   m_ObjectHideFlags: 0
