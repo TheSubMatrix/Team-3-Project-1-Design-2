@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CinemachineCameraSwitcher : MonoBehaviour
 {
     [SerializeField] SO_BoolChannel playerMovementUpdateChannel;
@@ -15,7 +15,15 @@ public class CinemachineCameraSwitcher : MonoBehaviour
 
     private void Start()
     {
-        SwitchCamera(cameras[0], cameras[1], 5, 5, 5);
+        if(SceneManager.GetActiveScene().name == "Level One")
+        {
+            SwitchCamera(cameras[0], cameras[1], 5, 5, 5);
+        }
+        else
+        {
+            playerMovementUpdateChannel?.boolEvent?.Invoke(true);
+        }
+       
     }
     void SwitchCamera(GameObject cameraOne, GameObject cameraTwo, float cameraOneAnimationOver,float cameraTwoAnimationOver, float defaultCameraDelay)
     {
