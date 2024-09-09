@@ -10,7 +10,7 @@ public class SO_ImageDisplayChannel : ScriptableObject
     [System.Serializable]
     public class ImageDisplayInfo 
     {
-        public ImageDisplayInfo(string image, int startAlpha, int endAlpha, float duration, float delay) 
+        public ImageDisplayInfo(string image, float startAlpha, float endAlpha, float duration, float delay) 
         {
             this.image = image;
             this.startAlpha = startAlpha;
@@ -19,8 +19,8 @@ public class SO_ImageDisplayChannel : ScriptableObject
             this.delay = delay;
         }
         public string image;
-        public int startAlpha;
-        public int endAlpha;
+        public float startAlpha;
+        public float endAlpha;
         public float duration;
         public float delay;
     }
