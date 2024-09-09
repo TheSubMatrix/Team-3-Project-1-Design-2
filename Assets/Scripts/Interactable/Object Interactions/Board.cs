@@ -25,10 +25,7 @@ public class Board : MonoBehaviour, IInteractable
     {
         animator = GetComponent<Animator>();
     }
-    private void Start()
-    {
-        Debug.Log(gameObject.name + transform.right);
-    }
+    
     private void Update()
     {
         //Debug.DrawRay(transform.position, transform.right * 5);

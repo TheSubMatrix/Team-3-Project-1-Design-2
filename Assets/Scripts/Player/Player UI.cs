@@ -36,7 +36,7 @@ using UnityEngine.Events;public class PlayerUI : MonoBehaviour
             }
         }
     }
-    IEnumerator FadePlayerUI(Image image, int startAlpha, int endAlpha, float duration, float delay)
+    IEnumerator FadePlayerUI(Image image, float startAlpha, float endAlpha, float duration, float delay)
     {
         float elapsedTime = 0f;
         float delayHolder = 0f;      

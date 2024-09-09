@@ -97,3 +97,45 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     associatedText: 
+  - soundName: Dialogue 6
+    sound: {fileID: 8300000, guid: 3a659969ff80ad34e8efab4f1581be0f, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Journal 1 Dialogue
+    sound: {fileID: 8300000, guid: 850f138e9bedd6340a2fb52c6f923794, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Journal 2 Dialogue
+    sound: {fileID: 8300000, guid: 6eb16fba01c74794a870ae8e4b201b58, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Journal 3 Dialogue
+    sound: {fileID: 8300000, guid: ff8f113d764a17945b2a331be857a114, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Journal 4 Dialogue
+    sound: {fileID: 8300000, guid: 850f138e9bedd6340a2fb52c6f923794, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Journal 5 Dialogue
+    sound: {fileID: 8300000, guid: 850f138e9bedd6340a2fb52c6f923794, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Journal 6 Dialogue
+    sound: {fileID: 8300000, guid: 850f138e9bedd6340a2fb52c6f923794, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
