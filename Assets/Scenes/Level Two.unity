@@ -266,6 +266,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (20)
@@ -527,6 +531,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (21)
@@ -711,6 +719,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (19)
@@ -1723,6 +1735,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (18)
@@ -2011,6 +2027,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (9)
@@ -2369,6 +2389,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (23)
@@ -3081,6 +3105,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (5)
@@ -4754,6 +4782,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (1)
@@ -5401,6 +5433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -5755,6 +5791,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (14)
@@ -5878,7 +5918,8 @@ PrefabInstance:
       value: 2514.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -2442395453326321355, guid: 8c00a46f03b8e8f4f860cff2105b612c, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2108697647634884320, guid: 8c00a46f03b8e8f4f860cff2105b612c, type: 3}
       insertIndex: -1
@@ -6210,6 +6251,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (16)
@@ -6730,6 +6775,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (12)
@@ -7219,6 +7268,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (12)
@@ -7898,6 +7951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -8020,6 +8077,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (6)
@@ -8177,6 +8238,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (22)
@@ -8448,6 +8513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (18)
@@ -8522,6 +8591,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (11)
@@ -8784,6 +8857,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (15)
@@ -8858,6 +8935,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (3)
@@ -8932,6 +9013,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (13)
@@ -9189,6 +9274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -9469,6 +9558,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (5)
@@ -9543,6 +9636,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (8)
@@ -9700,6 +9797,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (2)
@@ -9932,6 +10033,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (1)
@@ -10011,6 +10116,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (6)
@@ -10037,6 +10146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -10185,6 +10298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -11186,6 +11303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (15)
@@ -11509,6 +11630,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (4)
@@ -11583,6 +11708,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (17)
@@ -11692,6 +11821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -12385,6 +12518,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (4)
@@ -12536,6 +12673,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (10)
@@ -12636,6 +12777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -12841,6 +12986,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (24)
@@ -13348,6 +13497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -13505,6 +13658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -14015,6 +14172,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (16)
@@ -14504,6 +14665,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (7)
@@ -14979,6 +15144,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (14)
@@ -15136,6 +15305,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (8)
@@ -15162,6 +15335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -15318,6 +15495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -15843,6 +16024,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (21)
@@ -15869,6 +16054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -16017,6 +16206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -16227,6 +16420,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (7)
@@ -16253,6 +16450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -16532,6 +16733,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (25)
@@ -16606,6 +16811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (9)
@@ -16798,6 +17007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -17003,6 +17216,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (2)
@@ -17029,6 +17246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -17167,6 +17388,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 6108319898999643881, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -17217,6 +17442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -18394,6 +18623,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805853320307021282, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c750500c432b146ac242d101f4105f, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine
@@ -19814,6 +20047,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330941840330879288, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine
@@ -19835,6 +20072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine
       objectReference: {fileID: 0}
+    - target: {fileID: 2612877885508418234, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
