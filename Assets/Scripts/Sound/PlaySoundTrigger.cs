@@ -14,7 +14,7 @@ public class PlaySoundTrigger : MonoBehaviour
 
     public UpdateUIUnityEvent updateUI;
 
-    public Image updateImage;
+   // public Image updateImage;
    
     [SerializeField] public enum TriggerState
     {
@@ -49,9 +49,10 @@ public class PlaySoundTrigger : MonoBehaviour
                     Debug.Log("Next Scene");
                     if(SceneTransition.Instance == null)
                     {
-                        Debug.LogWarning("No instance");
+                        Debug.LogWarning("No transition instance");
                         return;
                     }
+                    imageChannel.OnFadeImage?.Invoke(imageInfo);
                     SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
                     SceneTransition.Instance.ChangeScene(4, 1, "Level Two Destroyed",null);
                     return;
@@ -62,7 +63,7 @@ public class PlaySoundTrigger : MonoBehaviour
                 SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
                 imageChannel.OnFadeImage?.Invoke(imageInfo);
                 Debug.Log("Show Image");
-                updateUI?.Invoke(updateImage, true, 1, 2);
+               // updateUI?.Invoke(updateImage, true, 1, 2);
                 hasPlayed = true;
             }
         }

@@ -452,6 +452,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5352aeb75b6a7864f955cccae87ee3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &852416136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7934540527537702621, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+  m_PrefabInstance: {fileID: 956681697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ac718733675664c9038a6f25fde812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &884837673
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,9 +548,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 545191647}
     - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: interactingHands
+      value: 
+      objectReference: {fileID: 1541992606}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: updatePlayerMovement
       value: 
       objectReference: {fileID: 11400000, guid: 71312b1e4f85da244897d6ddfdf89219, type: 2}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: TogglePlayerMovement.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: TogglePlayerMovement.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: TogglePlayerMovement.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 852416136}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: TogglePlayerMovement.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: TogglePlayerMovement.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePlayerMovement
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: TogglePlayerMovement.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: TogglePlayerMovement.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1035282920307820648, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Name
       value: Grab Crow Bar
@@ -979,6 +1022,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1541992606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8240976275119845440, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+  m_PrefabInstance: {fileID: 956681697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1665686488
 GameObject:
   m_ObjectHideFlags: 0

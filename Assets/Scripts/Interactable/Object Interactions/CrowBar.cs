@@ -19,13 +19,21 @@ public class CrowBar : MonoBehaviour, IHoldable
     public Quaternion HoldRotationOffset => rotationOffset;
 
     public PlayerUI PlayerUI { get; set; }
-
+   
     private float pickUpSpeed = 100f;
     private float rotateSpeed = 10000f;
 
     float currentImageALpha = 0;
 
-    bool firstTimePickUp;
+    [SerializeField] FrontDoor frontDoorRef;
+
+    [SerializeField] GameObject grabCrowBarTrigger;
+    
+    bool pickedUp, brokeInside;
+
+    private GameObject myHands;
+    public GameObject hands { get => myHands; set => myHands = value; }
+
 
     private Rigidbody rb;
     private void Awake()
@@ -33,31 +41,39 @@ public class CrowBar : MonoBehaviour, IHoldable
        imageLocaterChannel.returnImage.AddListener(ChangeImageAlphaValue);
         rb = GetComponent<Rigidbody>();
        
+
+
     }
     public void OnHoldStart() ///When holding crowbar it dissables the collider so it doesn't collide with player when moving camera with it
     {
+        myHands.SetActive(false);
+
+        grabCrowBarTrigger.SetActive(false); //If the player grabs the crowbar before heading to the front door
+                                            // it will turn off the trigger asking the player to grab it from the trunk
         Debug.Log("Holding a crowbar");
       //  isHolding = true;
         if(rb != null)
         {
             rb.isKinematic = true;
             GetComponent<MeshCollider>().isTrigger = true;
-            GameObject.Find("Hands").SetActive(false);
-            
-            
-            // uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Break Inside", 0, 1, .5f, 0));
+            pickedUp = true;
+            // transform.SetParent(GameObject.Find("Put Object Here").transform);
+            // hands.SetActive(false);
+            // GameObject.Find("Hands").SetActive(false);
 
+            imageLocaterChannel.locateImage.Invoke("Break Inside");
+            if(currentImageALpha < 1 && !brokeInside) /// Displays the Break Inside UI panel once if alpha is less than 1
+            {
+                uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Break Inside", 0, 1, .5f, 0));
+            }
+            
             imageLocaterChannel.locateImage.Invoke("Grab Crow Bar");
-
-            if(currentImageALpha > 0 && !firstTimePickUp)
+            if(currentImageALpha > 0 && pickedUp) ///Fades out the Grab Crow Bar UI panel only on the first pick up and if alpha is already at 1
             {
                 uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Grab Crow Bar", (int)currentImageALpha, 0, .5f, 0));
-                firstTimePickUp = true;
+               
             }
-           
-
-           
-           
+                   
         }
         
     }
@@ -67,20 +83,25 @@ public class CrowBar : MonoBehaviour, IHoldable
         transform.position = Vector3.MoveTowards(transform.position,desiredPos,Time.deltaTime * pickUpSpeed);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
 
+       if(frontDoorRef.boardCount == 5 && !brokeInside) ///When the player has took down all the boards and brokInside is false it will fade out once
+        {
+            uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Break Inside", 1, 0, .5f, 0));
+            brokeInside = true;
+        }
        
     }
 
     public void OnHoldEnd(GameObject gameObject) ///Re-enables the collider when player drops it. Feel free to change
     {
-        GameObject.Find("Hands").SetActive(true);
+        
         if (rb != null)
-        {
-           // isHolding = false;
+        {          
             rb.isKinematic = false;
             GetComponent<MeshCollider>().isTrigger = false;
-            //hands.SetActive(true);
+
             transform.parent = null;
-        }
+           hands.SetActive(true);
+        }       
     }
 
     public void ChangeImageAlphaValue(Image image)

@@ -10,6 +10,8 @@ public class JournalPage : MonoBehaviour,IHoldable
     public Quaternion HoldRotationOffset => rotationOffSet;
     public Vector3 HoldPositionOffset => positionOffSet;
 
+    GameObject IHoldable.hands { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
     [SerializeField] GameObject hands;
 
     private Rigidbody rb;

@@ -680,12 +680,11 @@ MonoBehaviour:
     image: Grab Crow Bar
     startAlpha: 0
     endAlpha: 1
-    duration: 5
+    duration: 2.5
     delay: 0
   updateUI:
     m_PersistentCalls:
       m_Calls: []
-  updateImage: {fileID: 0}
   triggerState: 0
   soundToPlay: Dialogue 3
 --- !u!1 &93735542 stripped
@@ -1478,7 +1477,7 @@ Transform:
   m_GameObject: {fileID: 167476811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5501.9995}
+  m_LocalPosition: {x: 0, y: -227, z: 5501.9995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2163,7 +2162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9840a7d65c440c249b2bdb5510852a36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.12
+      value: -10.23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9840a7d65c440c249b2bdb5510852a36, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2171,7 +2170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9840a7d65c440c249b2bdb5510852a36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.852
+      value: 19.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9840a7d65c440c249b2bdb5510852a36, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2766,6 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1654fad27dd1a4c4e8d998792b5ee383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustVFX: {fileID: 5661559431042473873, guid: 08653b27b0bf38a429b98b01a101036c, type: 3}
   frontDoorRef: {fileID: 847355969}
 --- !u!95 &391665454
 Animator:
@@ -3867,6 +3867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1654fad27dd1a4c4e8d998792b5ee383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustVFX: {fileID: 5661559431042473873, guid: 08653b27b0bf38a429b98b01a101036c, type: 3}
   frontDoorRef: {fileID: 847355969}
 --- !u!95 &585334175
 Animator:
@@ -5544,6 +5545,8 @@ MonoBehaviour:
   rotationOffset: {x: 0.2418448, y: -0.35355338, z: 0.664463, w: -0.61237246}
   uiPopupChannel: {fileID: 11400000, guid: 652aec808897f694ea3ba77f4433abc8, type: 2}
   imageLocaterChannel: {fileID: 11400000, guid: 9608f5660902a474eb4155f4b17bd507, type: 2}
+  frontDoorRef: {fileID: 847355969}
+  grabCrowBarTrigger: {fileID: 82229241}
 --- !u!54 &892126290
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8412,6 +8415,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9abf3d6162a7cf747b680533f198a8c7, type: 2}
+    - target: {fileID: 9222187426117935951, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -1311834142279137307, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
@@ -8511,6 +8518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1654fad27dd1a4c4e8d998792b5ee383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustVFX: {fileID: 5661559431042473873, guid: 08653b27b0bf38a429b98b01a101036c, type: 3}
   frontDoorRef: {fileID: 847355969}
 --- !u!95 &1406675710
 Animator:
@@ -8740,6 +8748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1654fad27dd1a4c4e8d998792b5ee383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustVFX: {fileID: 5661559431042473873, guid: 08653b27b0bf38a429b98b01a101036c, type: 3}
   frontDoorRef: {fileID: 847355969}
 --- !u!95 &1444515883
 Animator:
@@ -9831,7 +9840,7 @@ Transform:
   m_GameObject: {fileID: 1555591984}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -326.0002, y: 0, z: 4057}
+  m_LocalPosition: {x: -326.0002, y: -259, z: 4057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10112,6 +10121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1654fad27dd1a4c4e8d998792b5ee383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustVFX: {fileID: 5661559431042473873, guid: 08653b27b0bf38a429b98b01a101036c, type: 3}
   frontDoorRef: {fileID: 847355969}
 --- !u!95 &1597851251
 Animator:
@@ -10703,7 +10713,7 @@ Transform:
   m_GameObject: {fileID: 1711795909}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.27042666, z: -0, w: 0.9627406}
-  m_LocalPosition: {x: -2485.8699, y: 0.000025338579, z: 6672.823}
+  m_LocalPosition: {x: -2485.8699, y: -243, z: 6672.823}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11145,7 +11155,7 @@ Transform:
   m_GameObject: {fileID: 1769625334}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1223.0001, y: -179.26772, z: 6257}
+  m_LocalPosition: {x: -1223.0001, y: -232, z: 6257}
   m_LocalScale: {x: 0.62337065, y: 0.6233707, z: 0.62337065}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12790,17 +12800,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2617c61e84d91344dad9d44c51dacf9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageChannel: {fileID: 0}
+  imageChannel: {fileID: 11400000, guid: 652aec808897f694ea3ba77f4433abc8, type: 2}
   imageInfo:
-    image: 
-    startAlpha: 0
+    image: Break Inside
+    startAlpha: 1
     endAlpha: 0
-    duration: 0
+    duration: 2.5
     delay: 0
   updateUI:
     m_PersistentCalls:
       m_Calls: []
-  updateImage: {fileID: 0}
   triggerState: 0
   soundToPlay: Dialogue 5
 --- !u!65 &1967371674
@@ -14247,7 +14256,7 @@ Transform:
   m_GameObject: {fileID: 7911537894966825132}
   serializedVersion: 2
   m_LocalRotation: {x: -0.60886437, y: -0.16395497, z: -0.17483935, w: 0.7561972}
-  m_LocalPosition: {x: -9.216, y: 1.136, z: 19.074}
+  m_LocalPosition: {x: -10.325999, y: 1.136, z: 21.522}
   m_LocalScale: {x: 0.0061291605, y: 0.00612916, z: 0.00612916}
   m_ConstrainProportionsScale: 0
   m_Children: []

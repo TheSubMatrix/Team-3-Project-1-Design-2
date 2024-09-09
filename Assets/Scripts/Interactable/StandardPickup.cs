@@ -12,6 +12,8 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     public Vector3 HoldPositionOffset => positionOffset;
     public Quaternion HoldRotationOffset => rotationOffset;
 
+    public GameObject hands { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
     void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody>();

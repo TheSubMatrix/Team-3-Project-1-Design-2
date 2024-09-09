@@ -8,6 +8,7 @@ public interface IHoldable
     public Vector3 HoldPositionOffset { get; }
     Transform transform {  get; }
     GameObject gameObject { get; }
+    public GameObject hands { get; set; }
     void OnHoldStart();
     void OnHolding(Vector3 desiredPosition, Quaternion desiredRotation)
     {

@@ -231,5 +231,7 @@ public class PlayerMovement : MonoBehaviour
     {
         shouldBeAllowedToMove = newState;
     }
+
+
 }
 

@@ -12,6 +12,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public class InteractionEvent : UnityEvent<GameObject> { }
     [Serializable]
     public class PickupEvent : UnityEvent<GameObject> { }
+    
     [SerializeField] SO_BoolChannel updatePlayerMovement;
     [SerializeField] LayerMask interactableLayers;
     [SerializeField] public IHoldable heldObject;
@@ -21,6 +22,10 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
+
+      
+
+    [SerializeField] GameObject interactingHands;
 
     private GameObject hoveredObject;
 
@@ -87,11 +92,12 @@ public class PlayerInteractionHandler : MonoBehaviour
                 
                 if (holdable != null)
                 {
+                    holdable.hands = interactingHands;
                     StartPickup(holdable);
                 }
                 else if (interactable != null)
                 {
-                    StartInteraction(interactable);
+                    StartInteraction(interactable);                 
                 }
             }
             /*else if (interactingObject != null)
@@ -140,7 +146,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         if (interactingObject.ShouldStopMovement)
         {
-            updatePlayerMovement.boolEvent?.Invoke(false);
+           
+           updatePlayerMovement?.boolEvent?.Invoke(true);
         }
         InteractEnded.Invoke(interactingObject.gameObject);
         Debug.Log("End Interaction");
@@ -169,7 +176,9 @@ public class PlayerInteractionHandler : MonoBehaviour
         InteractStarted.Invoke(interactable.gameObject);
         if (interactable.ShouldStopMovement)
         {
-            updatePlayerMovement.boolEvent?.Invoke(true);
+            Debug.Log("Stop");
+           
+            updatePlayerMovement?.boolEvent?.Invoke(false);
         }
         interactable.OnInteractStart(this);
     }
@@ -189,7 +198,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     /// <param name="interactable">The interactable to update</param>
     public void WhileInteracting(IInteractable interactable)
     {
-
+       
         interactable.OnInteracting();
     }
 }
