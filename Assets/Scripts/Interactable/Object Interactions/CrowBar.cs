@@ -108,7 +108,7 @@ public class CrowBar : MonoBehaviour, IHoldable
             {
                 Debug.Log("Touching grass");
             } 
-            SoundManager.Instance.PlaySoundAtLocation(transform.position, "Crowbar Drop on Grass", false);
+           // SoundManager.Instance.PlaySoundAtLocation(transform.position, "Crowbar Drop on Grass", false);
         }       
     }
 

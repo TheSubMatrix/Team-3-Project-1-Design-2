@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;public class PlayerUI : MonoBehaviour
 {
     [SerializeField] SO_ImageDisplayChannel objectiveDisplayChannel;
@@ -19,11 +20,13 @@ using UnityEngine.Events;public class PlayerUI : MonoBehaviour
     }
     private void Start()
     {
-        if(controls != null)
+        if(SceneManager.GetActiveScene().name == "Level One")
         {
-            HidePlayerUI(controls, false, 15, 5);
-        }
-       
+            if (controls != null)
+            {
+                HidePlayerUI(controls, false, 15, 5);
+            }
+        }           
     }
 
     void FadePlayerUIImage(SO_ImageDisplayChannel.ImageDisplayInfo imageDisplayInfo)

@@ -54,13 +54,13 @@ public class PlaySoundTrigger : MonoBehaviour
                     }
                     imageChannel.OnFadeImage?.Invoke(imageInfo);
                     SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
-                    SceneTransition.Instance.ChangeScene(4, 1, "Level Two Destroyed",null);
+                    SceneTransition.Instance.ChangeScene(4, 1, "Level Two Destroyed","Player Scene",true);
                     return;
                     
                 }
                 Debug.Log("Exit");     
                 
-                SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
+                SoundManager.Instance.PlaySoundAtLocation(transform.position,soundToPlay,false);
                 imageChannel.OnFadeImage?.Invoke(imageInfo);
                 Debug.Log("Show Image");
                // updateUI?.Invoke(updateImage, true, 1, 2);
