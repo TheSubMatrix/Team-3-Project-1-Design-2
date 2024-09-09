@@ -91,3 +91,9 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     associatedText: 
+  - soundName: Crowbar Drop on Grass
+    sound: {fileID: 8300000, guid: 79c6c6040c1333c46a9679574f38c05a, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 

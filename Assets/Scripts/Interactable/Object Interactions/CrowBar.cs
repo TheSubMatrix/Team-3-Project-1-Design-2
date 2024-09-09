@@ -34,6 +34,7 @@ public class CrowBar : MonoBehaviour, IHoldable
     private GameObject myHands;
     public GameObject hands { get => myHands; set => myHands = value; }
 
+    
 
     private Rigidbody rb;
     private void Awake()
@@ -101,6 +102,13 @@ public class CrowBar : MonoBehaviour, IHoldable
 
             transform.parent = null;
            hands.SetActive(true);
+            RaycastHit hit;
+            Physics.Raycast(transform.position, Vector3.down, out hit, 5);
+            if (hit.collider.gameObject.layer == 8)
+            {
+                Debug.Log("Touching grass");
+            } 
+            SoundManager.Instance.PlaySoundAtLocation(transform.position, "Crowbar Drop on Grass", false);
         }       
     }
 
