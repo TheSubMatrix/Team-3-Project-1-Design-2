@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3584497630037689987, guid: db27d8f9cc4f2f44d9498225e46bba7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b78503380696c574194750c33f98d626, type: 2}
     - target: {fileID: 919132149155446097, guid: db27d8f9cc4f2f44d9498225e46bba7d, type: 3}
       propertyPath: m_Name
       value: Walls_fin
@@ -357,6 +361,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 630992576787500663, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 809109426037624338, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 843925685846085242, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
     - target: {fileID: 1209451324099633230, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -409,6 +425,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2480242312398007272, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 2834141837422545660, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 3521949484492194095, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 4714218974945206489, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 4714439135945181984, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 8889093999802154077, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 8927609190696397525, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
     - target: {fileID: 9193821786873528193, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
       propertyPath: m_Name
       value: ' Clon Machine (19)'
@@ -505,6 +549,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 630992576787500663, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 809109426037624338, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 843925685846085242, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
     - target: {fileID: 1209451324099633230, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -557,6 +613,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2480242312398007272, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 2834141837422545660, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 3521949484492194095, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 4714218974945206489, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 4714439135945181984, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 8889093999802154077, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
     - target: {fileID: 9193821786873528193, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
       propertyPath: m_Name
       value: ' Clon Machine (2)'
@@ -850,6 +930,10 @@ PrefabInstance:
       value: 166.4
       objectReference: {fileID: 0}
     - target: {fileID: -462081353362390066, guid: f7f1a39a7ce730745883029df9f17e46, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 79d20e66022666f41a10189733e13aec, type: 2}
+    - target: {fileID: 372015521315926245, guid: f7f1a39a7ce730745883029df9f17e46, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 79d20e66022666f41a10189733e13aec, type: 2}
@@ -1296,6 +1380,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7997266053375377036, guid: 5bd0d5c7057bf004d82296885be8671b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c95778df6e618144b78fbd8f9c380bd, type: 2}
+    - target: {fileID: -6636540844275590030, guid: 5bd0d5c7057bf004d82296885be8671b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c95778df6e618144b78fbd8f9c380bd, type: 2}
@@ -3015,6 +3103,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 1140613846908162526, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 1605531053423761273, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
     - target: {fileID: 2485313833206009849, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999984
@@ -3067,10 +3163,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3984255684363865017, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 4045028847939784913, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 4384208781459764727, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 5932254383872304510, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 6180368794877681098, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 6785175280083001231, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 7299598629269659114, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8399236069186899197, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3374,7 +3502,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8270007873448709173, guid: f7f1a39a7ce730745883029df9f17e46, type: 3}
+  - {fileID: 2100000, guid: 79d20e66022666f41a10189733e13aec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3858,6 +3986,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 1605531053423761273, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
     - target: {fileID: 2485313833206009849, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999984
@@ -3910,6 +4042,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5932254383872304510, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
     - target: {fileID: 7440317714909920127, guid: 9616768f49ac30a4dba2bd0527cf8076, type: 3}
       propertyPath: m_Name
       value: Coin Eater Machine (20)
@@ -4181,6 +4317,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 843925685846085242, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     - target: {fileID: 1209451324099633230, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -4233,6 +4373,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2480242312398007272, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     - target: {fileID: 9193821786873528193, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
       propertyPath: m_Name
       value: ' Clon Machine (4)'
@@ -4255,10 +4399,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 280490946607996544, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 472246741350305232, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     - target: {fileID: 1139046269751625226, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_Name
       value: Block Buster Arcade Machine (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2884513232723986682, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 3337942558911509876, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 3592819214309225337, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 3823063142814369849, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -4311,6 +4479,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5921752053736638441, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 7120827289937971694, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 7201535918810230323, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 7421852500385913279, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4404,10 +4588,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 280490946607996544, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 472246741350305232, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     - target: {fileID: 1139046269751625226, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_Name
       value: Block Buster Arcade Machine (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2884513232723986682, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 3337942558911509876, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 3592819214309225337, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 3823063142814369849, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -4460,6 +4668,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5921752053736638441, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 7120827289937971694, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 7201535918810230323, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
+    - target: {fileID: 7421852500385913279, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5698,6 +5922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block Buster Arcade Machine (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3823063142814369849, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -5750,6 +5978,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7120827289937971694, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 142b067f3504d6c408c31ae55350f976, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7092,6 +7324,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 1163865366439057239, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
     - target: {fileID: 3877825073739981568, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -7144,6 +7380,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6319820983184829907, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (3)
@@ -8042,6 +8282,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 630992576787500663, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
+    - target: {fileID: 809109426037624338, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
+    - target: {fileID: 843925685846085242, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
     - target: {fileID: 1209451324099633230, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -8094,6 +8346,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2480242312398007272, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
+    - target: {fileID: 2834141837422545660, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
+    - target: {fileID: 3521949484492194095, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
+    - target: {fileID: 4714218974945206489, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
+    - target: {fileID: 4714439135945181984, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
+    - target: {fileID: 8889093999802154077, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
+    - target: {fileID: 8927609190696397525, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
     - target: {fileID: 9193821786873528193, guid: 0998b05ca624b4347bbc58f037af2f5d, type: 3}
       propertyPath: m_Name
       value: ' Clon Machine (20)'
@@ -10501,7 +10781,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8270007873448709173, guid: f7f1a39a7ce730745883029df9f17e46, type: 3}
+  - {fileID: 2100000, guid: 79d20e66022666f41a10189733e13aec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11684,7 +11964,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8270007873448709173, guid: f7f1a39a7ce730745883029df9f17e46, type: 3}
+  - {fileID: 2100000, guid: 79d20e66022666f41a10189733e13aec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14482,6 +14762,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 1163865366439057239, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
     - target: {fileID: 3877825073739981568, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -14534,6 +14818,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6319820983184829907, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (11)
@@ -14944,6 +15232,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 1163865366439057239, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
     - target: {fileID: 3877825073739981568, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -14996,6 +15288,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6319820983184829907, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 932b72b17bf179840820a39e6aa135c4, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (19)
@@ -15298,10 +15594,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 280490946607996544, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 472246741350305232, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
     - target: {fileID: 1139046269751625226, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_Name
       value: Block Buster Arcade Machine (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2884513232723986682, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 3337942558911509876, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 3592819214309225337, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 3823063142814369849, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
     - target: {fileID: 5729293804331411748, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0074999994
@@ -15354,6 +15674,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5921752053736638441, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 7120827289937971694, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 7201535918810230323, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
+    - target: {fileID: 7421852500385913279, guid: dc5b53b41305eb34c9340e9c6badfa64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 436597e364fdf2e428755318df5049b8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16763,6 +17099,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 279983750}
     m_Modifications:
+    - target: {fileID: 565968276703461074, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 1163865366439057239, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 1948003267720647664, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
     - target: {fileID: 3877825073739981568, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0075
@@ -16815,10 +17163,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4512209188045312310, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 6108319898999643881, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 6319820983184829907, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 7277569047719143082, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 8534127635491863615, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
     - target: {fileID: 8916337909379339113, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
       propertyPath: m_Name
       value: Galaxy Grunts Arcade Machine (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 9049653135863730043, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
+    - target: {fileID: 9083748996335574172, guid: 598fb3208f4738640b8acbc5bf354779, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fb2fb69de8fe314cac225a0abd93ef8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19618,7 +19994,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3876542345217667742, guid: b28cf195c6a189d41892fac58df209c9, type: 3}
+  - {fileID: 2100000, guid: 8086b4857c81b604eb7f6a998b49d248, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
