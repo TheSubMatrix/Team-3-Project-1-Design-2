@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] SO_BoolChannel allowPlayerMovementChannel;
     [SerializeField] Transform levelOneStartPos;
-    private LayerMask currentTerrain;
+    public LayerMask currentTerrain;
     private const float defaultGravityForce = -9.8f;
 
     [Header("Player's Speed")]
