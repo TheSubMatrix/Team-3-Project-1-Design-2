@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(StartDialogue("Dialogue 1", 5f));
             StartCoroutine(StartDialogue("Dialogue 2", 15f));
             transform.position = new Vector3(-6.69f, 1.003f, 16.852f);
+            transform.rotation = Quaternion.Euler(0,180,0);
         }
         CheckTerrain();
     }

@@ -33,11 +33,14 @@ public class FrontDoor : MonoBehaviour, IInteractable
     }
     private void Update()
     {
-        
         if(switchEnabled || boardCount >= 5)
         {
             
             doorCollider.enabled = true;
+        }
+        if(switchEnabled && showingPowerSwitchUI)
+        {
+            uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 1, 0, 0.5f, 0));
         }
     }
     public void OnInteracting()
@@ -61,12 +64,12 @@ public class FrontDoor : MonoBehaviour, IInteractable
         else
         {
             Debug.Log("Need all boards down and switch enabled");
-            SoundManager.Instance.PlaySoundAtLocation(transform.position, "Dialogue 4 ", false);
+            SoundManager.Instance.PlaySoundAtLocation(transform.position, "Dialogue 4", false);
 
             if (!showingPowerSwitchUI && switchEnabled == false)
             {
                 uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 0, 1, 0.5f, 0));
-                uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 1, 0, 0.5f, 5));
+               // uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 1, 0, 0.5f, 5));
                 showingPowerSwitchUI = true;
             }
            

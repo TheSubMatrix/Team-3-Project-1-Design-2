@@ -11,7 +11,7 @@ public class FP_Camera : MonoBehaviour
 
     bool canMoveCamera = false;
     private float xRotation, yRotation;
-
+    Vector2 lastCameraPos;
    private GameObject defaultCamera;
 
     private void Awake()
@@ -39,12 +39,14 @@ public class FP_Camera : MonoBehaviour
             yRotation += mouseX;
             xRotation -= mouseY;
 
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
+            
+                       
+            cameraOrientation.localRotation *= Quaternion.Inverse(Quaternion.Euler(lastCameraPos.x - xRotation, 0, 0));
+            cameraOrientation.localRotation *= Quaternion.Inverse(Quaternion.Euler(0, lastCameraPos.y - yRotation, 0));
 
-
-            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-            cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
+             lastCameraPos = new Vector2(xRotation, yRotation);
         }
         
 
