@@ -46,7 +46,7 @@ MonoBehaviour:
   - soundName: Dialogue 6
     sound: {fileID: 8300000, guid: 3a659969ff80ad34e8efab4f1581be0f, type: 3}
     isMusic: 0
-    volume: 1
+    volume: 0.5
     pitch: 1
     associatedText: 
   - soundName: Grass Walking
@@ -112,13 +112,13 @@ MonoBehaviour:
   - soundName: Journal 2 Dialogue
     sound: {fileID: 8300000, guid: 6eb16fba01c74794a870ae8e4b201b58, type: 3}
     isMusic: 0
-    volume: 1
+    volume: 0.4
     pitch: 1
     associatedText: 
   - soundName: Journal 3 Dialogue
     sound: {fileID: 8300000, guid: ff8f113d764a17945b2a331be857a114, type: 3}
     isMusic: 0
-    volume: 1
+    volume: 0.4
     pitch: 1
     associatedText: 
   - soundName: Journal 4 Dialogue
@@ -143,5 +143,23 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: b2f9f58e07631874bb0b5349b8411f29, type: 3}
     isMusic: 0
     volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Arcade Music
+    sound: {fileID: 8300000, guid: 0d23291f45e2251409c4d97e54d5bf48, type: 3}
+    isMusic: 1
+    volume: 0.2
+    pitch: 1
+    associatedText: 
+  - soundName: Destroyed Music
+    sound: {fileID: 8300000, guid: 516143ab5bbf2d44eabbfe49dc5fce5b, type: 3}
+    isMusic: 1
+    volume: 0.5
+    pitch: 1
+    associatedText: 
+  - soundName: Dialogue 12
+    sound: {fileID: 8300000, guid: 14d1cf5c63b92f04d8696cf85224c7b5, type: 3}
+    isMusic: 1
+    volume: 0.6
     pitch: 1
     associatedText: 

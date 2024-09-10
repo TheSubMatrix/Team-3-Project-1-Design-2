@@ -9,6 +9,8 @@ public class ArcadeCode : MonoBehaviour, IInteractable
     [SerializeField]UnityEvent OnCodeCompleted = new UnityEvent();
     PlayerInteractionHandler playerInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => playerInteractionHandler; set => playerInteractionHandler = value; }
+
+    [SerializeField] SO_ImageDisplayChannel uiPopupChannel;
     public bool ShouldStopMovement { get; set; } = true;
     private Animator animator;
     [SerializeField] Animator hiddenDoorAnimator;
@@ -65,7 +67,9 @@ public class ArcadeCode : MonoBehaviour, IInteractable
     {
         if (typedChars.SequenceEqual(code))
         {
-            OnCodeCompleted.Invoke();
+            OnCodeCompleted.Invoke();          
+            uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Enter Code", 1, 0, 0.5f, 0));
+            uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Check Secret Door", 0, 1, 0.5f, 0));
             Debug.Log("Code Accepted");
         }
     }

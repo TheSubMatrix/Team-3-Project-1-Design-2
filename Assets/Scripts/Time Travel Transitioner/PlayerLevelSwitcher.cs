@@ -22,7 +22,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
     }
     private void Awake()
     {
-      //  m_updatePageCountChannel.myEvent.AddListener(UpdatePageCount);
+      m_updatePageCountChannel.myEvent.AddListener(UpdatePageCount);
     }
     private void Update()
     {
@@ -30,6 +30,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
         {
             m_animator.SetTrigger("Start Transition");
             StartCoroutine(TransitionSceneAsync(m_transitions));
+            //transform.position += Vector3.up * 2;
         }
     }
     public void CompleteSceneTransition()
@@ -78,6 +79,9 @@ public class PlayerLevelSwitcher : MonoBehaviour
         {
             imageDisplayChannel.OnFadeImage?.Invoke(imageDisplayInfoEnable);
             imageDisplayChannel.OnFadeImage?.Invoke(imageDisplayInfoDisable);
+            imageDisplayChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Find Journal Entries", 1, 0, .5f, 0));
+            //imageDisplayChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Time Travel Near Watch", 0, 1, .5f, 0));
+
         }
     }
 }

@@ -29,8 +29,9 @@ public class SoundManager : MonoBehaviour
             Destroy(this);
         }
         else
-        {
+        {         
             instance = this;
+            DontDestroyOnLoad(this);
         }
     }
     public void UpdatePlayingSoundVolume()

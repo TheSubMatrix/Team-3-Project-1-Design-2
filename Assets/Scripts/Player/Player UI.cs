@@ -26,7 +26,17 @@ using UnityEngine.Events;public class PlayerUI : MonoBehaviour
             {
                 HidePlayerUI(controls, false, 15, 5);
             }
-        }           
+        }
+        else if (SceneManager.GetActiveScene().name == "Level Two Destroyed")
+        {
+            if (controls != null)
+            {
+                Debug.Log("Hiding now");
+                FadePlayerUIImage(new SO_ImageDisplayChannel.ImageDisplayInfo("Controls", 1, 0, .1f, 0));
+                FadePlayerUIImage(new SO_ImageDisplayChannel.ImageDisplayInfo("Investigate Image", 1, 0, .1f, 0));
+            }
+        }
+
     }
 
     void FadePlayerUIImage(SO_ImageDisplayChannel.ImageDisplayInfo imageDisplayInfo)
