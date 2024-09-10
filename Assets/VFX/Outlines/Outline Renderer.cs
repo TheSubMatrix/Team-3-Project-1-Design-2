@@ -58,7 +58,7 @@ class OutlineRenderPass : ScriptableRenderPass
     private FilteringSettings filteringSettings = FilteringSettings.defaultValue;
     public OutlineRenderPass(Material material, OutlineRenderFeature.OutlineSettings settings, string name)
     {
-        filteringSettings = new FilteringSettings(RenderQueueRange.opaque, settings.layerMask);;
+        filteringSettings = new FilteringSettings(RenderQueueRange.opaque, settings.layerMask);
         this.profilingSampler = new ProfilingSampler(name);
         blitMaterial = material;
         if(settings.ShaderTags.Count > 0)

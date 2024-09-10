@@ -35,7 +35,7 @@ Shader "Custom/Outline"
 
     SubShader
     {
-        Tags{ "RenderPipeline" = "UniveralPipeline"}
+        Tags{ "RenderPipeline" = "UniversalPipeline"}
         ZWrite Off ZTest Always Blend Off Cull Off
         Pass
         {

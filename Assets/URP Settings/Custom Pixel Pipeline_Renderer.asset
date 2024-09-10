@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe324918a78d4fa40bcc1c566cc10deb, type: 3}
   m_Name: OutlineRenderFeature
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   material: {fileID: 2100000, guid: 6ac05ea217243f04997af415986ddaa1, type: 2}
   settings:
     outlineMaterialPass: 0
