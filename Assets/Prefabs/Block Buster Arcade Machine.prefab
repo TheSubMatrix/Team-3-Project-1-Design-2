@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5729293804331411748}
+  - component: {fileID: 434395173971213577}
   m_Layer: 0
   m_Name: Block Buster Arcade Machine
   m_TagString: Untagged
@@ -24,9 +25,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139046269751625226}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.901894, y: 1.3355147, z: 45.2}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.0074999994, y: 0.0075, z: 0.0074999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2014951656406830472}
@@ -42,6 +43,27 @@ Transform:
   - {fileID: 9131568849259268667}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &434395173971213577
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139046269751625226}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 132.8546, y: 405.47733, z: 197.50389}
+  m_Center: {x: -16.427216, y: 9.455236, z: -3.6801977}
 --- !u!1 &1171125548238135238
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 77aa3666c020a4340b7ba9931515e863, type: 2}
+  - {fileID: 2100000, guid: ea57f1d23e199064193a18eb0238f2c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

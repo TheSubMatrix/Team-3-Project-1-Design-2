@@ -310,7 +310,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 77aa3666c020a4340b7ba9931515e863, type: 2}
+  - {fileID: 2100000, guid: 49efdcd79c80b614b8d43c930da30acc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -590,6 +590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2485313833206009849}
+  - component: {fileID: -114291769035548085}
   m_Layer: 0
   m_Name: Coin Eater Machine
   m_TagString: Untagged
@@ -605,9 +606,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7440317714909920127}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.901894, y: 1.3355147, z: 47.81}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.0074999994, y: 0.007500001, z: 0.0075}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6540111763446094937}
@@ -623,6 +624,27 @@ Transform:
   - {fileID: 1238342157494434573}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-114291769035548085
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7440317714909920127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 119.49302, y: 412.03473, z: 201.55806}
+  m_Center: {x: -9.746299, y: -2.3181913, z: 2.7632077}
 --- !u!1 &8438819164860837202
 GameObject:
   m_ObjectHideFlags: 0
