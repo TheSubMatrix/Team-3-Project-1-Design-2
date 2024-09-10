@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 1873998904}
   - component: {fileID: 1873998903}
   m_Layer: 6
-  m_Name: Controls (1)
+  m_Name: Press F for watch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1045,10 +1045,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 956681698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.22464585, y: 0}
-  m_AnchorMax: {x: 0.36900002, y: 0.15300001}
-  m_AnchoredPosition: {x: 1.5, y: -2.500061}
-  m_SizeDelta: {x: 90.30005, y: 64.3}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 181, y: 103.5}
+  m_SizeDelta: {x: 367.30005, y: 243.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873998903
 MonoBehaviour:
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
