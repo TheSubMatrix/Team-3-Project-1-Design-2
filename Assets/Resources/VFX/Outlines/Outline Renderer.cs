@@ -25,6 +25,7 @@ public class OutlineRenderFeature : ScriptableRendererFeature
     }
     protected override void Dispose(bool disposing)
     {
+        base.Dispose(disposing);
         pass.ReleaseTargets();
     }
     private void OnDestroy()
