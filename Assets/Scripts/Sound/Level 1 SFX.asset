@@ -13,14 +13,50 @@ MonoBehaviour:
   m_Name: Level 1 SFX
   m_EditorClassIdentifier: 
   soundList:
-  - soundName: Concrete Walking
-    sound: {fileID: 8300000, guid: b3329021341f1bf46972751e8d69f97f, type: 3}
+  - soundName: Dialogue 1
+    sound: {fileID: 8300000, guid: 23190b98705b2db449826ab0d84ac92b, type: 3}
     isMusic: 0
-    volume: 0.356
+    volume: 0.7
+    pitch: 1
+    associatedText: 
+  - soundName: Dialogue 2
+    sound: {fileID: 8300000, guid: c1fdd7e7fa71ff64f8267b9b2e3b0a6a, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Dialogue 3
+    sound: {fileID: 8300000, guid: b8a8162c984894d4689032b681c9e073, type: 3}
+    isMusic: 0
+    volume: 0.4
+    pitch: 1
+    associatedText: 
+  - soundName: Dialogue 4
+    sound: {fileID: 8300000, guid: f369f041f42da4349941b79009622ec3, type: 3}
+    isMusic: 0
+    volume: 0.3
+    pitch: 1
+    associatedText: 
+  - soundName: Dialogue 5
+    sound: {fileID: 8300000, guid: 389f0b204701beb47b6e489ca7afce2d, type: 3}
+    isMusic: 0
+    volume: 0.5
+    pitch: 1
+    associatedText: 
+  - soundName: Dialogue 6
+    sound: {fileID: 8300000, guid: 3a659969ff80ad34e8efab4f1581be0f, type: 3}
+    isMusic: 0
+    volume: 1
     pitch: 1
     associatedText: 
   - soundName: Grass Walking
     sound: {fileID: 8300000, guid: 84c7b19dffc35f44fbbb517feed5f2d9, type: 3}
+    isMusic: 0
+    volume: 0.356
+    pitch: 1
+    associatedText: 
+  - soundName: Concrete Walking
+    sound: {fileID: 8300000, guid: b3329021341f1bf46972751e8d69f97f, type: 3}
     isMusic: 0
     volume: 0.356
     pitch: 1
@@ -49,30 +85,6 @@ MonoBehaviour:
     volume: 0.508
     pitch: 1
     associatedText: 
-  - soundName: Dialogue 1
-    sound: {fileID: 8300000, guid: 23190b98705b2db449826ab0d84ac92b, type: 3}
-    isMusic: 0
-    volume: 1
-    pitch: 1
-    associatedText: 
-  - soundName: Dialogue 2
-    sound: {fileID: 8300000, guid: c1fdd7e7fa71ff64f8267b9b2e3b0a6a, type: 3}
-    isMusic: 0
-    volume: 1
-    pitch: 1
-    associatedText: 
-  - soundName: Dialogue 3
-    sound: {fileID: 8300000, guid: b8a8162c984894d4689032b681c9e073, type: 3}
-    isMusic: 0
-    volume: 1
-    pitch: 1
-    associatedText: 
-  - soundName: Dialogue 5
-    sound: {fileID: 8300000, guid: 389f0b204701beb47b6e489ca7afce2d, type: 3}
-    isMusic: 0
-    volume: 0.5
-    pitch: 1
-    associatedText: 
   - soundName: Car Door Shut
     sound: {fileID: 8300000, guid: e2ae8e3509f02784784d1c05fae3a390, type: 3}
     isMusic: 0
@@ -81,24 +93,12 @@ MonoBehaviour:
     associatedText: 
   - soundName: Car Door Shut
     sound: {fileID: 8300000, guid: e2ae8e3509f02784784d1c05fae3a390, type: 3}
-    isMusic: 0
-    volume: 1
-    pitch: 1
-    associatedText: 
-  - soundName: Dialogue 4
-    sound: {fileID: 8300000, guid: f369f041f42da4349941b79009622ec3, type: 3}
     isMusic: 0
     volume: 1
     pitch: 1
     associatedText: 
   - soundName: Crowbar Drop on Grass
     sound: {fileID: 8300000, guid: 79c6c6040c1333c46a9679574f38c05a, type: 3}
-    isMusic: 0
-    volume: 1
-    pitch: 1
-    associatedText: 
-  - soundName: Dialogue 6
-    sound: {fileID: 8300000, guid: 3a659969ff80ad34e8efab4f1581be0f, type: 3}
     isMusic: 0
     volume: 1
     pitch: 1
@@ -135,6 +135,12 @@ MonoBehaviour:
     associatedText: 
   - soundName: Journal 6 Dialogue
     sound: {fileID: 8300000, guid: 850f138e9bedd6340a2fb52c6f923794, type: 3}
+    isMusic: 0
+    volume: 1
+    pitch: 1
+    associatedText: 
+  - soundName: Board Fall
+    sound: {fileID: 8300000, guid: b2f9f58e07631874bb0b5349b8411f29, type: 3}
     isMusic: 0
     volume: 1
     pitch: 1

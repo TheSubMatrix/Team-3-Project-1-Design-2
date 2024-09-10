@@ -47,6 +47,7 @@ public class CrowBar : MonoBehaviour, IHoldable
     }
     public void OnHoldStart() ///When holding crowbar it dissables the collider so it doesn't collide with player when moving camera with it
     {
+        
         myHands.SetActive(false);
 
         grabCrowBarTrigger.SetActive(false); //If the player grabs the crowbar before heading to the front door
@@ -83,8 +84,8 @@ public class CrowBar : MonoBehaviour, IHoldable
     {
         transform.position = Vector3.MoveTowards(transform.position,desiredPos,Time.deltaTime * pickUpSpeed);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
-
-       if(frontDoorRef.boardCount == 5 && !brokeInside) ///When the player has took down all the boards and brokInside is false it will fade out once
+        gameObject.layer = LayerMask.NameToLayer("Render On Top");
+        if (frontDoorRef.boardCount == 5 && !brokeInside) ///When the player has took down all the boards and brokInside is false it will fade out once
         {
             uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Break Inside", 1, 0, .5f, 0));
             brokeInside = true;
@@ -103,6 +104,7 @@ public class CrowBar : MonoBehaviour, IHoldable
             transform.parent = null;
            hands.SetActive(true);
             RaycastHit hit;
+            this.gameObject.layer = LayerMask.NameToLayer("Default");
             Physics.Raycast(transform.position, Vector3.down, out hit, 5);
             if (hit.collider.gameObject.layer == 8)
             {

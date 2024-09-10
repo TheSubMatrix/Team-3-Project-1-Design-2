@@ -9,7 +9,8 @@ public class Board : MonoBehaviour, IInteractable
     PlayerInteractionHandler myInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => myInteractionHandler; set => myInteractionHandler = value; }
 
-    Animator animator;
+    private Animator animator;
+    
 
     [SerializeField] GameObject dustVFX;
     public bool ShouldStopMovement { get => stopMovement; set => stopMovement = value; }
@@ -37,7 +38,7 @@ public class Board : MonoBehaviour, IInteractable
         if (playerInteractionHandler.heldObject != null)
         {
             if (playerInteractionHandler.heldObject.gameObject.name == "CrowBar")
-            {
+            {               
                 BoardsFall(gameObject.name);
             }
         }
@@ -95,7 +96,7 @@ public class Board : MonoBehaviour, IInteractable
         Debug.Log("Show dust");
         
             Instantiate(dustVFX, transform.position, transform.rotation);
-            
+        SoundManager.Instance.PlaySoundAtLocation(transform.position, "Board Fall", false);
         
 
 

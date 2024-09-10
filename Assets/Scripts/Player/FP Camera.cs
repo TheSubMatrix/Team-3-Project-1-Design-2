@@ -10,8 +10,7 @@ public class FP_Camera : MonoBehaviour
     [SerializeField] float sensitivityX, sensitivityY;
 
     bool canMoveCamera = false;
-    private float xRotation, yRotation;
-
+    private float yRotation, xRotation;
    private GameObject defaultCamera;
 
     private void Awake()
@@ -21,6 +20,8 @@ public class FP_Camera : MonoBehaviour
     void Start()
     {
         defaultCamera = gameObject;
+        yRotation = cameraOrientation.eulerAngles.y;
+        xRotation = cameraOrientation.eulerAngles.x;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -33,18 +34,10 @@ public class FP_Camera : MonoBehaviour
     {
         if (canMoveCamera)
         {
-            float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
-
-            yRotation += mouseX;
-            xRotation -= mouseY;
-
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-
-
-            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-            cameraOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
+            yRotation += Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
+            xRotation -= Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
+            xRotation = Mathf.Clamp(xRotation, -90, 90);
+            cameraOrientation.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         }
         
 
