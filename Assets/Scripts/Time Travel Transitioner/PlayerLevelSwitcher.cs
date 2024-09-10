@@ -5,31 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLevelSwitcher : MonoBehaviour
 {
-    bool shouldFinishTransition = false;
+    bool m_shouldFinishTransition = false;
+    [SerializeField] SO_VoidChannel m_updatePageCountChannel;
+    [SerializeField] SO_ImageDisplayChannel imageDisplayChannel;
     [SerializeField] float m_DelayBeforeTransition;
+    [SerializeField] SO_ImageDisplayChannel.ImageDisplayInfo imageDisplayInfoEnable;
+    [SerializeField] SO_ImageDisplayChannel.ImageDisplayInfo imageDisplayInfoDisable;
     [SerializeField] List<TransitionData> m_transitions = new List<TransitionData>();
-    [SerializeField] Animator animator;
+    [SerializeField] Animator m_animator;
+    int m_journalCount = 0;
     [System.Serializable]
     struct TransitionData
     {
         public string FromScene;
         public string ToScene;
     }
+    private void Awake()
+    {
+        m_updatePageCountChannel.myEvent.AddListener(UpdatePageCount);
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !shouldFinishTransition)
+        if (Input.GetKeyDown(KeyCode.F) && !m_shouldFinishTransition && m_journalCount >= 3)
         {
-            animator.SetTrigger("Start Transition");
+            m_animator.SetTrigger("Start Transition");
             StartCoroutine(TransitionSceneAsync(m_transitions));
         }
     }
     public void CompleteSceneTransition()
     {
-        shouldFinishTransition = true;
+        m_shouldFinishTransition = true;
     }
     public void ResetSceneTransitionStatus()
     {
-        shouldFinishTransition = false;
+        m_shouldFinishTransition = false;
     }
     IEnumerator TransitionSceneAsync(List<TransitionData> scenesToParse)
     {
@@ -50,7 +59,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
         }
         AsyncOperation asyncSceneLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         asyncSceneLoad.allowSceneActivation = false;
-        while (!Mathf.Approximately(asyncSceneLoad.progress, 0.9f) || !shouldFinishTransition)
+        while (!Mathf.Approximately(asyncSceneLoad.progress, 0.9f) || !m_shouldFinishTransition)
         {
             Debug.Log(asyncSceneLoad.progress);
             yield return null;
@@ -60,6 +69,15 @@ public class PlayerLevelSwitcher : MonoBehaviour
         yield return null;
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(currentScene));
-        animator.SetTrigger("End Transition");
+        m_animator.SetTrigger("End Transition");
+    }
+    void UpdatePageCount()
+    {
+        m_journalCount++;
+        if( m_journalCount >= 3) 
+        {
+            imageDisplayChannel.OnFadeImage?.Invoke(imageDisplayInfoEnable);
+            imageDisplayChannel.OnFadeImage?.Invoke(imageDisplayInfoDisable);
+        }
     }
 }
