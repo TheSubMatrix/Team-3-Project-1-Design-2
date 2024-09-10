@@ -8,6 +8,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
     bool m_shouldFinishTransition = false;
     [SerializeField] SO_VoidChannel m_updatePageCountChannel;
     [SerializeField] SO_ImageDisplayChannel imageDisplayChannel;
+    [SerializeField] SO_BoolChannel disablePlayerMovementChannel;
     [SerializeField] float m_DelayBeforeTransition;
     [SerializeField] SO_ImageDisplayChannel.ImageDisplayInfo imageDisplayInfoEnable;
     [SerializeField] SO_ImageDisplayChannel.ImageDisplayInfo imageDisplayInfoDisable;
@@ -58,6 +59,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
         {
             yield break;
         }
+        disablePlayerMovementChannel.boolEvent?.Invoke(false);
         AsyncOperation asyncSceneLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         asyncSceneLoad.allowSceneActivation = false;
         while (!Mathf.Approximately(asyncSceneLoad.progress, 0.9f) || !m_shouldFinishTransition)
@@ -71,6 +73,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(currentScene));
         m_animator.SetTrigger("End Transition");
+        disablePlayerMovementChannel.boolEvent?.Invoke(true);
     }
     void UpdatePageCount()
     {

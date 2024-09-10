@@ -303,6 +303,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1688609250056563892, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: disablePlayerMovementChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 71312b1e4f85da244897d6ddfdf89219, type: 2}
     - target: {fileID: 2797765485663489680, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Color.a
       value: 0
