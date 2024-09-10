@@ -55,11 +55,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().name == "Level One")
         {
             StartCoroutine(StartDialogue("Dialogue 1", 5f));
             StartCoroutine(StartDialogue("Dialogue 2", 15f));
             transform.position = new Vector3(-6.69f, 1.003f, 16.852f);
+        }
+        else if(SceneManager.GetActiveScene().name == "Level Two Destroyed")
+        {
+            transform.position = new Vector3(-11f, 1.003f, 33.5f);
+            Debug.Log(transform.position);
         }
         CheckTerrain();
     }
