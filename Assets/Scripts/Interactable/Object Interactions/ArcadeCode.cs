@@ -10,8 +10,8 @@ public class ArcadeCode : MonoBehaviour, IInteractable
     PlayerInteractionHandler playerInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => playerInteractionHandler; set => playerInteractionHandler = value; }
     public bool ShouldStopMovement { get; set; } = true;
-    Animator animator;
-
+    private Animator animator;
+    [SerializeField] Animator hiddenDoorAnimator;
     private void Awake()
     {
         if(GetComponent<Animator>() != null)
@@ -85,5 +85,11 @@ public class ArcadeCode : MonoBehaviour, IInteractable
         Debug.Log(sequence);
 
         CheckCode();
+    }
+
+
+    public void OpenHiddenDoor()
+    {
+        hiddenDoorAnimator.Play("Open_Door");
     }
 }

@@ -22,7 +22,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
     }
     private void Awake()
     {
-        m_updatePageCountChannel.myEvent.AddListener(UpdatePageCount);
+      //  m_updatePageCountChannel.myEvent.AddListener(UpdatePageCount);
     }
     private void Update()
     {

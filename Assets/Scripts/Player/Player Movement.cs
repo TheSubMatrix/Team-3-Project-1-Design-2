@@ -42,8 +42,8 @@ public class PlayerMovement : MonoBehaviour
     private bool activateTerrainChecker = false;
 
     private string soundName;
-    
 
+    
     
 
     private void Awake()
@@ -87,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
+        
     }
     private void FixedUpdate()
     {
