@@ -31,6 +31,10 @@ public class OutlineRenderFeature : ScriptableRendererFeature
     {
         pass.ReleaseTargets();
     }
+    private void OnDisable()
+    {
+        pass.ReleaseTargets();
+    }
     [System.Serializable]
      public class OutlineSettings
     {
