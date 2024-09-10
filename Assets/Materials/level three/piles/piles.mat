@@ -49,7 +49,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Color:
+<<<<<<< Updated upstream
         m_Texture: {fileID: 2800000, guid: 08c7faca24750054baaa6418eb0dfdae, type: 3}
+=======
+        m_Texture: {fileID: 2800000, guid: 3991aadeaf7255d45878814425c23792, type: 3}
+>>>>>>> Stashed changes
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -97,7 +101,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Roughness:
+<<<<<<< Updated upstream
         m_Texture: {fileID: 2800000, guid: 806f425c8376595468eb85385ec177fb, type: 3}
+=======
+        m_Texture: {fileID: 2800000, guid: 9bec8bcc9b954dc45bf72d5bc7a5ca2d, type: 3}
+>>>>>>> Stashed changes
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -154,8 +162,15 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< Updated upstream
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 20, g: 20, b: 0, a: 0}
+=======
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+>>>>>>> Stashed changes
   m_BuildTextureStacks: []
