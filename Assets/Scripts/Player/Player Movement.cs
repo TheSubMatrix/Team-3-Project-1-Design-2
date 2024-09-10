@@ -51,21 +51,22 @@ public class PlayerMovement : MonoBehaviour
         //seeting varaibles should always be in awake
         characterController = GetComponent<CharacterController>();
         allowPlayerMovementChannel.boolEvent.AddListener(OnPlayerMovementEventUpdated);
-    }
-
-    private void Start()
-    {
         if (SceneManager.GetActiveScene().name == "Level One")
         {
             StartCoroutine(StartDialogue("Dialogue 1", 5f));
             StartCoroutine(StartDialogue("Dialogue 2", 15f));
-            transform.position = new Vector3(-6.69f, 1.003f, 16.852f);
+            transform.position = new Vector3(-8.69f, 1.003f, 16.852f);
         }
-        else if(SceneManager.GetActiveScene().name == "Level Two Destroyed")
+        else if (SceneManager.GetActiveScene().name == "Level Two Destroyed")
         {
             transform.position = new Vector3(-11f, 1.003f, 33.5f);
             Debug.Log(transform.position);
         }
+    }
+
+    private void Start()
+    {
+        
         CheckTerrain();
     }
     private void Update()

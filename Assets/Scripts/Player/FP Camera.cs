@@ -16,14 +16,15 @@ public class FP_Camera : MonoBehaviour
     private void Awake()
     {
         playerMovementActivationChannel.boolEvent.AddListener(UpdatePlayerMovementState);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     void Start()
     {
         defaultCamera = gameObject;
         yRotation = cameraOrientation.eulerAngles.y;
         xRotation = cameraOrientation.eulerAngles.x;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
     }
     void UpdatePlayerMovementState(bool newState) 
     {

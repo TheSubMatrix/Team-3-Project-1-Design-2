@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31407d5b10c4fbe47b26054d85f64a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  watchEnableChannel: {fileID: 11400000, guid: 2b1e7057f0fe52240a283048f9a68c1f, type: 2}
   imageDisplayInfoEnable:
     image: Journal 2
     startAlpha: 0
