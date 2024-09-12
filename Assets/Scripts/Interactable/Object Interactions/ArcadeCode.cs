@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using UnityEngine.Events;
 public class ArcadeCode : MonoBehaviour, IInteractable
 {
     [SerializeField]UnityEvent OnCodeCompleted = new UnityEvent();
+    [SerializeField]UnityEvent SwitchCameraView = new UnityEvent(); 
     PlayerInteractionHandler playerInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => playerInteractionHandler; set => playerInteractionHandler = value; }
 
@@ -14,6 +16,8 @@ public class ArcadeCode : MonoBehaviour, IInteractable
     public bool ShouldStopMovement { get; set; } = true;
     private Animator animator;
     [SerializeField] Animator hiddenDoorAnimator;
+
+    private CinemachineVirtualCamera arcadeCameraView;
     private void Awake()
     {
         if(GetComponent<Animator>() != null)
@@ -24,44 +28,72 @@ public class ArcadeCode : MonoBehaviour, IInteractable
         {
             Debug.LogWarning("No animator found");
         }
-       
+        if(GetComponentInChildren<CinemachineVirtualCamera>() != null)
+        {
+            arcadeCameraView = GetComponentInChildren<CinemachineVirtualCamera>();
+           arcadeCameraView.enabled = false;
+            
+        }
+        else
+        {
+            Debug.LogWarning("There is no virtual camera attached to Arcade Controls");
+        }
     }
 
+    public void OnInteractStart(PlayerInteractionHandler incomingInteractionHandler)
+    {
+        playerInteractionHandler = incomingInteractionHandler;
+        SwitchCameraView.Invoke();
 
+    }
+   
     [SerializeField] char[] code = { 'w', 'w', 's', 's', 'a', 'd', 'a', 'd', '0', '1' };
     char[] typedChars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
     public void OnInteracting()
     {
-        if(Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
+            Debug.Log("Up");
             UpdateChars('w');
-            animator.Play("Up_Joystick");
+            animator.SetTrigger("Up_Joystick");
+
+            StartCoroutine(ResetTrigger());
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
             UpdateChars('a');
-            animator.Play("Left_Joystick");
+            animator.SetTrigger("Left_Joystick");
+            StartCoroutine(ResetTrigger());
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             UpdateChars('s');
-            animator.Play("Down_Joystick");
+            animator.SetTrigger("Down_Joystick");
+            StartCoroutine(ResetTrigger());
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             UpdateChars('d');
-            animator.Play("Right_Joystick");
+            animator.SetTrigger("Right_Joystick");
+            StartCoroutine(ResetTrigger());
         }
         if (Input.GetMouseButtonDown(0))
         {
             UpdateChars('0');
-            animator.Play("Button1 Push");
+            animator.SetTrigger("Push_Button1");
+            StartCoroutine(ResetTrigger());
         }
         if (Input.GetMouseButtonDown(1))
         {
             UpdateChars('1');
-            animator.Play("Button2 Push");
+            animator.SetTrigger("Push_Button2");
+            StartCoroutine(ResetTrigger());
         }
+    }
+
+    public void OnInteractEnd()
+    {
+        SwitchCameraView.Invoke();
     }
     void CheckCode()
     {
@@ -96,4 +128,27 @@ public class ArcadeCode : MonoBehaviour, IInteractable
     {
         hiddenDoorAnimator.Play("Open_Door");
     }
+
+
+    IEnumerator ResetTrigger()
+    {
+        yield return new WaitForSeconds(1f);
+        animator.SetTrigger("Finish");
+        
+        Debug.Log("Trigger Reseted");
+    }
+
+    public void ArcadeInteractionCamera()
+    {
+        if (!arcadeCameraView.enabled)
+        {
+            arcadeCameraView.enabled = true;
+        }
+        else if (arcadeCameraView.enabled)
+        {
+            arcadeCameraView.enabled = false;
+        }
+       
+    }
+
 }

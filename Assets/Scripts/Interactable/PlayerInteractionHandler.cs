@@ -100,11 +100,7 @@ public class PlayerInteractionHandler : MonoBehaviour
                     StartInteraction(interactable);                 
                 }
             }
-            /*else if (interactingObject != null)
-            {
-                Debug.Log("End Interaction");
-                EndIntreaction();
-            }*/
+           
 
             
 
