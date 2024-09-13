@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 4106015b8444b4c419b637da772ef382, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 066cdc2a71b454143a1047a5270df491, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1007,6 +1007,75 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 104.23254
   m_Center: {x: -3.8935564, y: 60.90778, z: -4.6786523}
+--- !u!1001 &101485317
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.234562
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9934898
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 43.89122
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000029504295
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 700b09c69356e6d409c481f1c1ce5ac1, type: 2}
+    - target: {fileID: 919132149155446097, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_Name
+      value: FluorescentLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071182760956848314, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 700b09c69356e6d409c481f1c1ce5ac1, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 700b09c69356e6d409c481f1c1ce5ac1, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 699329b31c99b5645b59612863be2a0c, type: 3}
 --- !u!1 &114683169
 GameObject:
   m_ObjectHideFlags: 0
@@ -18828,3 +18897,4 @@ SceneRoots:
   - {fileID: 1086465279}
   - {fileID: 216505256}
   - {fileID: 1538645930}
+  - {fileID: 101485317}
