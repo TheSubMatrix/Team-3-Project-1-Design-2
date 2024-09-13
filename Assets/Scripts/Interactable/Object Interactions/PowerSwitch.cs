@@ -17,8 +17,10 @@ public class PowerSwitch : MonoBehaviour, IInteractable
     public PlayerInteractionHandler interactionHandler { get => currentInteractor; set => currentInteractor = value; }
     public bool ShouldStopMovement { get => shouldStopMovement; set => shouldStopMovement = value; }
 
-    
-   
+    [SerializeField] GameObject sparksVFX;
+
+    [SerializeField] List<Transform> sparkSpawnPoints = new List<Transform>();
+
     [SerializeField]  Animator animator;
     
 
@@ -36,7 +38,9 @@ public class PowerSwitch : MonoBehaviour, IInteractable
     {
         Debug.Log("Interact Start");
         currentInteractor = incomingHandler;
-                                          
+        StartCoroutine(StartSparks());
+        
+        //Instantiate(sparksVFX, transform.position, Quaternion.identity);                              
     }
 
     public void OnInteractEnd()
@@ -64,5 +68,18 @@ public class PowerSwitch : MonoBehaviour, IInteractable
         {
             animator.Play("Turn Off");
         }
+    }
+
+
+    IEnumerator StartSparks()
+    {
+        for (int i = 0; i <= sparkSpawnPoints.Count-1; i++)
+        {
+            Instantiate(sparksVFX, sparkSpawnPoints[i].position, Quaternion.identity);
+            yield return new WaitForSeconds(1f);
+
+        }
+      
+
     }
 }
