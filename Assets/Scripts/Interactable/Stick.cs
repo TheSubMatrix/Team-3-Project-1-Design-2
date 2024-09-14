@@ -28,10 +28,13 @@ public class Stick : MonoBehaviour, IHoldable
     public void OnHoldStart( PlayerInteractionHandler incomingHandler)
     {
         myPlayerIntercationHandler = incomingHandler;
+        
         myPlayerIntercationHandler.raycastDistance = 10;
-        myHands.SetActive(false);
+        
+            myHands.SetActive(false);
+        
 
-        if(rb != null)
+        if (rb != null)
         {
             rb.isKinematic = true;
             GetComponent<CapsuleCollider>().isTrigger = true;
@@ -52,8 +55,9 @@ public class Stick : MonoBehaviour, IHoldable
         if(rb != null)
         {
             rb.isKinematic = false;
-            GetComponent<CapsuleCollider>().isTrigger = true;
+            GetComponent<CapsuleCollider>().isTrigger = false;
             myHands.SetActive(true);
+            gameObject.layer = LayerMask.NameToLayer("Default");
         }
     }
 

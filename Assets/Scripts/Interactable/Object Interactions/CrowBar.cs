@@ -49,7 +49,10 @@ public class CrowBar : MonoBehaviour, IHoldable
     public void OnHoldStart(PlayerInteractionHandler incomingHandler) ///When holding crowbar it dissables the collider so it doesn't collide with player when moving camera with it
     {
         myPlayerInteractionHandler = incomingHandler;
-        myHands.SetActive(false);
+
+            myHands.SetActive(false);
+        
+       
 
         grabCrowBarTrigger.SetActive(false); //If the player grabs the crowbar before heading to the front door
                                             // it will turn off the trigger asking the player to grab it from the trunk
