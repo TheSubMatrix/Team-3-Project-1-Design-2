@@ -23,7 +23,8 @@ public class PlayerInteractionHandler : MonoBehaviour
     [SerializeField] PickupEvent PickupStarted;
     [SerializeField] PickupEvent PickupEnded;
 
-      
+
+    [SerializeField] public int raycastDistance = 5;
 
     [SerializeField] GameObject interactingHands;
 
@@ -34,7 +35,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     private IInteractable interactable;
     void Update()
     {
-        const int raycastDistance = 5;
+        //const int raycastDistance = 5;
         Ray ray = new Ray(transform.position, transform.forward);
         Physics.Raycast(ray, out RaycastHit hitInfo, raycastDistance, interactableLayers, QueryTriggerInteraction.UseGlobal);
         if(hitInfo.collider != null)
@@ -166,7 +167,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     public void StartPickup(IHoldable holdable)
     {
         PickupStarted.Invoke(holdable.gameObject);
-        holdable.OnHoldStart();
+        holdable.OnHoldStart(this);
         heldObject = holdable;
 
     }

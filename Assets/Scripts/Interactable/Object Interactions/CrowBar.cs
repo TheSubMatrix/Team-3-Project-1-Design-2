@@ -13,8 +13,9 @@ public class CrowBar : MonoBehaviour, IHoldable
 
     
     public Vector3 HoldPositionOffset => positionOffset;
-    
-    
+
+    private PlayerInteractionHandler myPlayerInteractionHandler;
+    public PlayerInteractionHandler playerInteractionHandler { get => myPlayerInteractionHandler; set => myPlayerInteractionHandler = value; }
     public Vector3 TransformToOffsetPositionFrom { get; set; }
     public Quaternion HoldRotationOffset => rotationOffset;
 
@@ -45,9 +46,9 @@ public class CrowBar : MonoBehaviour, IHoldable
 
 
     }
-    public void OnHoldStart() ///When holding crowbar it dissables the collider so it doesn't collide with player when moving camera with it
+    public void OnHoldStart(PlayerInteractionHandler incomingHandler) ///When holding crowbar it dissables the collider so it doesn't collide with player when moving camera with it
     {
-        
+        myPlayerInteractionHandler = incomingHandler;
         myHands.SetActive(false);
 
         grabCrowBarTrigger.SetActive(false); //If the player grabs the crowbar before heading to the front door
@@ -101,7 +102,7 @@ public class CrowBar : MonoBehaviour, IHoldable
             rb.isKinematic = false;
             GetComponent<MeshCollider>().isTrigger = false;
 
-            transform.parent = null;
+           // transform.parent = null;
            hands.SetActive(true);
             RaycastHit hit;
             this.gameObject.layer = LayerMask.NameToLayer("Default");
