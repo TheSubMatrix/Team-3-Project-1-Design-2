@@ -28,6 +28,7 @@ public class PlayerInteractionHandler : MonoBehaviour
     [SerializeField] GameObject interactingHands;
 
     private GameObject hoveredObject;
+    private LayerMask hoveredObjectLayer;
 
     private IHoldable holdable;
     private IInteractable interactable;
@@ -42,23 +43,26 @@ public class PlayerInteractionHandler : MonoBehaviour
             interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>();
             if (hitInfo.collider.gameObject != hoveredObject)
             {
-                if (interactable != null || holdable != null)
+                if (interactable != null || holdable != null && holdable != heldObject)
                 {
                     //Debug.Log($"Interactable is {interactable} and holdable is  {holdable}");
                   
                     if (hoveredObject != null)
                     {
-                        hoveredObject.layer = LayerMask.NameToLayer("Default");
+                        hoveredObject.layer = hoveredObjectLayer;
+                        hoveredObjectLayer = LayerMask.NameToLayer("Default");
                         hoveredObject = null;
                     }
                     hoveredObject = hitInfo.collider.gameObject;
+                    hoveredObjectLayer = hoveredObject.layer;
                     hoveredObject.layer = LayerMask.NameToLayer("Outlines");
                 }
                 else 
                 {
                     if (hoveredObject != null)
                     {
-                        hoveredObject.layer = LayerMask.NameToLayer("Default");
+                        hoveredObject.layer = hoveredObjectLayer;
+                        hoveredObjectLayer = LayerMask.NameToLayer("Default");
                         hoveredObject = null;
                     }
                 }
@@ -69,7 +73,8 @@ public class PlayerInteractionHandler : MonoBehaviour
         {
             if (hoveredObject != null)
             {
-                hoveredObject.layer = LayerMask.NameToLayer("Default");
+                hoveredObject.layer = hoveredObjectLayer;
+                hoveredObjectLayer = LayerMask.NameToLayer("Default");
                 hoveredObject = null;
             }
         }
@@ -92,6 +97,10 @@ public class PlayerInteractionHandler : MonoBehaviour
                 
                 if (holdable != null)
                 {
+                    if(holdable.gameObject.layer == LayerMask.NameToLayer("Outlines")) 
+                    {
+                        holdable.gameObject.layer = hoveredObjectLayer;
+                    }
                     holdable.hands = interactingHands;
                     StartPickup(holdable);
                 }
