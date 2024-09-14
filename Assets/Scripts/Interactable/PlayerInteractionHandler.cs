@@ -91,6 +91,12 @@ public class PlayerInteractionHandler : MonoBehaviour
                 EndInteraction();
                 return;
             }
+            else if(heldObject != null)
+            {
+                Debug.Log("End holdable");
+                EndPickup(hitInfo.collider.gameObject);                
+                return;
+            }
             
             
             if ((heldObject == null || interactingObject == null) && hitInfo.collider != null)  // If the && is replaced with || then by pressing E it wont EndInteraction
