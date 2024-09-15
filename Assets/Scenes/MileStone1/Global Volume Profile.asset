@@ -28,6 +28,28 @@ MonoBehaviour:
   rounded:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &-7284612254994389689
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b823ddda77d15548a0594ab29131d38, type: 3}
+  m_Name: RadialBlurVolumeComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  radialBlurMaterial:
+    m_OverrideState: 1
+    m_Value: {fileID: 2100000, guid: ee069ab3ccbcf00418a634ab5f312144, type: 2}
+  SampleAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  EffectAmount:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &-3905739366176388531
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -95,6 +117,7 @@ MonoBehaviour:
   - {fileID: -3905739366176388531}
   - {fileID: 2695004465279082321}
   - {fileID: -885789103597483772}
+  - {fileID: -7284612254994389689}
 --- !u!114 &391164791935874453
 MonoBehaviour:
   m_ObjectHideFlags: 3
