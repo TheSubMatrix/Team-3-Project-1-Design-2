@@ -73,6 +73,6 @@ public class RadialBlurPass : ScriptableRenderPass
     }
     public void ReleaseTargets()
     {
-        tempRT.Release();
+        tempRT?.Release();
     }
 }
