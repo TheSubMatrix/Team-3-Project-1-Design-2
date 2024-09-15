@@ -54,9 +54,9 @@ public class RadialBlurPass : ScriptableRenderPass
         {
             context.ExecuteCommandBuffer(cmd);
             cmd.Clear();
-            if (radialBlurVolumeComponent != null && radialBlurVolumeComponent.active && radialBlurVolumeComponent.radialBlurMaterial != null)
+            _blitMat = radialBlurVolumeComponent.radialBlurMaterial.value;
+            if (radialBlurVolumeComponent != null && radialBlurVolumeComponent.active && _blitMat != null)
             {
-                _blitMat = radialBlurVolumeComponent.radialBlurMaterial.value;
                 _blitMat.SetFloat("_EffectAmount", radialBlurVolumeComponent.EffectAmount.value);
                 _blitMat.SetInt("_SampleAmount", radialBlurVolumeComponent.SampleAmount.value);
                 RTHandle camTarget = renderingData.cameraData.renderer.cameraColorTargetHandle;
