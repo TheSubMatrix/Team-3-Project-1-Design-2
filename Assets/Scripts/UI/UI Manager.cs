@@ -15,6 +15,9 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+
+        SceneManager.LoadScene("Level Two Destroyed",LoadSceneMode.Additive);
+
     }
     private void Start()
     {
