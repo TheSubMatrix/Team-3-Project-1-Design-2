@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Star : MonoBehaviour, IInteractable
@@ -9,23 +10,34 @@ public class Star : MonoBehaviour, IInteractable
     private PlayerInteractionHandler myPlayerInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => myPlayerInteractionHandler; set => myPlayerInteractionHandler = value; }
     public bool ShouldStopMovement { get =>stopPlayerMovement; set =>   stopPlayerMovement = value; }
+    [SerializeField] GameObject pipe;
 
+    
+
+    
     public void OnInteractStart(PlayerInteractionHandler playerInteractionHandler)
-    {
+    {       
         myPlayerInteractionHandler = playerInteractionHandler;
-        
-        Debug.Log("Touch");
+
+        if (myPlayerInteractionHandler.heldObject.gameObject.name == "Metal Pipe")
+        {
+            myPlayerInteractionHandler.EndInteraction();
+        }
+
+
     }
 
 
 
-    public void OnInteracting()
-    {
-        myPlayerInteractionHandler.EndInteraction();
-    }
+    
 
     public void OnInteractEnd()
     {
         Debug.Log("Fall");
+    }
+
+    public void OnInteracting()
+    {
+        throw new System.NotImplementedException();
     }
 }
