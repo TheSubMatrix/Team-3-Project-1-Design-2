@@ -28,7 +28,7 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     [SerializeField] GameObject interactingHands;
 
-    private GameObject hoveredObject;
+    public GameObject hoveredObject;
     private LayerMask hoveredObjectLayer;
 
     private IHoldable holdable;
@@ -91,7 +91,7 @@ public class PlayerInteractionHandler : MonoBehaviour
                 EndInteraction();
                 return;
             }
-            else if(heldObject != null)
+            else if( holdable != null && heldObject != null)
             {
                 Debug.Log("End holdable");
                 EndPickup(hitInfo.collider.gameObject);                
