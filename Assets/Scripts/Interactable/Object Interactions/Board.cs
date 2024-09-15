@@ -1,36 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.VFX;
-
+using UnityEngine.Events;
 public class Board : MonoBehaviour, IInteractable
 {
     PlayerInteractionHandler myInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => myInteractionHandler; set => myInteractionHandler = value; }
 
-    private Animator animator;
-    
+    private Animator animator;  
 
     [SerializeField] GameObject dustVFX;
     public bool ShouldStopMovement { get => stopMovement; set => stopMovement = value; }
 
-
+    
     private bool stopMovement = false;
 
     [SerializeField] FrontDoor frontDoorRef;
-
-
+   
+    [SerializeField] UnityEvent checkBoardCountEvent = new UnityEvent();
 
     void Awake()
     {
         animator = GetComponent<Animator>();
     }
     
-    private void Update()
-    {
-        //Debug.DrawRay(transform.position, transform.right * 5);
-    }
+    
     public void OnInteractStart(PlayerInteractionHandler playerInteractionHandler)
     {
         myInteractionHandler = playerInteractionHandler;
@@ -40,6 +35,8 @@ public class Board : MonoBehaviour, IInteractable
             if (playerInteractionHandler.heldObject.gameObject.name == "CrowBar")
             {               
                 BoardsFall(gameObject.name);
+               
+                checkBoardCountEvent.Invoke();
             }
         }
         else
@@ -57,12 +54,8 @@ public class Board : MonoBehaviour, IInteractable
 
 
     public void OnInteractEnd()
-    {
-        frontDoorRef.boardCount++;
-        Debug.Log(frontDoorRef.boardCount);
-        Destroy(gameObject);
-
-        //BoardsFall(gameObject.name);
+    {             
+        Destroy(gameObject);      
     }
 
     void BoardsFall(string boardName)  ///Depending on which board is interacted with will play it's respective animation
@@ -70,22 +63,27 @@ public class Board : MonoBehaviour, IInteractable
         if (boardName == "DoorPlank5")
         {
             animator.Play("Board_5");
+           
         }
         if (boardName == "DoorPlank4")
         {
             animator.Play("Board_4");
+           
         }
         if (boardName == "DoorPlank3")
         {
             animator.Play("Board_3");
+           
         }
         if (boardName == "DoorPlank2")
         {
             animator.Play("Board_2");
+            
         }
         if (boardName == "DoorPlank1")
         {
             animator.Play("Board_1");
+            
         }
 
     }
@@ -94,15 +92,12 @@ public class Board : MonoBehaviour, IInteractable
     public void ShowDust()
     {
         Debug.Log("Show dust");
-        
-            Instantiate(dustVFX, transform.position, transform.rotation);
+
+        Instantiate(dustVFX, transform.position, transform.rotation);
+   
         SoundManager.Instance.PlaySoundAtLocation(transform.position, "Board Fall", false);
-        
-
-
-
     }
 
-    
+
 }
 

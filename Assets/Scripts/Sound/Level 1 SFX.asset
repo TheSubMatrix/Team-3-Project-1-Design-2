@@ -163,3 +163,39 @@ MonoBehaviour:
     volume: 0.6
     pitch: 1
     associatedText: 
+  - soundName: Spark1
+    sound: {fileID: 8300000, guid: 528e6b292647e54469b49eb8a7ac8247, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Spark2
+    sound: {fileID: 8300000, guid: 74a479683eda6b343898647f315a603b, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Spark3
+    sound: {fileID: 8300000, guid: 8d903a2efafd02441b651863a8b3d371, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Spark4
+    sound: {fileID: 8300000, guid: 03b2496c964f78d449e174b1635f7b14, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: GeneratorOn
+    sound: {fileID: 8300000, guid: a4894553872c5594e893b2510fcafcdd, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: SwitchPull
+    sound: {fileID: 8300000, guid: f4a4ef62f5f53fb4da1455d124d2e7ed, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stick : MonoBehaviour, IHoldable
+public class Pipe : MonoBehaviour, IHoldable
 {
     [field:SerializeField] public Quaternion HoldRotationOffset {get; private set; }
 
@@ -54,11 +54,11 @@ public class Stick : MonoBehaviour, IHoldable
             transform.position = Vector3.MoveTowards(transform.position, desiredPos, Time.deltaTime * pickUpSpeed);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
             gameObject.layer = LayerMask.NameToLayer("Render On Top");
-        if ( active && Input.GetKeyDown(KeyCode.E))
+        /*if ( active && Input.GetKeyDown(KeyCode.E))
         {
-            animator.SetTrigger("Pipe_Throw"); //Change trigger name 
-            StartCoroutine(StopAnimation());
-        }
+           
+            StartCoroutine(StartAnimation());
+        }*/
     }
 
     public void OnHoldEnd(GameObject objectBeingLookedAt)
@@ -75,8 +75,13 @@ public class Stick : MonoBehaviour, IHoldable
         }
     }
 
-    IEnumerator StopAnimation()
+    public void PipeSwingAnimation()
     {
+        StartCoroutine(StartAnimation());
+    }
+    IEnumerator StartAnimation()
+    {
+        animator.SetTrigger("Swing");
         yield return new WaitForSeconds(1f);        
         animator.SetTrigger("Stop_Swing");
     }

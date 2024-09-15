@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
     private string soundName;
 
-    
+    private GameObject newSound;
     
 
     private void Awake()
@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (SoundManager.Instance.newSoundGO != null)
                     {
-                        SoundManager.Instance.StopSoundEffect(SoundManager.Instance.newSoundGO);
+                        SoundManager.Instance.StopSoundEffect(newSound);
                     }
                     else
                     {
@@ -219,11 +219,12 @@ public class PlayerMovement : MonoBehaviour
 
     //move your logic out WHENEVER YOU CAN.
     private void PlayUpdatedSound(string soundName)
-    {
+    {      
         if(SoundManager.Instance != null)
         {
-            SoundManager.Instance.StopSoundEffect(SoundManager.Instance.newSoundGO);
-            SoundManager.Instance.PlaySoundOnObject(gameObject, soundName, true);
+
+            SoundManager.Instance.StopSoundEffect(newSound);
+            newSound = SoundManager.Instance.PlaySoundOnObject(gameObject, soundName, true);
         }
               
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 public class FrontDoor : MonoBehaviour, IInteractable
 {
 
@@ -12,12 +13,14 @@ public class FrontDoor : MonoBehaviour, IInteractable
     public PlayerInteractionHandler interactionHandler { get => currentInteractable; set => currentInteractable = value; }
     public bool ShouldStopMovement { get => shouldStopMovement; set => shouldStopMovement = value; }
 
+    
     bool shouldStopMovement = false;
     bool showingPowerSwitchUI = false;
     BoxCollider doorCollider;
 
     public bool switchEnabled = false;
-   [SerializeField] public int boardCount { get;set; }
+    public int boardCount = 0;
+    public bool keyInHand = false;
     public PlayerUI PlayerUI { get; set; }
 
     private void Awake()
@@ -33,7 +36,7 @@ public class FrontDoor : MonoBehaviour, IInteractable
     }
     private void Update()
     {
-        if(switchEnabled || boardCount >= 5)
+        if(switchEnabled || boardCount == 5)
         {
             
             doorCollider.enabled = true;
@@ -51,13 +54,16 @@ public class FrontDoor : MonoBehaviour, IInteractable
    public void OnInteractStart( PlayerInteractionHandler incomingInteractionHandler)
     {
         currentInteractable = incomingInteractionHandler;
-
         
+      
+
+
     }
 
     public void OnInteractEnd()
     {
-        if(boardCount >= 5 && switchEnabled)
+       
+        if(boardCount >= 5 && switchEnabled && keyInHand)
         {
             animator.Play("Open");
         }
@@ -76,8 +82,20 @@ public class FrontDoor : MonoBehaviour, IInteractable
         }
        
     }
+
+    public void CheckIfHasKey(bool hasKey)
+    {
+        keyInHand = hasKey;
+    }
     public void UpdateSwitchState(bool newSwitchState) 
     {
         switchEnabled = newSwitchState;
     }
+
+    public void UpdateBoardCount(int incomingBoardCount)
+    {
+        boardCount += incomingBoardCount;
+    }
+
+    
 }
