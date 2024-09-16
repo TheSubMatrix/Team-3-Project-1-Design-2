@@ -60,7 +60,7 @@ public class RadialBlurPass : ScriptableRenderPass
                 _blitMat.SetFloat("_EffectAmount", radialBlurVolumeComponent.EffectAmount.value);
                 _blitMat.SetInt("_SampleAmount", radialBlurVolumeComponent.SampleAmount.value);
                 RTHandle camTarget = renderingData.cameraData.renderer.cameraColorTargetHandle;
-                if (camTarget != null && tempRT.rt != null && camTarget.rt != null)
+                if (camTarget != null && tempRT != null  && camTarget != null && tempRT.rt != null && camTarget.rt != null)
                 {
                     Blitter.BlitCameraTexture(cmd, camTarget, tempRT, _blitMat, 0);
                     Blitter.BlitCameraTexture(cmd, tempRT, camTarget);
