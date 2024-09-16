@@ -18,13 +18,19 @@ public class Star : MonoBehaviour, IInteractable
     {       
         myPlayerInteractionHandler = playerInteractionHandler;
 
-        if (myPlayerInteractionHandler.heldObject.gameObject.name == "Metal Pipe")
+        if(myPlayerInteractionHandler.heldObject != null)
         {
-            onPipeAnimationPlay.Invoke();
-            myPlayerInteractionHandler.EndInteraction();
+            if (myPlayerInteractionHandler.heldObject.gameObject.name == "Metal Pipe")
+            {
+                onPipeAnimationPlay.Invoke();
+                Debug.Log("Swing");
+            }
         }
-
-
+        else
+        {
+            Debug.Log("Need something to knock it down");
+        }
+      
     }
 
     public void OnInteractEnd()
@@ -35,6 +41,6 @@ public class Star : MonoBehaviour, IInteractable
 
     public void OnInteracting()
     {
-        throw new System.NotImplementedException();
+        myPlayerInteractionHandler.EndInteraction();
     }
 }
