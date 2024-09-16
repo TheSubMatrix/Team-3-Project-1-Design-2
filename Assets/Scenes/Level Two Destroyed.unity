@@ -14528,7 +14528,7 @@ Transform:
   m_GameObject: {fileID: 1704192950}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6742718, y: 0.054758202, z: 0.0502521, w: 0.7347338}
-  m_LocalPosition: {x: -2538, y: -380, z: -821}
+  m_LocalPosition: {x: -2515.4, y: -386.2, z: -797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14569,7 +14569,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.70814455, g: 0.07663221, b: 0.86415094, a: 1}
-  m_Intensity: 5
+  m_Intensity: 0.5
   m_Range: 2
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -14646,7 +14646,7 @@ Transform:
   m_GameObject: {fileID: 1719322358}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6742718, y: 0.054758202, z: 0.0502521, w: 0.7347338}
-  m_LocalPosition: {x: 50.6, y: -311, z: 235.8}
+  m_LocalPosition: {x: 53.8, y: -332.5, z: 237.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14687,7 +14687,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.70814455, g: 0.07663221, b: 0.86415094, a: 1}
-  m_Intensity: 5
+  m_Intensity: 0.5
   m_Range: 0.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -15166,13 +15166,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748038471}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6742718, y: 0.054758202, z: 0.0502521, w: 0.7347338}
-  m_LocalPosition: {x: -4324, y: 69, z: 1628}
+  m_LocalRotation: {x: 0.5531393, y: 0.42371857, z: 0.38885036, w: 0.6027395}
+  m_LocalPosition: {x: -4747.2, y: -155.7, z: 1389.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 356966777}
-  m_LocalEulerAnglesHint: {x: 80.17, y: 60.251, z: 59.885}
+  m_LocalEulerAnglesHint: {x: 19.711, y: 88.235, z: 84.779}
 --- !u!114 &1748038473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15207,7 +15207,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.7132075, g: 0.5998419, b: 0.41312206, a: 1}
+  m_Color: {r: 1, g: 0.8386915, b: 0.57169807, a: 1}
   m_Intensity: 20
   m_Range: 20
   m_SpotAngle: 129.41653
