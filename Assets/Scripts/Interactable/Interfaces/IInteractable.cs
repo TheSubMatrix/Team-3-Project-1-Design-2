@@ -8,9 +8,6 @@ public interface IInteractable
     PlayerInteractionHandler interactionHandler { get; set; }
     bool ShouldStopMovement { get; set; }
 
-   
-
-  
     void OnInteractStart(PlayerInteractionHandler incomingHandler)
     {
         {

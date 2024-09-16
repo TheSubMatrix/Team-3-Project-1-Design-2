@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
+public class StandardPickup : MonoBehaviour, IHoldable
 {
     Rigidbody m_rigidbody;
     [SerializeField]
@@ -13,13 +13,14 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     public Quaternion HoldRotationOffset => rotationOffset;
 
 
-
-    public GameObject hands { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-    public PlayerInteractionHandler playerInteractionHandler { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    LayerMask startingLayer;
+    public GameObject hands { get; set; }
+    public PlayerInteractionHandler playerInteractionHandler { get; set; }
 
     void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody>();
+        startingLayer = gameObject.layer;
     }
     public void OnHoldUpdate()
     {
@@ -27,17 +28,14 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
     }
     public void OnHoldEnd(GameObject objectBeingLookedAt)
     {
-        if (Place(objectBeingLookedAt))
+
+        if (m_rigidbody != null)
         {
-            Debug.Log("No");
+            m_rigidbody.isKinematic = false;
         }
-        else
-        {
-            if (m_rigidbody != null)
-            {
-                m_rigidbody.isKinematic = false;
-            }
-        }
+        hands?.SetActive(true);
+        gameObject.GetComponent<Collider>().enabled = true;
+        gameObject.layer = startingLayer;
     }
 
     public  void OnHoldStart()
@@ -46,11 +44,9 @@ public class StandardPickup : MonoBehaviour, IPlacable, IHoldable
         {
             m_rigidbody.isKinematic = true;
         }
-    }
-
-    public bool Place(GameObject objectToTryAndPlaceOn)
-    {
-        return false;
+        hands?.SetActive(false);
+        gameObject.GetComponent<Collider>().enabled = false;
+        gameObject.layer = LayerMask.NameToLayer("Render On Top");
     }
 
     public void OnHolding(GameObject pickUpObj)
