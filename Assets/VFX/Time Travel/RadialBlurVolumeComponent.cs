@@ -9,8 +9,9 @@ using UnityEngine.Rendering.Universal;
 public class RadialBlurVolumeComponent : VolumeComponent, IPostProcessComponent
 {
     public MaterialParameter radialBlurMaterial = new MaterialParameter(null);
-    public IntParameter SampleAmount = new IntParameter(100);
-    public FloatParameter EffectAmount = new FloatParameter(0.5f);
+    public NoInterpIntParameter SampleAmount = new NoInterpIntParameter(100);
+    public ClampedFloatParameter EffectAmount = new ClampedFloatParameter(value: 0.5f, min: 0, max: 1);
+
 
     public bool IsActive() => SampleAmount.value > 1 && EffectAmount.value > 0 && radialBlurMaterial != null;
 

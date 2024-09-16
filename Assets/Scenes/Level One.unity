@@ -270,6 +270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -294,6 +298,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -447,6 +455,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -667,6 +679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -696,6 +712,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,6 +868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -930,6 +954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1007,6 +1035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1031,6 +1063,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1101,6 +1137,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1176,7 +1216,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &167476812
 Transform:
@@ -1308,6 +1348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1337,7 +1381,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &174856122
 Transform:
@@ -1953,6 +1997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1982,6 +2030,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2047,6 +2099,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2279,7 +2335,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &336741479
 Transform:
@@ -2555,6 +2611,122 @@ PrefabInstance:
     - target: {fileID: 100000, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
       propertyPath: m_Name
       value: Tocus
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100064, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100066, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100070, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100072, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100074, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100076, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100082, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100084, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100086, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100088, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100096, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100098, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100100, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100102, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100104, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100106, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100108, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100110, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100112, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100114, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100116, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100118, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100120, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df7495afdce80f54694ff3d2fae828ac, type: 3}
       propertyPath: m_LocalScale.x
@@ -2882,6 +3054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2989,6 +3165,10 @@ PrefabInstance:
     - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Name
       value: Tree (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3218,6 +3398,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3512,6 +3696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.2
@@ -3586,7 +3774,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &415827548
 Transform:
@@ -3843,6 +4031,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3982,7 +4174,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &457564860
 Transform:
@@ -4083,6 +4275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4107,6 +4303,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -4194,7 +4394,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &480128267
 Transform:
@@ -4277,7 +4477,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &484232924
 Transform:
@@ -4360,7 +4560,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &491715408
 Transform:
@@ -4564,6 +4764,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4841,6 +5045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd pine fbx (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8249999
@@ -4975,6 +5183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4999,6 +5211,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -5203,6 +5419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.52
@@ -5350,6 +5570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.09
@@ -5414,6 +5638,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5537,6 +5765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5561,6 +5793,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5629,7 +5865,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &619931833
 Transform:
@@ -5767,6 +6003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5898,6 +6138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.66
@@ -5967,6 +6211,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6090,6 +6338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6114,6 +6366,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -6196,6 +6452,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6292,6 +6552,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -6450,6 +6714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.9
@@ -6603,6 +6871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.49
@@ -6677,6 +6949,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -6823,6 +7099,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fc726884edb70ad49b80085a6dd5ae8d, type: 3}
       propertyPath: m_Name
       value: Car Trunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc726884edb70ad49b80085a6dd5ae8d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948507677302152760, guid: fc726884edb70ad49b80085a6dd5ae8d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7053,6 +7337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.94
@@ -7128,7 +7416,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &789892167
 MeshCollider:
@@ -7414,6 +7702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7448,7 +7740,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &831711054
 Transform:
@@ -7558,7 +7850,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &844769113
 Transform:
@@ -7637,6 +7929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.33
@@ -7711,7 +8007,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &847338268
 Transform:
@@ -8023,6 +8319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8047,6 +8347,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8205,6 +8509,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -8440,6 +8748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd pine fbx (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8249999
@@ -8521,7 +8833,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &941329720
 Transform:
@@ -8605,6 +8917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.9
@@ -8679,6 +8995,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8797,6 +9117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8826,7 +9150,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &986227674
 Transform:
@@ -9075,6 +9399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9113,12 +9441,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998756651}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.25, y: 2.75, z: -6.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.25, y: 2.75, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1813426273}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!215 &998756653
 ReflectionProbe:
@@ -9135,8 +9463,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 2048
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 10, y: 10, z: 10}
-  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_BoxSize: {x: 99.62366, y: 10, z: 61.58394}
+  m_BoxOffset: {x: 3.0608387, y: 0, z: 25.791973}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -9148,7 +9476,7 @@ ReflectionProbe:
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
   m_HDR: 1
-  m_BoxProjection: 0
+  m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
   m_Importance: 1
@@ -9164,6 +9492,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9287,7 +9619,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1051512817
 Transform:
@@ -9423,6 +9755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9487,6 +9823,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9562,7 +9902,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1116432251
 Transform:
@@ -9726,6 +10066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9841,6 +10185,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9963,6 +10311,10 @@ PrefabInstance:
     - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Name
       value: Tree (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10134,6 +10486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -10285,7 +10641,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1235157391
 MeshCollider:
@@ -10507,6 +10863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 46.53
@@ -10577,6 +10937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.3
@@ -10646,6 +11010,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -10812,6 +11180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.92
@@ -10881,6 +11253,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11189,7 +11565,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1345758029
 Transform:
@@ -11272,6 +11648,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11433,7 +11813,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1378511930
 Transform:
@@ -11718,6 +12098,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8715522557927610755, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2121212
@@ -11778,6 +12162,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e79e3532265ba6449873f868fd443035, type: 2}
+    - target: {fileID: -8130517686070377926, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8088100112909292386, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 21.1
@@ -11786,9 +12174,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7235015103121818086, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -7204340155782157797, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -6668171011846674436, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6668171011846674436, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: -6528988119191806113, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_LocalScale.x
@@ -11810,6 +12210,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 12.897587
       objectReference: {fileID: 0}
+    - target: {fileID: -6198136499694349142, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -6038947443029297089, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -11822,9 +12226,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 19c15abc9d8996c4a8e4151271f71cdd, type: 2}
+    - target: {fileID: -5167112812538592034, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -5162949923263000399, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5162949923263000399, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: -4871751281287220447, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_IsActive
@@ -11838,6 +12250,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3944426748630832570, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -3900811458309941921, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -11850,10 +12266,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e79e3532265ba6449873f868fd443035, type: 2}
+    - target: {fileID: -3242316329445903297, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -2903044539087084056, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f553a4265d01b0c45bf9c8b6a8c94e2a, type: 2}
+    - target: {fileID: -2709711512419559945, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -2407475244240956050, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -11862,9 +12286,29 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6b5b2b8ef26250341afa5e92beb65555, type: 2}
+    - target: {fileID: -1421399403398974569, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1049841733107279213, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 268838961407492068, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 329111104556720423, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 425537885894435172, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425537885894435172, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 685697239366859807, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11878,9 +12322,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1094559010302358929, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323564983857360617, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1635832984237857499, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909546858937694940, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2544934222435229444, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11938,10 +12394,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8604336536672171903, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8678476363669080436, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 99226fac98ffcdd43a774d1754d5422e, type: 2}
+    - target: {fileID: 8733894571379361085, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9102158730633125178, guid: 03b380248b901e445b8455978a8c0b8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -12075,6 +12539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd pine fbx (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8249999
@@ -12156,6 +12624,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12299,6 +12771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd pine fbx (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8249999
@@ -12386,6 +12862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd pine fbx (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8249999
@@ -12467,6 +12947,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12650,7 +13134,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1461868269
 Transform:
@@ -12733,7 +13217,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1465297130
 Transform:
@@ -12864,6 +13348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -12985,7 +13473,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1488397251
 Transform:
@@ -13094,6 +13582,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13227,6 +13719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.18
@@ -13291,6 +13787,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13366,7 +13866,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1540950367
 Transform:
@@ -13459,6 +13959,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13687,6 +14191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -13719,7 +14227,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1555591985
 Transform:
@@ -13850,6 +14358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -13916,6 +14428,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13986,6 +14502,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14129,6 +14649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd pine fbx (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8249999
@@ -14211,6 +14735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.2
@@ -14280,6 +14808,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14360,7 +14892,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1617019577
 Transform:
@@ -14491,6 +15023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -14614,6 +15150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.27
@@ -14678,6 +15218,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14749,6 +15293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.33
@@ -14818,6 +15366,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14889,6 +15441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.15
@@ -14958,6 +15514,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -15234,6 +15794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -15311,6 +15875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -15335,6 +15903,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15489,6 +16061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.44
@@ -15594,7 +16170,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1769625335
 Transform:
@@ -15790,6 +16366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 58.55
@@ -15864,7 +16444,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1793665546
 Transform:
@@ -16053,6 +16633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16134,8 +16718,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 998756652}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1819474937
@@ -16149,6 +16732,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -16428,6 +17015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16479,6 +17070,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16804,6 +17399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16831,6 +17430,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -17014,6 +17617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.7
@@ -17083,6 +17690,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17395,6 +18006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -17427,7 +18042,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1953367998
 Transform:
@@ -17507,6 +18122,10 @@ PrefabInstance:
     - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Name
       value: Tree (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -17851,6 +18470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -18090,7 +18713,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2051069611
 Transform:
@@ -18168,6 +18791,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18290,6 +18917,10 @@ PrefabInstance:
     - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Name
       value: Tree (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -18421,6 +19052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: baum hd fbx (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
       value: 48.09
@@ -18536,6 +19171,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_Name
       value: baum hd fbx (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b27b908e66bddb42940797bc06df908, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18766,6 +19405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -18790,6 +19433,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_Name
       value: baum hd pine fbx (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7163db7426b13a345b09fa28a500a5e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -18955,6 +19602,10 @@ PrefabInstance:
     - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Name
       value: Tree (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081560930681807377, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8112886821234420941, guid: 9bbcf38318576e94081464c2d2933acf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -19453,4 +20104,5 @@ SceneRoots:
   - {fileID: 3383183295837314887}
   - {fileID: 552449282}
   - {fileID: 2137632920}
+  - {fileID: 998756652}
   - {fileID: 1813426273}

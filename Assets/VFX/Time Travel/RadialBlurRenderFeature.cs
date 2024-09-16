@@ -48,15 +48,15 @@ public class RadialBlurPass : ScriptableRenderPass
     public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
     {
         var stack = VolumeManager.instance.stack;
-        var radialBlurVolumeComponent = stack.GetComponent<RadialBlurVolumeComponent>();
+        RadialBlurVolumeComponent radialBlurVolumeComponent = stack.GetComponent<RadialBlurVolumeComponent>();
         CommandBuffer cmd = CommandBufferPool.Get();
         using (new ProfilingScope(cmd, _profilingSampler))
         {
             context.ExecuteCommandBuffer(cmd);
             cmd.Clear();
-            _blitMat = radialBlurVolumeComponent.radialBlurMaterial.value;
-            if (radialBlurVolumeComponent != null && radialBlurVolumeComponent.active && _blitMat != null)
+            if (radialBlurVolumeComponent != null && radialBlurVolumeComponent.active && radialBlurVolumeComponent != null && radialBlurVolumeComponent.radialBlurMaterial.value != null)
             {
+                _blitMat = radialBlurVolumeComponent.radialBlurMaterial.value;
                 _blitMat.SetFloat("_EffectAmount", radialBlurVolumeComponent.EffectAmount.value);
                 _blitMat.SetInt("_SampleAmount", radialBlurVolumeComponent.SampleAmount.value);
                 RTHandle camTarget = renderingData.cameraData.renderer.cameraColorTargetHandle;
