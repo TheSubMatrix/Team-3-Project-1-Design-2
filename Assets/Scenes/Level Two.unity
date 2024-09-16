@@ -22548,7 +22548,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 11
+  m_Priority: 111
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 1320247757928895594}
   m_Follow: {fileID: 0}
@@ -28688,6 +28688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c919eaf3bc1c3f14e8d435a40b865647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionOffset: {x: 0, y: 0, z: 0}
+  rotationOffSet: {x: 0, y: 0, z: 0, w: 1}
+  checkForKeyInHandEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &7425404336487998087
 MeshCollider:
   m_ObjectHideFlags: 0

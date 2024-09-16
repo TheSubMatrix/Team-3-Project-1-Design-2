@@ -51,8 +51,6 @@ public class CrowBar : MonoBehaviour, IHoldable
         myPlayerInteractionHandler = incomingHandler;
 
             myHands.SetActive(false);
-        
-       
 
         grabCrowBarTrigger.SetActive(false); //If the player grabs the crowbar before heading to the front door
                                             // it will turn off the trigger asking the player to grab it from the trunk

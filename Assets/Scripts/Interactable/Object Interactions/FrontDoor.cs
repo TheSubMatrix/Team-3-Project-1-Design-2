@@ -23,6 +23,7 @@ public class FrontDoor : MonoBehaviour, IInteractable
     public bool keyInHand = false;
     public PlayerUI PlayerUI { get; set; }
 
+    [SerializeField] UnityEvent useKeyAnimationEvent = new UnityEvent();
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -65,6 +66,7 @@ public class FrontDoor : MonoBehaviour, IInteractable
        
         if(boardCount >= 5 && switchEnabled && keyInHand)
         {
+            useKeyAnimationEvent.Invoke();
             animator.Play("Open");
         }
         else
