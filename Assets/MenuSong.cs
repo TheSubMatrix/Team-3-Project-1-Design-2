@@ -13,8 +13,9 @@ public class MenuSounds : MonoBehaviour
         }
         else
         {
-            DontDestroyOnLoad(gameObject);
             instance = this;
+            DontDestroyOnLoad(gameObject);
+            
         }
     }
 
