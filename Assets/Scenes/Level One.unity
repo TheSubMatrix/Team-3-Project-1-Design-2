@@ -11283,7 +11283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fe5a9661aef97499c684c3b0f27496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipe: {fileID: 0}
   onPipeAnimationPlay:
     m_PersistentCalls:
       m_Calls:
@@ -11299,6 +11298,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  key: {fileID: 2137632919}
 --- !u!64 &1358297914
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13093,15 +13093,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 70f4932704d2bc644af9558cbf18f141, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: 4.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70f4932704d2bc644af9558cbf18f141, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.216
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70f4932704d2bc644af9558cbf18f141, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.109
+      value: 3.94
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70f4932704d2bc644af9558cbf18f141, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18890,7 +18890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2137632920
 Transform:
   m_ObjectHideFlags: 0
@@ -18900,7 +18900,7 @@ Transform:
   m_GameObject: {fileID: 2137632919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.34, y: 0.52, z: 3.7}
+  m_LocalPosition: {x: 3.34, y: 2.122, z: 3.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
