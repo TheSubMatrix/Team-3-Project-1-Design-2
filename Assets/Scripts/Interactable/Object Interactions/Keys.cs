@@ -24,9 +24,13 @@ public class Keys : MonoBehaviour, IHoldable
     public class CheckForKeyInHand: UnityEvent<bool> { }
 
    [SerializeField]CheckForKeyInHand checkForKeyInHandEvent;
+
+    private Animator animator;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        //animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
 
     }
     public void OnHoldStart(PlayerInteractionHandler incomingHandler)
@@ -37,7 +41,7 @@ public class Keys : MonoBehaviour, IHoldable
             rb.isKinematic = true;
             GetComponent<Collider>().isTrigger = true;
             myHands.SetActive(false);
-            Debug.Log(hasKey);
+           
         }    
     }
     
@@ -47,7 +51,7 @@ public class Keys : MonoBehaviour, IHoldable
         transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
         gameObject.layer = LayerMask.NameToLayer("Render On Top");
         hasKey = true;
-        Debug.Log(hasKey);
+       
         checkForKeyInHandEvent.Invoke(hasKey);
         
 
@@ -63,8 +67,15 @@ public class Keys : MonoBehaviour, IHoldable
             myHands.SetActive(true);
             hasKey = false;
             checkForKeyInHandEvent.Invoke(hasKey);
-            Debug.Log(hasKey);
+            this.gameObject.layer = LayerMask.NameToLayer("Default");
         }
 
+    }
+
+
+    public void UseKeyAnimation()
+    {
+       
+        animator.Play("UseKey");
     }
 }
