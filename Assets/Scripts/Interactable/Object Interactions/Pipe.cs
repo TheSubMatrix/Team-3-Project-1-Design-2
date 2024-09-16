@@ -53,12 +53,7 @@ public class Pipe : MonoBehaviour, IHoldable
         
             transform.position = Vector3.MoveTowards(transform.position, desiredPos, Time.deltaTime * pickUpSpeed);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
-            gameObject.layer = LayerMask.NameToLayer("Render On Top");
-        /*if ( active && Input.GetKeyDown(KeyCode.E))
-        {
-           
-            StartCoroutine(StartAnimation());
-        }*/
+            gameObject.layer = LayerMask.NameToLayer("Render On Top");       
     }
 
     public void OnHoldEnd(GameObject objectBeingLookedAt)

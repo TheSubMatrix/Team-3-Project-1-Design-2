@@ -10,11 +10,10 @@ public class Star : MonoBehaviour, IInteractable
     private PlayerInteractionHandler myPlayerInteractionHandler;
     public PlayerInteractionHandler interactionHandler { get => myPlayerInteractionHandler; set => myPlayerInteractionHandler = value; }
     public bool ShouldStopMovement { get =>stopPlayerMovement; set =>   stopPlayerMovement = value; }
-    [SerializeField] GameObject pipe;
 
     [SerializeField] UnityEvent onPipeAnimationPlay = new UnityEvent();
 
-    
+    [SerializeField] GameObject key;
     public void OnInteractStart(PlayerInteractionHandler playerInteractionHandler)
     {       
         myPlayerInteractionHandler = playerInteractionHandler;
@@ -31,6 +30,7 @@ public class Star : MonoBehaviour, IInteractable
     public void OnInteractEnd()
     {
         Debug.Log("Fall");
+        key.SetActive(true);
     }
 
     public void OnInteracting()
