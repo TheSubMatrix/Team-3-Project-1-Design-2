@@ -949,6 +949,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 41008616620626060, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+      propertyPath: interactingHands
+      value: 
+      objectReference: {fileID: 1298689873}
     - target: {fileID: 723558774013263967, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -1092,6 +1096,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -7703271297185671392, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
+    - {fileID: 1610558726861814698, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6537492319886193358, guid: 39e555126231ce0489c90fb3d26dd1b5, type: 3}
       insertIndex: -1
@@ -1286,6 +1291,11 @@ PrefabInstance:
 --- !u!4 &1298689872 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f7f6c3b2ab3fab4fb3852cdc5b364ae, type: 3}
+  m_PrefabInstance: {fileID: 1298689871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1298689873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f7f6c3b2ab3fab4fb3852cdc5b364ae, type: 3}
   m_PrefabInstance: {fileID: 1298689871}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1307679554
