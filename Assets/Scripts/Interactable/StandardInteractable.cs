@@ -6,25 +6,37 @@ public class StandardInteractable : MonoBehaviour, IInteractable
 {
     PlayerInteractionHandler m_interactionHandler;
 
-    bool myShouldStopMovement;
-    bool myHasAnimations;
+   [SerializeField] bool myShouldStopMovement;
+   [SerializeField] bool myHasAnimations;
     GameObject m_gameObject  { get; }
-    public PlayerInteractionHandler interactionHandler { get; set ; }
+    public PlayerInteractionHandler interactionHandler { get => m_interactionHandler; set => m_interactionHandler = value ; }
     public bool ShouldStopMovement { get => myShouldStopMovement; set => myShouldStopMovement = value; }
-    
-
-    public void OnInteracting()
+    Animator animator;
+    private void Awake()
     {
-        
+        if (myHasAnimations)
+        {
+           animator = gameObject.AddComponent<Animator>();
+        }
     }
+
     public void OnIneractStart(PlayerInteractionHandler interactionHandler)
     {
         m_interactionHandler = interactionHandler;
         Debug.Log("ON Interact");
-        
+        if (animator)
+        {
+
+        }
+
     }
+    public void OnInteracting()
+    {
+        m_interactionHandler.EndInteraction();
+    }
+   
     public void OnInteractEnd()
     {
-        Debug.Log("End");
+        Debug.Log("End of interaction");
     }
 }
