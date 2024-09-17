@@ -20,17 +20,19 @@ public class Keys : MonoBehaviour, IHoldable
     private float rotateSpeed = 10000f;
     private Rigidbody rb;
     private bool hasKey = false;
+    private bool firstTimePickup = true;
     [System.Serializable]
     public class CheckForKeyInHand: UnityEvent<bool> { }
 
    [SerializeField]CheckForKeyInHand checkForKeyInHandEvent;
 
     [SerializeField] Animator childAnimator;
-    
+
+    private Animator parentAnimator;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        
+        parentAnimator = GetComponent<Animator>();
         
     }
    
@@ -74,7 +76,10 @@ public class Keys : MonoBehaviour, IHoldable
 
     }
 
-
+    public void DeleteAnimator()
+    {
+        Destroy(parentAnimator);
+    }
     public void UseKeyAnimation()
     {
 

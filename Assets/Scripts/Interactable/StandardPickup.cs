@@ -42,7 +42,7 @@ public class StandardPickup : MonoBehaviour, IHoldable
     }
     public void OnHolding(Vector3 desiredPos, Quaternion desiredRot)
     {
-        transform.position = Vector3.MoveTowards(transform.position, positionOffset, Time.deltaTime * pickUpSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, desiredPos, Time.deltaTime * pickUpSpeed);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, Time.deltaTime * rotateSpeed);
         gameObject.layer = LayerMask.NameToLayer("Render On Top");
     }

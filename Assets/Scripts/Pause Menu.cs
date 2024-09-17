@@ -16,11 +16,7 @@ public class PauseMenu : MonoBehaviour
     {
         Resume();
     }
-    public void WhenMainButtonClicked()
-    {Debug.Log("MainButton Clicked");
-       SceneManager.LoadScene("MainMenu");
-        
-    }
+    
     public void WhenContinueButtonCliked()
     {
         Resume();
