@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        SceneManager.LoadScene("Level Two Destroyed",LoadSceneMode.Additive);
+        SceneManager.LoadScene("Level Two Destroyed",LoadSceneMode.Additive); //main menu loading scene level 2 destroyed
 
     }
     private void Start()
@@ -50,6 +50,8 @@ public class UIManager : MonoBehaviour
        // SceneManager.LoadScene("Help");
 
     }
+   
+    
     public void WhenCreditsButtonisClicked()
     {
         // SceneManager.LoadScene("Credits");
