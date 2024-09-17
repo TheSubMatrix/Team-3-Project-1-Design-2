@@ -47,6 +47,11 @@ public class Keys : MonoBehaviour, IHoldable
             myHands.SetActive(false);
            
         }    
+        if(firstTimePickup)
+        {
+            SoundManager.Instance.PlaySoundOnObject(gameObject, "Found Key", false);
+            firstTimePickup= false;
+        }
     }
     
     public void OnHolding(Vector3 desiredPos,Quaternion desiredRot)

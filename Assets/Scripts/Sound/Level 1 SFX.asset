@@ -26,15 +26,15 @@ MonoBehaviour:
     pitch: 1
     associatedText: 
   - soundName: Dialogue 3
-    sound: {fileID: 8300000, guid: b8a8162c984894d4689032b681c9e073, type: 3}
+    sound: {fileID: 8300000, guid: 578fa14a15b15664fb1f966a41c52e88, type: 3}
     isMusic: 0
     volume: 0.4
     pitch: 1
     associatedText: 
   - soundName: Dialogue 4
-    sound: {fileID: 8300000, guid: f369f041f42da4349941b79009622ec3, type: 3}
+    sound: {fileID: 8300000, guid: 1e5e130ac7d619143ba3a20fb43dc48c, type: 3}
     isMusic: 0
-    volume: 0.3
+    volume: 0.5
     pitch: 1
     associatedText: 
   - soundName: Dialogue 5
@@ -195,6 +195,30 @@ MonoBehaviour:
     associatedText: 
   - soundName: SwitchPull
     sound: {fileID: 8300000, guid: f4a4ef62f5f53fb4da1455d124d2e7ed, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Found Key
+    sound: {fileID: 8300000, guid: 3cfa2456bf24cfb4ba5fedb9a112f253, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Found Crowbar
+    sound: {fileID: 8300000, guid: eb40b0c53fb1af2448cc99bcd0bbf640, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Turn On Lights
+    sound: {fileID: 8300000, guid: 3bad7d4f4e43bd841bee6716cdd61075, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Found Pipe
+    sound: {fileID: 8300000, guid: 1c3ae935f8470064b8dda0a1cabf4aea, type: 3}
     isMusic: 0
     volume: 0.6
     pitch: 1

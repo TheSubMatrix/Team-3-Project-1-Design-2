@@ -64,7 +64,7 @@ public class FrontDoor : MonoBehaviour, IInteractable
     public void OnInteractEnd()
     {
        
-        if(boardCount >= 5 && switchEnabled && keyInHand)
+        if(boardCount >= 5  && keyInHand)
         {
             useKeyAnimationEvent.Invoke();
             animator.Play("Open");
@@ -74,12 +74,12 @@ public class FrontDoor : MonoBehaviour, IInteractable
             Debug.Log("Need all boards down and switch enabled");
             SoundManager.Instance.PlaySoundAtLocation(transform.position, "Dialogue 4", false);
 
-            if (!showingPowerSwitchUI && switchEnabled == false)
+            /*if (!showingPowerSwitchUI && switchEnabled == false)
             {
                 uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 0, 1, 0.5f, 0));
                // uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 1, 0, 0.5f, 5));
                 showingPowerSwitchUI = true;
-            }
+            }*/
            
         }
        

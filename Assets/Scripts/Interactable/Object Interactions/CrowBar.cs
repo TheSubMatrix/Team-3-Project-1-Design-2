@@ -71,12 +71,12 @@ public class CrowBar : MonoBehaviour, IHoldable
                 uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Break Inside", 0, 1, .5f, 0));
             }
             
-            imageLocaterChannel.locateImage.Invoke("Grab Crow Bar");
+            /*imageLocaterChannel.locateImage.Invoke("Grab Crow Bar");
             if(currentImageALpha > 0 && pickedUp) ///Fades out the Grab Crow Bar UI panel only on the first pick up and if alpha is already at 1
             {
                 uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Grab Crow Bar", (int)currentImageALpha, 0, .5f, 0));
                
-            }
+            }*/
                    
         }
         

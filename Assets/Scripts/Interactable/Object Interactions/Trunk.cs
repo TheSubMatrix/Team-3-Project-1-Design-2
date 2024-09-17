@@ -13,7 +13,7 @@ public class Trunk : MonoBehaviour, IInteractable
     [SerializeField] AudioClip trunkOpenSFX;
     [SerializeField] AudioClip trunkCloseSFX;
     public bool ShouldStopMovement { get => shouldStopMovement; set => shouldStopMovement = value; }
-   
+    private bool firstTimePickup = true;
     PlayerInteractionHandler IInteractable.interactionHandler { get => myInteractionHandler; set => myInteractionHandler = value; }
 
 
@@ -31,7 +31,11 @@ public class Trunk : MonoBehaviour, IInteractable
 
         
         myInteractionHandler = incomingHandler;
-        
+        if(firstTimePickup)
+        {
+            SoundManager.Instance.PlaySoundAtLocation(transform.position,"Found Crowbar",false );
+            firstTimePickup= false;
+        }
         
        
         

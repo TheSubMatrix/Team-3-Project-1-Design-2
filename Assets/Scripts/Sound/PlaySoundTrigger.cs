@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class PlaySoundTrigger : MonoBehaviour
 {
@@ -10,9 +11,15 @@ public class PlaySoundTrigger : MonoBehaviour
     [SerializeField] SO_ImageDisplayChannel.ImageDisplayInfo imageInfo;
 
     [System.Serializable]
-    public class UpdateUIUnityEvent : UnityEvent<Image, bool, float, float> { } 
+    public class UpdateUIUnityEvent : UnityEvent<Image, bool, float, float> { }
 
+ 
+
+
+    
     public UpdateUIUnityEvent updateUI;
+
+    private bool switchIsOn = false;
 
    // public Image updateImage;
    
@@ -43,7 +50,24 @@ public class PlaySoundTrigger : MonoBehaviour
         {
             if (!hasPlayed && other.gameObject.tag == "Player" && SoundManager.Instance != null)
             {
-                if(soundToPlay == "Dialogue 5")
+                if(SceneManager.GetActiveScene().name == "Level One")
+                {
+                    if(soundToPlay == "Dialogue 5" && !switchIsOn)
+                    {
+                        SoundManager.Instance.PlaySoundAtLocation(transform.position, "Turn On Lights", false);
+                        return;
+                    }
+                    else if(switchIsOn)
+                    {
+                        SoundManager.Instance.PlaySoundAtLocation(transform.position, soundToPlay, false);
+                        SceneTransition.Instance.ChangeScene(4, 1, "Level Two Destroyed", "Player Scene", true);
+                        return;
+                    }
+                    
+
+                    
+                }
+                /*if(soundToPlay == "Dialogue 5")
                 {
 
                     Debug.Log("Next Scene");
@@ -57,7 +81,7 @@ public class PlaySoundTrigger : MonoBehaviour
                     SceneTransition.Instance.ChangeScene(4, 1, "Level Two Destroyed","Player Scene",true);
                     return;
                     
-                }
+                }*/
                 Debug.Log("Exit");     
                 
                 SoundManager.Instance.PlaySoundAtLocation(transform.position,soundToPlay,false);
@@ -83,5 +107,10 @@ public class PlaySoundTrigger : MonoBehaviour
 
     }
 
+
+    public void CheckSwitchIsOn(bool incomingBool)
+    {
+        switchIsOn = incomingBool;
+    }
     
 }

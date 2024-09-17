@@ -24,6 +24,7 @@ public class Pipe : MonoBehaviour, IHoldable
 
     private bool active;
 
+    private bool firstTimePickup = true;
     
     private void Awake()
     {
@@ -45,6 +46,12 @@ public class Pipe : MonoBehaviour, IHoldable
             rb.isKinematic = true;
             GetComponent<Collider>().isTrigger = true;
             StartCoroutine(StartPipe());
+        }
+
+        if(firstTimePickup)
+        {
+            SoundManager.Instance.PlaySoundOnObject(gameObject, "Found Pipe", false);
+            firstTimePickup= false;
         }
     }
 
