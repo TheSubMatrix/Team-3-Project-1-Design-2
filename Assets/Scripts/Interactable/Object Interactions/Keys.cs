@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 public class Keys : MonoBehaviour, IHoldable
 {
 
@@ -47,7 +48,7 @@ public class Keys : MonoBehaviour, IHoldable
             myHands.SetActive(false);
            
         }    
-        if(firstTimePickup)
+        if(firstTimePickup && SceneManager.GetActiveScene().name == "Level One")
         {
             SoundManager.Instance.PlaySoundOnObject(gameObject, "Found Key", false);
             firstTimePickup= false;
@@ -87,7 +88,19 @@ public class Keys : MonoBehaviour, IHoldable
     }
     public void UseKeyAnimation()
     {
+        if(childAnimator != null)
+        {
+            childAnimator.Play("UseKey");
+        }
+        else
+        {
+            return;
+        }
+      
+    }
 
-        childAnimator.Play("UseKey");
+    public void Level2KeyAnimation()
+    {
+        parentAnimator.Play("Open");
     }
 }

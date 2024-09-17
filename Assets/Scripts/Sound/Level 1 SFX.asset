@@ -122,19 +122,19 @@ MonoBehaviour:
     pitch: 1
     associatedText: 
   - soundName: Journal 4 Dialogue
-    sound: {fileID: 8300000, guid: 850f138e9bedd6340a2fb52c6f923794, type: 3}
+    sound: {fileID: 8300000, guid: 6fb94a1db03ad334ca1f5812f148e24d, type: 3}
     isMusic: 0
     volume: 1
     pitch: 1
     associatedText: 
   - soundName: Journal 5 Dialogue
-    sound: {fileID: 8300000, guid: 850f138e9bedd6340a2fb52c6f923794, type: 3}
+    sound: {fileID: 8300000, guid: 462e57b07c37e9442a27b71536137c4b, type: 3}
     isMusic: 0
     volume: 1
     pitch: 1
     associatedText: 
   - soundName: Journal 6 Dialogue
-    sound: {fileID: 8300000, guid: 850f138e9bedd6340a2fb52c6f923794, type: 3}
+    sound: {fileID: 8300000, guid: c5741f225ce816e499ab6bbb1ef07a4e, type: 3}
     isMusic: 0
     volume: 1
     pitch: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   - soundName: Arcade Music
     sound: {fileID: 8300000, guid: 0d23291f45e2251409c4d97e54d5bf48, type: 3}
     isMusic: 1
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     associatedText: 
   - soundName: Destroyed Music
@@ -219,6 +219,12 @@ MonoBehaviour:
     associatedText: 
   - soundName: Found Pipe
     sound: {fileID: 8300000, guid: 1c3ae935f8470064b8dda0a1cabf4aea, type: 3}
+    isMusic: 0
+    volume: 0.6
+    pitch: 1
+    associatedText: 
+  - soundName: Teleport
+    sound: {fileID: 8300000, guid: 5da93aad457582c49af0b155f2952b1e, type: 3}
     isMusic: 0
     volume: 0.6
     pitch: 1

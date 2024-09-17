@@ -126,7 +126,7 @@ public class ArcadeCode : MonoBehaviour, IInteractable
 
     public void OpenHiddenDoor()
     {
-        hiddenDoorAnimator.Play("Open_Door");
+        hiddenDoorAnimator.Play("Secret_Door_Open");
     }
 
 

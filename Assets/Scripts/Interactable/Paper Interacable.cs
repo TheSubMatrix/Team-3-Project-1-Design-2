@@ -66,13 +66,13 @@ public class PaperInteractable : MonoBehaviour, IInteractable
                 SoundManager.Instance.PlaySoundAtLocation(transform.position, "Journal 3 Dialogue", false);
                 break;
             case "Journal 4":
-                Debug.Log("Journal 4");
+                SoundManager.Instance.PlaySoundAtLocation(transform.position, "Journal 4 Dialogue", false);
                 break;
             case "Journal 5":
-                Debug.Log("Journal 5");
+                SoundManager.Instance.PlaySoundAtLocation(transform.position, "Journal 5 Dialogue", false);
                 break;
             case "Journal 6":
-                Debug.Log("Journal 6");
+                SoundManager.Instance.PlaySoundAtLocation(transform.position, "Journal 6 Dialogue", false);
                 break;
             default:
                 Debug.LogError("Journal object doesn't mactch name for function");

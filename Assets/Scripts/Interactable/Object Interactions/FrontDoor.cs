@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 public class FrontDoor : MonoBehaviour, IInteractable
 {
 
@@ -44,7 +45,11 @@ public class FrontDoor : MonoBehaviour, IInteractable
         }
         if(switchEnabled && showingPowerSwitchUI)
         {
-            uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 1, 0, 0.5f, 0));
+           if(SceneManager.GetActiveScene().name == "Level One")
+            {
+                uiPopupChannel.OnFadeImage.Invoke(new SO_ImageDisplayChannel.ImageDisplayInfo("Turn On Generator", 1, 0, 0.5f, 0));
+            }
+            
         }
     }
     public void OnInteracting()

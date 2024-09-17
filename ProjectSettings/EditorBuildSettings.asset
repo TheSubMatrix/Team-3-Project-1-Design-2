@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Player Scene.unity
     guid: 25326a7d730f87545a0c497b2fdcbaa1
   - enabled: 1
-    path: Assets/Scenes/To be Continued.unity
-    guid: 7b5e049b7b8e9fd4c8c78f3cdbfae249
+    path: Assets/Scenes/End Screen.unity
+    guid: 5f6157dcb72368e47a42acf097c15167
   m_configObjects: {}

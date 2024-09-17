@@ -15,6 +15,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
     [SerializeField] List<TransitionData> m_transitions = new List<TransitionData>();
     [SerializeField] Animator m_animator;
     int m_journalCount = 0;
+    GameObject teleportSFX;
     [System.Serializable]
     struct TransitionData
     {
@@ -30,6 +31,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && !m_shouldFinishTransition && m_journalCount >= 3)
         {
             StartTransition();
+           teleportSFX = SoundManager.Instance.PlaySoundOnObject(gameObject, "Teleport", true);
         }
     }
     public void StartTransition() 
@@ -81,6 +83,7 @@ public class PlayerLevelSwitcher : MonoBehaviour
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(currentScene));
         m_animator.SetTrigger("End Transition");
         disablePlayerMovementChannel.boolEvent?.Invoke(true);
+        Destroy(teleportSFX);
     }
     void UpdatePageCount()
     {

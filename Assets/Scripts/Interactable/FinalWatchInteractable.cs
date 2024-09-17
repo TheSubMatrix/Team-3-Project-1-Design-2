@@ -13,6 +13,7 @@ public class FinalWatchInteractable : MonoBehaviour, IInteractable
         PlayerLevelSwitcher playerLevelSwitcher = interactionHandler.GetComponentInParent<PlayerLevelSwitcher>();
         if (playerLevelSwitcher != null)
         {
+            SoundManager.Instance.PlaySoundAtLocation(transform.position, "Teleport", false);
             playerLevelSwitcher.FakeTransition();
         }
         SceneTransition.Instance?.ChangeScene(1, 1, "End Screen", null);
