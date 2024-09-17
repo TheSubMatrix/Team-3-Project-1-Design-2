@@ -29,10 +29,17 @@ public class PlayerLevelSwitcher : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && !m_shouldFinishTransition && m_journalCount >= 3)
         {
-            m_animator.SetTrigger("Start Transition");
-            StartCoroutine(TransitionSceneAsync(m_transitions));
-            //transform.position += Vector3.up * 2;
+            StartTransition();
         }
+    }
+    public void StartTransition() 
+    {
+        m_animator.SetTrigger("Start Transition");
+        StartCoroutine(TransitionSceneAsync(m_transitions));
+    }
+    public void FakeTransition()
+    {
+        m_animator.SetTrigger("Start Transition");
     }
     public void CompleteSceneTransition()
     {
