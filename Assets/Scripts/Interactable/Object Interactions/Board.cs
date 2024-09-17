@@ -60,31 +60,28 @@ public class Board : MonoBehaviour, IInteractable
 
     void BoardsFall(string boardName)  ///Depending on which board is interacted with will play it's respective animation
     {
-        if (boardName == "DoorPlank5")
+        Debug.Log("This boards name is" +  boardName);
+        switch(boardName)
         {
-            animator.Play("Board_5");
-           
-        }
-        if (boardName == "DoorPlank4")
-        {
-            animator.Play("Board_4");
-           
-        }
-        if (boardName == "DoorPlank3")
-        {
-            animator.Play("Board_3");
-           
-        }
-        if (boardName == "DoorPlank2")
-        {
-            animator.Play("Board_2");
-            
-        }
-        if (boardName == "DoorPlank1")
-        {
-            animator.Play("Board_1");
-            
-        }
+            case "DoorPlank5":
+                animator.Play("Board_5");
+                break;
+            case "DoorPlank4":
+                animator.Play("Board_4");
+                break;
+            case "DoorPlank3":
+                animator.Play("Board_3");
+                break;
+            case "DoorPlank2":
+                animator.Play("Board_2");
+                break;
+            case "DoorPlank1":
+                animator.Play("Board_1");
+                break;
+            default:
+                Debug.Log("No board animation");
+                break;
+        }       
 
     }
 

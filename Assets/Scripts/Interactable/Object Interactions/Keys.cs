@@ -25,19 +25,16 @@ public class Keys : MonoBehaviour, IHoldable
 
    [SerializeField]CheckForKeyInHand checkForKeyInHandEvent;
 
-    private Animator animator;
-    private Animator parentAnimator;
+     [SerializeField] Animator childAnimator;
+   
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        //animator = GetComponent<Animator>();
-        animator = GetComponentInChildren<Animator>();
-        parentAnimator = GetComponent<Animator>();  
+       
+        
+        
     }
-    private void Start()
-    {
-        animator.Play("KeyFalling");
-    }
+    
     public void OnHoldStart(PlayerInteractionHandler incomingHandler)
     {
         myInteractionHandler = incomingHandler;
@@ -80,7 +77,7 @@ public class Keys : MonoBehaviour, IHoldable
 
     public void UseKeyAnimation()
     {
-       
-        animator.Play("UseKey");
+
+        childAnimator.Play("UseKey");
     }
 }
